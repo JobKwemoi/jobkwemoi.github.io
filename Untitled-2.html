@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <title>Kirong Job Kwemoi |Web Developer</title>
+    <style>
+        body {
+             font-family: 'Segoe UI' , Arial, sans-serif;
+             background: linear-gradient(to bottom, #00698f, #fff) ; 
+             text-align: center;
+             padding: 40px;
+             color: #333;
+             margin: 0;
+  
+        }
+        
+        h1, h2 {
+            color: #004d66;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+          
+        a {
+            text-decoration: none;
+            color: #fff;
+            background: #00698f;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            background: #004d66;
+            transform: scale(1.05);
+        }
+        
+        img {
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        section {
+            margin: 30px auto;
+            padding: 20px;
+            background:#ffffffee;
+            border-radius: 12px;
+            max-width: 650px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skills-tag {
+            background: #0025b5; 
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #004d66;
+            color: #fff;
+            border-radius: 12px;
+            max-width: 650px;
+            margin: 30px auto;
+        }
+
+        #Whatsapp-link {
+            background: #25D366;
+        }
+        #whatsapp-link:hover {
+            background: #25D366;
+        }
+
+        #hire-me {
+            background: #ff6600;
+            margin-top: 20px;
+        }
+        #hire-me:hover {
+            background: #cc5200;
+        }
+
+        #about-me, #services {
+            background-color: white;
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 900px;
+            text-align: left;
+        }
+        #about-me h2, #services h2 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .service {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 4px solid #25D366; /* WhatsApp green accent */
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translate(10px);
+        }
+
+        .service h3 {
+            color: #00698f;
+            margin-bottom: 8px;
+        }
+        .service p {
+            color: #555;
+            line-height: 1.6;
+        }
+        #project {
+            background-color: white;
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 900px;
+        }
+
+        #project h2 {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .project {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #25D366;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translate(10px);
+        }
+
+        .project h3 {
+            color: #00698f;
+            margin-bottom: 8px;
+        }
+
+        .project p { 
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .project button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .project button:hover {
+            background-color: #128c7e;
+            transform: scale(1.05);
+        }
+
+        #testimonials {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 900px;
+        }
+
+        #testimonials h2 {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00698f;
+            border-radius: 6px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0,0.1);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+        }
+        </style>
+     </head>
+      <body>
+        <!--WhatsApp floating button -->  
+        <a href="https:
+           style="position: fixed;bottom:20px ;right :20px;background:background: #25D366;Padding: 15px;border-radius:50%;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:999;">
+          <i class="fab fa-Whatsapp" style="color: white;font-size: 24px;"></i>
+        </a>
+        
+       <img src="image/kirong-image.png" alt="profile picture">
+
+       <h1>Hello, I'm Kirong Job Kwemoi</h1>
+       <p>Web Developer | Freelancer | Tech Enthusiast</p>
+       <a href="https://wa.me/254792442670" id="whatsapp-link">chat with me on whatsApp</a>
+
+       
+
+<section>
+    <h2>About Me</h2>
+    <p> I specialize in buiding <strong> modern, resposive, and scalable web experiences</strong> that help businesses thrieve online.
+        I don't chase shortcuts I <strong> create systems, prepare for opportunities, and deliver solutions</strong> that stand out.
+        My passion lies in <strong> turning ideas into clean, functional, and user-friendly digital product</strong> that makes an impact.
+    </p>
+</section>
+<section id="services">
+    <h2>services</h2>
+    <div class="service">
+        <h3>Custom Web Development</h3>
+        <p>Build fully resposive websites using <strong> HTML,CSS,JavaScript </strong> and <strong>React</strong> tailored to 
+        your brand and business needs</p>
+    </div>
+    <div class="service">
+        <h3>UI/UX Design </h3>
+        <p>Design visually stunning interfaces with <strong>user-first experiences</strong>, ensuring your website or app is 
+        intuitive, sleek and interactive.</p>
+    </div>
+    <div class="service">
+        <h3>E-Commerce solutions</h3>
+        <p>Develop online store with <strong>security checkout, product catalogs, and dynamic features</strong> to maximize sales
+        and conversions.</p>
+    </div>
+    <div class="service">
+        <h3>portfolio and personal brand</h3>
+       <p>Create polished portfolio sites that <strong>showcase skills, projects and personal identity</strong> to impress
+        clients and employers.</p>
+       </div>
+       <div class="service">
+        <h3>SEO & perfomance Optimization</h3>
+        <p>Optimize websites for <strong>search engines and speed</strong>, ensuring higher ranking and faster loading times.</p>
+       </div>
+       <div class="service">
+        <h3>Freelance Consultation & Tech Guidance</h3>
+        <p> Help startups and small businesses  <strong> plan, design, and implement digital solutions </strong> that
+        align with growth goals</p>
+        </div>
+    </div>
+</section>
+       
+      <section id="project">
+         <h2>projects</h2>
+         <div class="project">
+                <h3>personal portfolio Website</h3>
+                <p>My personal portfolio site showcasing my skills,services and projects.</p>
+                <button
+                onclick="window.open('https://portfolio.com','_blank')">Live Demo</button>
+                </div>
+
+                <div class="project">
+                    <h3>E-commerce Store</h3>
+                    <p>A resposive online store built with HTML,CSS and JavaScript.</p>
+                    <button
+                    onclick="window.open('https://Store.com','_blank')">Live Demo</button>
+                </div>
+                    <div class="project">
+                        <h3>business Landing page</h3>
+                        <p>clean,modern Landing page designed for small businesses to showcase services online.</p>
+                        <button
+                        onclick="window.open('https://businesslanding.com','_blank')">Live Demo</button>
+         </div>
+      </section>
+        
+         <section id="skills">
+            <h2>My skills</h2>
+            <div class="skills-list">
+                <span class="skills-tag">HTML & CSS</span>
+                <span class="skills-tag">JavaScript</span>
+                <span class="skills-tag">React</span>
+                <span class="skills-tag">UX/UI</span>
+                <span class="skills-tag">SEO</span>
+            </div>
+         </section>
+
+
+       <section id="Testimonials">
+           <h2>Testimonials</h2>
+           <div class="testimonial">
+            <p>"Kirong is a top-notch developer! Fast, reliable and creative."</p>
+            <span>-Hellen Maya, Client</span>
+           </div>
+
+           <div class="testimonial">
+           <p>"He built my portfolio site in 3 days- and it looks professional and modern!"</p>
+           <span>-peter Washira, Entrepreneur</span>
+
+           <div class="testimonial">
+            <p>"The E-commerce store Kirong developed exceeded expectation.Responsive and clean!"</p>
+            <span>- Eliud Mango, Business owner</span>
+           </div>
+           <div class="testimonial">
+            <p>"Highly recommended! Kirong's attention to details and work ethic is incredible."</p>
+            <span>- Lily Jacobs , Freelancer</span>
+           </div>
+       </section>
+
+       <section>
+           <h2>contact</h2>
+           <p>Email: kirongjob@gmail.com</p>
+           <a href="mailto:kirongjob@gmail.com" class="btn">send me an Email</a>
+           <a href="#" id="hire-me">Hire-Me</a>
+</section>
+
+<footer>
+    <p>&copy;2026 Kirong Job Kwemoi |All rights reserved</p>
+    <p>Follow me:
+        <a
+        href="https://www.linkedin.com/in/JobWhite" target="_blank">LinkedIn</a>
+        |
+               <a
+    <a href="https://Facebook.com/JobWhite" target="-blank">Facebook</a>
+    </p>
+</footer>
+    
+<script>
+     document.getElementById('whatsapp-link').addEventListener('click',function() {
+        alert('You are about to chat with Kirong Job Kwemoi on WhatsApp!');
+       });
+   </script> 
+</body>
+</html> 
+ 
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
