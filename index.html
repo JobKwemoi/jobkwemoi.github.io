@@ -1,419 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8"
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
-    <title>Kirong Job Kwemoi |Web Developer</title>
-    <style>
-        body {
-             font-family: 'Segoe UI' , Arial, sans-serif;
-             background: linear-gradient(to bottom, #00698f, #fff) ; 
-             text-align: center;
-             padding: 40px;
-             color: #333;
-             margin: 0;
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial scale=1.0">
+    <title>Freelancer | Web Developer | Digital Creator</title>
+<style>
+      body {
+        background: linear-gradient(135deg, #f4f4f4 0%, #fff 100%);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        color: #333;
+        margin: 40px 0;
+        padding: 40px;
+        text-align: center;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      h1, h2, h3 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,  'Helvetica Neue', Arial, sans-serif;
+        color: #004d66;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin-bottom: 0.75em;
+      }
+
+      p {
+        font-size: 1.125rem;
+        color: #333;
+        max-width: 65ch;
+        margin: 0 auto 1.5em
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        background: #00698f;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight:bold;
+        transition: 0.3s ease;
+      }
+
+      a:hover {
+        background: #004d66;
+        transform:scale(1.05);
+      }
+
+      img {
+        border-radius: 50%;
+        width: 160px;
+        height:160px;
+        object-fit:cover;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      
+      .section {
+        margin:30px auto;
+        padding:20px;
+        background:ffffffee;
+        border-radius:12px;
+        max-width:650px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      }
+
+      .skill list {
+        display:flex;
+        justify-content:center;
+        gap: 15px;
+        flex-wrap:wrap;
+      }
+
+      .skill-tag {
+        background: #0025b5;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+      }
+
+      footer {
+        margin-top:40px;
+        padding:20px;
+        background: #004d66;
+        color: #fff;
+        border-radius:12px;
+        max-width:650;
+        margin:30px auto;
+      }
+      
+      #whatsapp-link {
+        background: #fff;
+      
+      }
+
+      #whatsapp-link:hover {
+        background: #25D366;
+      }
+
+      #hire-me {
+        background: purple;
+        margin-top: 20px;
+      }
+
+     #hire-me:hover {
+        background:pink;
+      }
+
+      #project {
+        background-color:white;
+        padding: 40px 20px;
+        margin: 20px auto;
+        border-radius: 8px;
+        max-width: 900px;
+      }
+
+      #project h2 {
+        text-align: center;
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      .project {
+        padding: 15px;
+        border-left: 4px solid #25D366;
+      }
+
+      .project:hover {
+        transform:translateX(10px);
+      }
+
+.project h3 {
+  color: #00698F;
+  margin-bottom: 8px;
+}
+
+.project p {
+  color: #555;
+  line-height:1.6;
+}
+
+#Testimonials  {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  margin:20px auto;
+  border-radius: 8px;
+  max-width: 900px;
+}
+
+#testimonials h2 {
+  text-align: left;
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #00698f;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial span {
+  display:block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  text-align:right;
+}
+
+
+
+@media (max-width:768px) {
+  body {
+    padding: 20px
+  }
+  section {
+    padding: 15px;
+  }
+}
+
+/* project card */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius:10px;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  margin-bottom:30px;
+  opacity:0; /*fade-in*/
+  transform:translateY(20px);
+}
+
+.project-card:hover {
+  transform:scale(1.1);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/*Project Images*/
+.project-card img {
+  width:100%;
+  max-width: 100px; /*reduce from 150px to 100px */
+  height: auto; /*maintain aspect ratio*/
+  border-radius: 8px; /* optional: rounded corners*/
+  display: block;
+  margin: 15px auto; /*add some top/bottom spacing */
+  object-fit: cover; /*prevent stretching */
+}
+
+.project-img:active, project-img:hover
+{
+  transform:scale(1.1);
+  box-shadow:0 0 20px
+  rgba(255,255,255,0.4);
+}
+
+/*Tooltip*/
+.project-card .tooltip {
+  visibility:hidden;
+  opacity:0;
+  background-color:rgba(0,0,0,0.8);
+  color: #fff;
+  text-align:center;
+  padding:6px 160px;
+  border-radius:6px;
+  position:absolute;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:0.85em;
+  pointer-events:none;
+  box-shadow:0 0 15px
+  rgba(255,255,255,0.3);
+  transition:opacity 0.3s,transform 0.6s ease,box-shadow 0.4s;
+  animation:pulse-tooltip 2s infinite;
+}
+
+.project-card:hover .tooltip,
+.project-card .tooltip :active {
+  visibility:visible;
+  opacity:1;
+  transform:translateY(-5px)
+  scale(1.02);
+  box-shadow:0 0 12px
+  rgba (255,255,255,0.4);
+}
+
+
+
+.project-card img {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px 
+  rgba(0,0,0,0.2);
+}
+
+.project-info {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-info {
+  opacity: 1;
+}
   
-        }
-        
-        h1, h2 {
-            color: #004d66;
-            font-weight: 700;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-          
-        a {
-            text-decoration: none;
-            color: #fff;
-            background: #00698f;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
+  /*Button*/
+.button  {
+  position:relation;
+  overflow:hidden;
+  margin-top:10px;
+}
 
-        a:hover {
-            background: #004d66;
-            transform: scale(1.05);
-        }
-        
-        img {
-            border-radius: 50%;
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        section {
-            margin: 30px auto;
-            padding: 20px;
-            background:#ffffffee;
-            border-radius: 12px;
-            max-width: 650px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        
-        
-        .skills-list {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.button ::after {
+  content:'';
+  position:absolute;
+  width:100px;
+  height:100px;
+  background:rgba(255,255,255,0.3);
+  display:block;
+  border-radius:50%;
+  transform:scale(0);
+  opacity:0;
+  transition:transform 0.5s, opacity 1s;
+}
 
-        .skills-tag {
-            background: #0025b5; 
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #004d66;
-            color: #fff;
-            border-radius: 12px;
-            max-width: 650px;
-            margin: 30px auto;
-        }
+.button :active ::after{
+  transform:scale(2);
+  opacity:1;
+  transition:0s;
+}
 
-        #Whatsapp-link {
-            background: #25D366;
-        }
-        #whatsapp-link:hover {
-            background: #25D366;
-        }
+/*Footer*/
+footer {
+  padding:20px;
+  text-align: center;
+  background-color: lightseagreen;
+  color:#fff;
+  position:relative;
+  opacity:1;
+}
 
-        #hire-me {
-            background: #ff6600;
-            margin-top: 20px;
-        }
-        #hire-me:hover {
-            background: #cc5200;
-        }
+.footer text {
+  display:block;
+  margin:5px 0;
+  
+}
 
-        #about-me, #services {
-            background-color: white;
-            padding: 40px 20px;
-            margin: 20px auto;
-            border-radius: 8px;
-            max-width: 900px;
-            text-align: left;
-        }
-        #about-me h2, #services h2 {
-            color: #333;
-            font-size: 32px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+footer {
+  color: white;
+}
 
-        .service {
-            margin-bottom: 25px;
-            padding: 15px;
-            border-radius: 4px solid #25D366; /* WhatsApp green accent */
-            transition: transform 0.3s ease;
-        }
+/*HEARTBEAT*/
+.heartbeat {
+  display: inline-block;
+  animation: heartbeat 1.5s infinite ease-in-out;
+}
 
-        .service:hover {
-            transform: translate(10px);
-        }
+@keyframes heartbeat {
+0% {  transform: scale(1);    }
+20% {  transform: scale(1.05); }
+40% {  transform: scale(1);  }
+60% {  transform: scale(1.05);   }
+80% {   transform: scale(1);      }
+100% {   transform: scale(1);     }
 
-        .service h3 {
-            color: #00698f;
-            margin-bottom: 8px;
-        }
-        .service p {
-            color: #555;
-            line-height: 1.6;
-        }
-        #project {
-            background-color: white;
-            padding: 40px 20px;
-            margin: 20px auto;
-            border-radius: 8px;
-            max-width: 900px;
-        }
 
-        #project h2 {
-            text-align: center;
-            color: #333;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
+}
 
-        .project {
-            margin-bottom: 25px;
-            padding: 15px;
-            border-left: 4px solid #25D366;
-            transition: transform 0.3s ease;
-        }
 
-        .project:hover {
-            transform: translate(10px);
-        }
+.footer-hover {
+  opacity:1;
+  font-style:italic;
+  font-size:0.9em;
+  transition:opacity 0.5s;
+}
 
-        .project h3 {
-            color: #00698f;
-            margin-bottom: 8px;
-        }
+footer:hover .footer-hover {
+  opacity:1;
+}
 
-        .project p { 
-            color: #555;
-            line-height: 1.6;
-        }
+/*Footer Emoji Pulse*/
+.footer-text {
+  display:inline-block;
+  animation:pulse 2s infinite;
+}
 
-        .project button {
-            background-color: #25D366;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
 
-        .project button:hover {
-            background-color: #128c7e;
-            transform: scale(1.05);
-        }
 
-        #testimonials {
-            background-color: #f4f4f4;
-            padding: 40px 20px;
-            margin: 20px auto;
-            border-radius: 8px;
-            max-width: 900px;
-        }
+/*Fade-In section*/
+section {
+  transition:opacity 0.6s ease, transform 0.6s ease;
+}
 
-        #testimonials h2 {
-            text-align: center;
-            color: #333;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-        
-        .testimonial {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 4px solid #00698f;
-            border-radius: 6px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0,0.1);
-        }
+/*scroll to the top bottom*/
+#scrollTopBtn {
+  position:fixted;
+  bottom:30px;
+  right:20px;
+  background: #333;
+  color:fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:0;
+  transition:opacity 0.3s ease;
+}
 
-        .testimonial p {
-            font-style: italic;
-            color: #555;
-        }
+#scrollTopBtn .shadow  {
+  opacity: 1;
+}
 
-        .testimonial span {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            color: #333;
-            text-align: right;
-        }
+/*smooth scrolling*/
+html {
+  scroll-behavior: smooth;
+}
 
-        @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-        }
-        </style>
-     </head>
-      <body>
-        <!--WhatsApp floating button -->  
-        <a href="https:
-           style="position: fixed;bottom:20px ;right :20px;background:background: #25D366;Padding: 15px;border-radius:50%;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:999;">
-          <i class="fab fa-Whatsapp" style="color: white;font-size: 24px;"></i>
-        </a>
-        
-       <img src="kirong-image.png" alt="profile picture">
+/*Text Glow on Healing*/
+h2, .project-card h3 ,#About-me #Services h3 {
+  transition: color 0.3s ease,
+  text-shadow  0.3s ease;
+}
 
-       <h1>Hello, I'm Kirong Job Kwemoi</h1>
-       <p>Web Developer | Freelancer | Tech Enthusiast</p>
-       <a href="https://wa.me/254792442670" id="whatsapp-link">chat with me on whatsApp</a>
+h2:hover, .project-card h3:hover , #About-me:hover #Services h3 {
+  color: #ff5722;
+  text-shadow:0 0 8px
+  rgba(255,87,35,0.6);
+}
 
-       
+/*Icon Float*/
+.icon {
+  transition:tranform 0.3s ease;
+  display:inline-block;
+}
 
-<section>
+.icon:hover {
+  transform :translateY(-5px)
+  scale(1.1);
+}
+
+/*Feature Project Pulse*/
+.feature-project:hover {
+  box-shadow :0 0 25px rgba(0,150,255,0.3),
+  0 0 50px rgba(0,150,255,0.2);
+}
+
+.project-card{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+.project .project-img {
+  width:100%;
+  height:200px;/*force uniform size*/
+  object-fit:cover;/*crop nicely*/ 
+  border-radius:10px 10px 0 0; 
+  transition:transform 0.3s ease, box-radius 0.3s ease;
+}
+
+.project-card:hover .project-img {
+  transform:scale(1.1);
+}
+
+.project-card {
+  overflow:hidden;
+}
+
+
+
+/*WhatsApp button styling */ 
+  .whatsapp-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: bold;
+  
+}
+
+.whatsapp-btn:hover {
+  background-color: #1da851;
+}
+
+button:hover {
+  background-color: #004d66; /*Dark Green*/
+transform: scale(1.1); /*Slight zoom effect*/
+}
+
+button:active {
+  background-color: #25D366; /*Even dark green when clicked*/
+transform:scale(0.98); /*Slight shrink effect*/
+}
+
+.tagline  {
+  font-size: 1.1ref;
+  color: #ccc;
+  margin-top: 5px;
+  margin-bottom:10px;
+  letter-spacing: 0.5px;
+}
+#about-me, #services {
+  background-color:white;
+  padding:40px 20px;
+  margin: 20px auto;
+  border-radius:8px;
+  max-width:900px;
+  
+}
+
+#about-me h2, #services h2 {
+  color: #004d66;
+  font-size:32px;
+  margin-bottom:20px;
+  text-align:center;
+  text-transform: capitalize; /*Services*/
+}
+
+#services h3 {
+  text-align: left; /*Subheadings left*/
+  color: #333;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.services:hover {
+  transform: translateX(10px);
+}
+
+.services  h3 {
+  color: #00698F;
+  margin-bottom: 8px;
+}
+
+.services  p {
+   text-align: left; /*Paragraphs left*/
+  color: #555;
+  line-height: 1.6;
+}
+
+  
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px 
+  rgba(0,0,0,0.1);
+
+}
+
+   </style>
+</head>
+<body>
+  <img src="image/kirong-image.png " alt="image/kirong-image.png">
+
+  <h1>Hello, I'm Kirong Job Kwemoi</h1>
+  <p>Web Developer | UI/UX Designer</p>
+  <p class="tag-line">I build fast, responsive websites that help businesses get clients online.</p>
+   
+  <section id="about-me">
     <h2>About Me</h2>
-    <p> I specialize in buiding <strong> modern, resposive, and scalable web experiences</strong> that help businesses thrieve online.
-        I don't chase shortcuts I <strong> create systems, prepare for opportunities, and deliver solutions</strong> that stand out.
-        My passion lies in <strong> turning ideas into clean, functional, and user-friendly digital product</strong> that makes an impact.
-    </p>
-</section>
-<section id="services">
+    <p>I am a Digital Creator,Freelancer, Web Developer and UI/UX Designer based in Nairobi, Kenya.</p>
+   <p><strong>Tech stack:</strong> I work daily with HTML5,CSS3,JavaScript and React. For styling, I use Tailwind CSS and Vanilla CSS. I deploy on Netify, handle basic SEO setup. If your project needs a CMS, I integrate Wordpress or build with React+Headless CMS.</p>
+    <p><strong>I work:</strong> I start with your business goal, not just "design". First we define what the website must do:Collect leads,Sell products or Book calls. Then I design  a UI that guides users to take action. Every section has a purpose. I test on real devices because 70%+ of your visitors are on mobile.</p>
+    <p><strong>You get:</strong> Clean code you can hand to any developer later, load times under 3 seconds, and a site you can update yourself.No shortcuts. No page builders that break after 6 months. I document everything and record loom videos showing you how to edit text/images.</p>
+    <p>currently taking on 2-3 client projects per month. If you need a website that work as hard as you do, let's talk.</p>
+
+  </section>
+  <section id="services">
     <h2>services</h2>
     <div class="service">
-        <h3>Custom Web Development</h3>
-        <p>Build fully resposive websites using <strong> HTML,CSS,JavaScript </strong> and <strong>React</strong> tailored to 
-        your brand and business needs</p>
+      <h3>Custom Web Development</h3>
+      <p>Building fully responsive websites using <strong>HTML,CSS,JavaScript</strong>, and <strong>React</strong> tailored to your brand and bussiness needs.</p>
     </div>
     <div class="service">
-        <h3>UI/UX Design </h3>
-        <p>Design visually stunning interfaces with <strong>user-first experiences</strong>, ensuring your website or app is 
-        intuitive, sleek and interactive.</p>
+      <h3>UI/UX Designer</h3> 
+      <p>Design visually stunning interfaces with<strong> user-first experiences</strong>, ensure your website or app is intuitive,sleek and interactive.</p>
     </div>
     <div class="service">
-        <h3>E-Commerce solutions</h3>
-        <p>Develop online store with <strong>security checkout, product catalogs, and dynamic features</strong> to maximize sales
-        and conversions.</p>
+      <h3>E-Commerce solutions</h3>
+      <p>Develop online store with <strong>secure checkouts,product catalogs and dynamic features</strong> to maximize and conversations.</p>
     </div>
     <div class="service">
-        <h3>portfolio and personal brand</h3>
-       <p>Create polished portfolio sites that <strong>showcase skills, projects and personal identity</strong> to impress
-        clients and employers.</p>
-       </div>
-       <div class="service">
-        <h3>SEO & perfomance Optimization</h3>
-        <p>Optimize websites for <strong>search engines and speed</strong>, ensuring higher ranking and faster loading times.</p>
-       </div>
-       <div class="service">
-        <h3>Freelance Consultation & Tech Guidance</h3>
-        <p> Help startups and small businesses  <strong> plan, design, and implement digital solutions </strong> that
-        align with growth goals</p>
-        </div>
-    </div>
+      <h3>Portfolio & Personal Branding websites</h3>
+      <p>Create polished portfolio sites that <strong>showcase skills,projects and professional identity</strong> to impress clients and employers.</p>
+     </div>
+     <div class="service">
+      <h3>SEO & Performance Optimization</h3>
+      <p>Optimize websites for <strong>search engines and speed</strong>, ensuring higher rankings and faster loading times.</p>
+     </div>
+     <div class="service">
+      <h3>Freelancer Consultation & Tech Guidance</h3>
+      <p>Help startups and small businesses<strong> plan,design and impliment digital solutions</strong> that align with growth goals.</p>
+     </div>
+  </section>
+
+<!--Project Section-->
+<section id="projects">
+  <h2>projects</h2>
+  <div class="project-card feature-project">
+    <img src="image/kirong-image.png" alt="Project 1" class="image/kirong-image.png">
+    <h3>E-Commerce store</h3>
+    <p>A responsive online store built with HTML,CSS and JavaScript.</p>
+    <div class="project-info">
+    <span class="tooltip">Selling online isn't just about having products, it's about making it easy for people to buy. This store was built to remove fiction, guide decisions, and turn visitors into customers.</span>
+     <p class="proof">product showcase.Easy navigation.Mobile-friendly</p></div>
+    <a href="https://store.com"target="_blank">Live Demo</a>
+  
+  </div>
+
+  <div class="project-card feature-project">
+    <img src="image/kirong-image.png" alt="Project 2" class="image/kirong-image.png">
+    <h3>Bussiness Landing pages</h3>
+    <p>A clean morden Landing page designed for all small businesses to showcase services online.</p>
+<div class="project-info">
+    <span class="tooltip">Many businesess lose potential clients because the message isn't clear. This page was built to communicate value instantly and guide visitors to take action.</span>
+     <p class="proof">Clear messaging.Call-to-action focused.Fast loading</p></div>
+    <a href="https://businesseslanding.com"target="_blank">Live Demo</a>
+  
+  </div>
+
+  <div class="project-card feature-project">
+    <img src="Image/kirong-image.png" alt="Project 3" class="image/kirong-image">
+    <h3>Personal portfolio website</h3>
+    <p>My personal portfolio website showcasing my skills,services and projects.</p>
+    <div class="project-info">
+  <span class="tooltip">A weak online presence can make skills go unnoticed. This portfolio was built to present work clearly,profesionally and leave a lasting impression.</span>
+  <p class="proof">Clean design.Responsive layout.Professinal structure</p></div>
+     <a href="https://portfolio.com"target="_blank">Live Demo</a>
+  
+  </div>
 </section>
-       
-      <section id="project">
-         <h2>projects</h2>
-         <div class="project">
-                <h3>personal portfolio Website</h3>
-                <p>My personal portfolio site showcasing my skills,services and projects.</p>
-                <button
-                onclick="window.open('https://portfolio.com','_blank')">Live Demo</button>
-                </div>
 
-                <div class="project">
-                    <h3>E-commerce Store</h3>
-                    <p>A resposive online store built with HTML,CSS and JavaScript.</p>
-                    <button
-                    onclick="window.open('https://Store.com','_blank')">Live Demo</button>
-                </div>
-                    <div class="project">
-                        <h3>business Landing page</h3>
-                        <p>clean,modern Landing page designed for small businesses to showcase services online.</p>
-                        <button
-                        onclick="window.open('https://businesslanding.com','_blank')">Live Demo</button>
-         </div>
-      </section>
-        
-         <section id="skills">
-            <h2>My skills</h2>
-            <div class="skills-list">
-                <span class="skills-tag">HTML & CSS</span>
-                <span class="skills-tag">JavaScript</span>
-                <span class="skills-tag">React</span>
-                <span class="skills-tag">UX/UI</span>
-                <span class="skills-tag">SEO</span>
-            </div>
-         </section>
+<section id="skills">
+  <h2>My skills</h2>
+  <div class="skill-list">
+    <span class="skill-tag">HTML & CSS</span>
+    <span class="skill-tag">JavaScript</span>
+    <span class="skill-tag">React</span>
+    <span class="skill-tag">UX/UI</span>
+    <span class="skill-tag">SEO</span>
+    
+  </div>
+</section>
 
+<section id="Testimonials">
+  <h2>Testimonials</h2>
+  <div class="testimonial">
+    <p>"Kirong is a top-notch developer! Fast,reliable and creative."</p>
+    <span>-Hellen Maya, Client</span>
+  </div>
+         
+<div class="testimonial">
+  <p>"He built my portfolio site in 3 days and looks professional and morden.</p>
+  <span>-Peter Washira, Entrepreneur</span>
+</div>
 
-       <section id="Testimonials">
-           <h2>Testimonials</h2>
-           <div class="testimonial">
-            <p>"Kirong is a top-notch developer! Fast, reliable and creative."</p>
-            <span>-Hellen Maya, Client</span>
-           </div>
+  <div class="testimonial">
+    <p>"The E-commerce store Kirong developed exceeded exceeded expectation.Responsive and clean!"</p>
+    <span>-Eliud Mango, Bussiness owner</span>
+  </div>
 
-           <div class="testimonial">
-           <p>"He built my portfolio site in 3 days- and it looks professional and modern!"</p>
-           <span>-peter Washira, Entrepreneur</span>
+  <div class="testimonial">
+    <p>"Highly recommended! Kirong's attention to details and work ethic is incredible."</p>
+    <span>-Lily Jacob, Freelancer</span>
+  </div>
+</section>
 
-           <div class="testimonial">
-            <p>"The E-commerce store Kirong developed exceeded expectation.Responsive and clean!"</p>
-            <span>- Eliud Mango, Business owner</span>
-           </div>
-           <div class="testimonial">
-            <p>"Highly recommended! Kirong's attention to details and work ethic is incredible."</p>
-            <span>- Lily Jacobs , Freelancer</span>
-           </div>
-       </section>
+<section> 
+  <h2>Contact</h2>
+  <p>E-mail:kirongjob@gmail.com</p>
+  <a href="mailto:kirongjob@gmai.com" class="btn">send me an Email</a>
+  <a href="#contact" id="hire-me">Hire-Me</a>
+  
+  <a href="https://wa.me/254792442670?text=Hello%20,%20I%20came%20across%20your%20portfolio%20and%20I%20am%20really%20impressed%20.%20I%20do%20love%20to%20discuss%20a%20project%20with%20you"
+    target="_blank" class="whatsapp-btn">WhatApp</a>
 
-       <section>
-           <h2>contact</h2>
-           <p>Email: kirongjob@gmail.com</p>
-           <a href="mailto:kirongjob@gmail.com" class="btn">send me an Email</a>
-           <a href="#" id="hire-me">Hire-Me</a>
+  <p>Location:Kenya</p>
+  
 </section>
 
 <footer>
-    <p>&copy;2026 Kirong Job Kwemoi |All rights reserved</p>
-    <p>Follow me:
-        <a
-        href="https://www.linkedin.com/in/JobWhite" target="_blank">LinkedIn</a>
-        |
-               <a
-    <a href="https://Facebook.com/JobWhite" target="-blank">Facebook</a>
-    </p>
+  <p class="footer-text">&copy 2026 Kirong Job Kwemoi | All rights reserved</p>
+  <p class="heartbeat">What we build today whispers in the hearts of tomorrow. </p>
+  <p class="footer-hover">consistency,courage and creativity shapes the future.</p>
+  <p>follow me:
+  <a
+  href="https://www.LinkedIn.com/in/JobWhite" target="_blank">LinkedIn
+  |
+  <a href="https://www.Facebook.com/in/JobWhite" target="_blank">Facebook</a>
+  </p>
 </footer>
-    
+<!--scroll to top button -->
+<button id="scrollTopBtn">ij Top</button>
+
 <script>
-     document.getElementById('whatsapp-link').addEventListener('click',function() {
-        alert('You are about to chat with Kirong Job Kwemoi on WhatsApp!');
-       });
-   </script> 
+document.getElementById('whatapp-link').addEventListener('click', function() {
+  alert('You are about to chat Job on whatsapp!');
+
+});
+
+
+  const sections=
+  document.querySelectorAll('section, .project-card');
+  const observer=new
+  IntersectionObserver(entries =>{
+    entries.forEach(entry=> {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform =
+       'translateY(0)';
+    }
+  });
+});
+
+Selections.forEach(section=>
+observer.observe(section));
+/*Scroll to Top Button*/
+const scrollBtn=
+document.getElementById('scrollTop');
+window.addEventListener('scroll', ()=> 
+{
+  if(window.scrollY>300){
+scrollBtn.classList.add('show');
+  }else{
+    scrollBtn.class.remove('show');
+  }
+});
+
+scrollBtn.addEventListener('click',()=> {
+  Window.scrollTo({top:0,behavior:'smooth'});
+});
+
+const heartbeat=
+document.querySelector('.heartbeat');
+
+setInterval (() => {
+  heartbeat.style.transform=
+  'scale(1)';
+setTimeout(() => {
+  heartbeat.style.transform=
+'scale(1)';
+}, 300);
+}, 1500);
+
+</script>
 </body>
-</html> 
- 
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
