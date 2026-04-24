@@ -1,4 +1,4 @@
-## Habari👋 I'm Job Kwemoi Kirong| Full-stack Dev 🇰🇪
+## Habari👋 I'm Job Kwemoi Kirong | Full-stack Dev 🇰🇪
 **I build websites that make cash registers ring.** No fluff, just results for Kenyan hustlers.
 **🔥 Live Client wins:**🏆 
 - **Agriculture products:** 15 to 4o clients daily vegges orders | [Live sites](https://kisii-fresh-greens.netlify.app)
