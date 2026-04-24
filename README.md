@@ -13,5 +13,5 @@
 
 **currently:** Building tools for mama mbogas,bodaboda Saccos and food vendors.
 
-**Opened to remote contacts,collabs,startup MVP builds.
+**Opened to:** Remote contacts,collabs,startup MVP builds.
 
