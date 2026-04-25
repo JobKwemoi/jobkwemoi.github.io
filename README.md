@@ -2,8 +2,7 @@
 **I build websites that make cash registers ring.** No fluff, just results for Kenyan hustlers.
 **🔥 Live Client wins:** 🏆 
 - **Agriculture products:** 15 to 4o clients daily vegges orders | [Live sites](https://kisii-fresh-greens.netlify.app)
-- **Nakuru Nduthi Sacco:** 70% fewer missed calls for bodaboda Sacco
-  | [Live Site](https://nakuru-boda-boda.netlifly.app)
+- **Nakuru Nduthi Sacco:** 70% fewer missed calls for bodaboda Sacco | [Live Site](https://nakuru-boda-boda.netlifly.app)
 - **Mama Chapo:** 200 to 400+ sales daily | [Live site](https://dreamy-tanuki-1c65c3.netlify.app)
   
 **🔧🔨👷‍♂️ Stack:** HTML, CSS, Vanilla Js, WhatsApp API 
