@@ -652,7 +652,29 @@ color:#0C5A5A;
 .btn-whatsapp:hover,  .btn-email:hover {
 transform:translateY (-2px);
 }
-   </style>
+    .lang-toggle {
+        display:flex;
+        gap:8px;
+        justify-content:flex-end;
+        margin-bottom:20px;
+    }
+    .lang-btn {
+        padding:8px 16px;
+        border:2px solid #333;
+        background:transparent;
+        cursor:pointer;
+        font-weight:700;
+        border-radius:6px;
+        transition:all 0.2s;
+    }
+    .lang-btn  .active {
+        background:#333;
+        color:#fff;
+    }
+    .lang-btn:hover {
+        transform:translateY(-2px);
+    }
+        </style>
 </head>
 <body>
   <img src="kirong-image.png " alt="kirong-image.png">
