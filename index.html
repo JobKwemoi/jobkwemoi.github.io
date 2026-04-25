@@ -873,6 +873,35 @@ setTimeout(() => {
 }, 300);
 }, 1500);
 
+    const btnEn=document.getElementById ('btn-en');
+    const btnSwa=document.getElementById ('btn-swa');
+    const enElements=document.querySelectorAll ('.lang-en');
+    const swaElements=document.querySelectorAll ('.lang-swa');
+
+    //function for switch 
+    function setLanguage(lang) {
+        if (lang==='en') {
+            enElements.forEach(el=>el.style.display='');
+            swaElements.forEach(el=>el.style.display='none');
+            btnEn.class.add('active');
+            btnSwa.classList.remove('active');
+          localStorage.setItem('lang','en');
+        }else{
+            enElements.forEach(el=>el.style.display=('none');
+          swaElements.forEach(el =>el.style.display ='');
+            btnSwa.classList.add('active')
+            btnEn.classList.remove('active')
+          localStorage.setItem('lang','swa');
+        }
+    }
+
+    //click events
+    btnEn.addEventListener('click',()=>setLanguage('en));
+                                                   btnSwa addEventListener ('click',()=>setLanguage ('swa));
+                                                                                                     //Remember choice of users 
+                                                                                                     const savedLang=localstorage.getItem('lang')||'en';
+                                                                                                     setLanguage(savedLang);
+
 </script>
 </body>
 </html>
