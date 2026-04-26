@@ -790,7 +790,7 @@ transform:translateY (-2px);
             </a>
         </div>
         
-        <!--Project 3:MAMA CHAPO-->
+        <!--Project 3:Mama Chapo-->
     <div class ="project-card">
         <span class ="tag-food"> Food Bussiness </span>
         <h3>Mama Chapo</h3>
@@ -864,7 +864,7 @@ transform:translateY (-2px);
 </section>
 
 <section>
-  <h2>Contacts</h2>
+  <h2>Contacts📞</h2>
 <p>Got a business in Kenya? Need a website in days?Holla.</p>
 <div class ="contact-buttons">
   <p>E-mail:kirongjob@gmail.com</p>
@@ -943,33 +943,33 @@ setTimeout(() => {
 }, 300);
 }, 1500);
 
-    const btnEn=document.getElementById ('btn-en');
-    const btnSwa=document.getElementById ('btn-swa');
-    const enElements=document.querySelectorAll ('.lang-en');
-    const swaElements=document.querySelectorAll ('.lang-swa');
+    const btnEn = document.getElementById ('btn-en');
+    const btnSwa = document.getElementById ('btn-swa');
+    const enElements = document.querySelectorAll ('.lang-en');
+    const swaElements = document.querySelectorAll ('.lang-swa');
 
     //function for switch 
     function setLanguage(lang) {
-        if (lang==='en') {
+        if (lang=== 'en') {
             enElements.forEach(el=>el.style.display='');
-            swaElements.forEach(el=>el.style.display='none');
+            swaElements.forEach(el=>el.style.display= 'none');
             btnEn.class.add('active');
             btnSwa.classList.remove('active');
-          localStorage.setItem('lang','en');
-        }else{
-            enElements.forEach(el=>el.style.display=('none');
-          swaElements.forEach(el =>el.style.display ='');
+          localStorage.setItem('lang', 'en');
+        } else {
+            enElements.forEach(el=>el.style.display= ('none');
+          swaElements.forEach(el =>el.style.display = '');
             btnSwa.classList.add('active')
             btnEn.classList.remove('active')
-          localStorage.setItem('lang','swa');
+          localStorage.setItem('lang', 'swa');
         }
     }
 
     //click events
-    btnEn.addEventListener('click',()=>setLanguage('en));
-                                                   btnSwa.addEventListener ('click',()=>setLanguage ('swa));
+    btnEn.addEventListener('click', ()=>setLanguage('en'));
+                                                   btnSwa.addEventListener ('click', ()=>setLanguage ('swa'));
                                                                                                      //Remember choice of users 
-                                                                                                     const savedLang=localstorage.getItem('lang')||'en';
+                                                                                                     const savedLang = localstorage.getItem('lang') || 'en';
                                                                                                      setLanguage(savedLang);
 
 </script>
