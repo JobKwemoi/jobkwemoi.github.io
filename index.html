@@ -728,7 +728,7 @@ transform:translateY (-2px);
     </div>
 <section id="projects">
 
-        <h2 class="lang-en">Client Work- Live projects</h2>
+        <h2 class="lang-en">Client Work- Live projects 📚</h2>
     <h2 class="lang-swa" style ="display:none;">Kazi za Clients- Sites Ziko Live </h2>
     
     <!--Project 1:Agriculture products-->
@@ -819,7 +819,7 @@ transform:translateY (-2px);
 </section>
   
 <section id="skills">
-  <h2>My skills</h2>
+  <h2>My skills 💻</h2>
   <div class="skill-list">
     <span class="skill-tag">HTML & CSS</span>
     <span class="skill-tag">JavaScript</span>
@@ -942,36 +942,36 @@ setTimeout(() => {
 'scale(1)';
 }, 300);
 }, 1500);
-
+     document.addEventListener('DOMContentLoaded', function() {
     const btnEn = document.getElementById ('btn-en');
     const btnSwa = document.getElementById ('btn-swa');
+         function setLanguagen(lang) {
     const enElements = document.querySelectorAll ('.lang-en');
     const swaElements = document.querySelectorAll ('.lang-swa');
-
-    //function for switch 
-    function setLanguage(lang) {
-        if (lang=== 'en') {
-            enElements.forEach(el=>el.style.display='');
-            swaElements.forEach(el=>el.style.display= 'none');
-            btnEn.class.add('active');
-            btnSwa.classList.remove('active');
-          localStorage.setItem('lang', 'en');
+            
+        if (lang=== 'swa') {
+            enElements.forEach(el=>el.style.display='none');
+            swaElements.forEach(el=>el.style.display= '');
+            btnSwa.classList.add('active');
+            btnEn.classList.remove('active');
+          
         } else {
-            enElements.forEach(el=>el.style.display= ('none');
-          swaElements.forEach(el =>el.style.display = '');
-            btnSwa.classList.add('active')
-            btnEn.classList.remove('active')
-          localStorage.setItem('lang', 'swa');
+            enElements.forEach(el=>el.style.display= ('');
+          swaElements.forEach(el =>el.style.display = 'none');
+            btnEn.classList.add('active')
+            btnSwa.classList.remove('active')
+          
         }
+             localStorage.setItem('prefferedLang', lang);
     }
 
-    //click events
-    btnEn.addEventListener('click', ()=>setLanguage('en'));
+    //EventListeners 
+         if(btn && btnSwa)  {
+         btnEn.addEventListener('click', ()=>setLanguage('en'));
                                                    btnSwa.addEventListener ('click', ()=>setLanguage ('swa'));
-                                                                                                     //Remember choice of users 
-                                                                                                     const savedLang = localstorage.getItem('lang') || 'en';
-                                                                                                     setLanguage(savedLang);
-
+                                                                                                     //Load saved language
+                                                                                                     const savedLang = localstorage.getItem('preferredLang') || 'en';
+    });                                                                                                     setLanguage(savedLang);
 </script>
 </body>
 </html>
