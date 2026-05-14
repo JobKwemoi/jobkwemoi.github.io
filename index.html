@@ -1404,9 +1404,9 @@ function playSound(type) {
   if(!SoundEnable) return;
   const msg = {
     squash: 'Wueeh!',
-    deploy:'Weeked is saved!',
-    start:'keywrong,help!',
-    gameover:'Weekend ended'
+    deploy:'you are welcomed to visit again!',
+    start:'welcome,twicle,twitle,you are the star',
+    gameover:'thank you, for your time'
   };
   try {
    speechSynthesis.cancel();
@@ -1503,7 +1503,7 @@ function playSound(type) {
 
   function showDeployButton() {
     const deployBtn = document.createElement('button');
-    deployBtn.innerHTML = '🚀 DEPLOY YA KIRONG!';
+    deployBtn.innerHTML = '🚀 DEPLOY YA KIRONG JOB KWEMOI!💪';
     deployBtn.style.cssText ='position:absolute;top:50%;left:50%;tranform:translate(-50%,-50%);padding:18px 35px;background:purple;color:white;border:none;border-radius: 15px; font-size:1.3rem;cursor:pointer; z-index:10;font-weight:boid;';
     deployBtn.onclick = () => {
       playSound('deploy');
