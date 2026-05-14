@@ -883,11 +883,28 @@ img.loaded {
           padding:14px;
           margin: 16px auto;
         }
-        
-          
-    
-
-
+        .project-grid {
+          display: grid;
+          grid-template-columns:1fr !important;
+          gap:16px;
+          padding:0 10px;
+        }
+        section {
+          padding:30px 16px;
+        }
+        @media (max-width: 400px) {
+          .project-card h3 {
+            font-size: 1.1rem;
+          }
+          .project-card p {
+            font-size: 0.9rem;
+          }
+          #lang-toggle button {
+            padding:5px 10px;
+            font-size: 0.9rem;
+          }
+        }
+      
       
 </style>
   </head>
