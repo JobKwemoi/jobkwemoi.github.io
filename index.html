@@ -875,6 +875,13 @@ footer {
   padding: 20px 16px;
   text-align: center;
 }
+ 
+.footer-hover {
+  
+  font-style: italic;
+  font-size: 0.9em;
+  
+}
 
 .footer-links {
   display: flex;
@@ -927,49 +934,204 @@ footer {
 }
 
 #game-area {
-  width: 100%;
+  max-width: 100%;
+  max-width: 600px;
   height: 400px;
-  background: #0d1117;
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.event-text {
-  animation: fadeUp 1.5s forwards;
-}
-@keyframes fadeUp {
-  0% { opacity: 1; transform: translate(-50%, -50%); }
-  100% { opacity: 0; transform: translate(-50%, -150%); }
-}
- 
-#game-area {
-  width: 100%;
-  height: 400px;
-  border: #1a1a2e;
-  border: 2px solid #00ff88;
+  background: #0a0a0a;
+  border: 3px solid #00ff88;
+  border-radius: 15px;
+  margin: 20 auto;
   position: relative;
   overflow: hidden;
-  margin: 20px 0;
+  box-shadow: 0 0 30px rgba(0,255,136,0.3);
 }
 
-.bug {
+#game-section {
+  padding: 20px;
+  background: linear-gradient(135deg, #1a0033, #fff);
+  min-height: 100vh;
+}
+
+
+
+bug {
   width: 40px;
   height: 40px;
-  background: red;
-  border-radius: 50%;
+  font-size: 35px;
   position: absolute;
   cursor: pointer;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: all 0.8s ease-in-out;
 }
 
 .bug:hover {
-  background: darkred;
+  transform: scale(1.2);
 }
 
-</style>
-  </head>
+.boss {
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  animation: pulse 1s infinite;
+  transition: filter 0.1s;
+}
 
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.boss div {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+}
+
+.event-text {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 100;
+  pointer-events: none;
+  text-shadow: 0 0 10px currentColor;
+  animation: popUp 1,5s ease-out forwards;
+}
+
+@keyframes popUp {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+  100% { opacity: 0; transform: translate( -50%, -50%) scale(1); }
+}
+
+
+/*chatbot*/
+
+#chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 320px;
+ max-height: 500px;
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#chatbot-header {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#chatbot-messages {
+  height: 300px;
+  overflow-y: auto;
+  padding: 15px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.bot-message,
+.user-message {
+  padding: 10px 14px;
+  max-width: 85%;
+  line-height: 1.4;
+}
+
+.bot-message {
+  background: #e8f5e9;
+  align-self: flex-start;
+  color: #222;
+}
+
+.user-message {
+  background: var(--primary);
+  color: white;
+  align-self: flex-end;
+}
+
+#chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #add;
+}
+
+
+#chatbot-input {
+  flex:1;
+  border: none;
+  padding: 14px;
+  outline: none;
+  font-size: 1rem;
+  
+  
+}
+
+
+#send-btn {
+  border: none;
+  background: var(--accent);
+  color:white;
+  font-family: 1.2rem;
+  cursor:pointer;
+  padding: 0 18px;
+}
+
+#chatbot-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px
+  rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+}
+ 
+@media (max-width: 768px){
+
+  #chatbot-container{
+    width:92%;
+    right: 4%;
+    bottom: 90px;
+    height: 400px;
+  }
+}
+
+
+</style>
+
+</head>
   <body>
     <!--TRICK 13: Loader-->
     <div id="loader"><div class="load-text">Loading Portfolio...</div></div>
@@ -993,7 +1155,7 @@ footer {
 
 
 <p class="lang-en" style="text-align: center;">Software Developer | UI/UX Designer</p>
-<p class="lang-swa" style="display: none;text-align: center;">Msanidi programu | Mbunifu wa UI/UX</p>
+<p class="lang-swa" style="display: none;text-align: center;">Mtengenezaji wa Msanidi programu | Mbunifu wa UI/UX</p>
 
 <p class="tag-line lang-en" style="text-align: center;">I build fast, responsive websites that help businesses get clients online.</p>
 <p class= "tag-line lang-swa" style="display: none;text-align: center;">Nagenga tovuti za haraka zinazosaidia biashara kupata wateja mtandaoni.</p>
@@ -1225,6 +1387,13 @@ footer {
       <p class="lang-swa" style="display: none;">"Tulikuwa tunashindana na apps kubwa.Sasa tuna platform yetu.wateja wanatuamini kwa sababu wanajua waendeshaji,inategemewa na wateja wetu kwa sababu wanapata zaidi."</p>
 <span>-Peter Karanja,Chairman Nakuru Nduthi SACCO</span>
     </div>
+
+<div class="testimonial">
+  <p class="lang-en">"We don't use computers, but this this thing Kirong put on our phones works even when we have slept ,customers order even at night in the morning we know exactly what to cook. No more wasting igredients."</p>
+  <p class="lang-swa" style="display: none;">"Hatutumi tarakilishi, lakini hii kitu Kirong aliweka kwa simu yetu inafanya kazi hata wakati tumelala, wateja wanaagiza chakula hata usiku asubuhi tunajua cha kupika.Hatuwaste igredients tena."</p>
+   <span>-Emily Kosgei,Mama Chapo</span></p>
+   </div>
+   
 </section>
 
 <section id="contact">
@@ -1260,7 +1429,75 @@ footer {
 <!--Trick 16:Toast Notification container-->
 <div class="toast" id="toast"></div>
 
- 
+<!--Game Section-->
+<section id="game-section" style="text-align: center;">
+
+  <!--mission text-->
+  <div id="mission-text" style="color: #00ff88; font-weight: bold; font-size: 18px; margin-bottom: 15px;">
+    Game underconstraction!
+  </div>
+
+  <!--Game Start-->
+  <div class="game-stats" style="margin-bottom: 15px; color: var(--text);">
+    <div style="font-size: 18px; font-weight: bold;">
+      High Score: <span  id="high-score">0</span>
+    </div>
+    <div style="font-size: 20px; font-weight: bold; color:#00ff88;">
+      Score: <span id="score">0</span>
+
+    </div>
+    <div id="stats" style="font-size: 14px; opacity: 0.8;">
+      Best Combo: 0 | Game: 0
+    </div>
+    <div id="timer" style="font-size: 20px; color:#ff4444; font-weight: bold; margin-top: 5px;">
+      Time: 300s
+    </div>
+  </div>
+
+  <!--Game Area-->
+  <div id="game-area"></div>
+
+  <button onclick="startGame()" style="
+  margin-top: 20px ;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, var(--accent), #1da851);
+  color:white;
+  border:none;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  " onmouseover="this.style.transform='scale(1.05)'"
+  onmouseout="this.style.transform='scale(1)'">
+START DEBUG OPS
+</button>
+</section>
+
+<!--AI chatbox-->
+<div id="chatbot-container">
+
+  <div id="chatbot-header">
+    🤖 kirong's AI assistant
+    </div>
+
+    <div id="chatbot-messages">
+      <div class="bot-message">
+     👋Hello! Ask me anything about kirong's services.
+    </div>
+    </div>
+
+
+ <div id="chatbot-input-area">
+      <input type="text"
+      id="chatbot-input" placeholder="Ask something..." />
+      <button id="send-btn">🔳</button>
+    </div>
+    <button id="chatbot-toggle">📑</button>
+  
+
 
 <footer>
   <p>©2026 Kirong Job Kwemoi | All rights reserved</p>
@@ -1271,6 +1508,12 @@ footer {
   </div>
 
 </footer>
+
+
+
+
+
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1292,7 +1535,7 @@ window.addEventListener('load',() => {
       loader.style.transition ='opacity 0.5s';
       setTimeout(() => loader.remove(), 500);
     }
-    showToast('Karibu🥰,Website Loaded Successfully🔥','welcome');
+    showToast('Karibu🥰,Loaded Successfully🔥','welcome');
   },1000);
 });
 //toast function
@@ -1534,193 +1777,355 @@ function showToast(message) {
   },3000);
 }
 
-let score = 0, timeLeft = 300, combo = 0, maxCombo = 0, gameRunning = false;
 
+let Score = 0, timeLeft = 300, combo = 0, maxCombo = 0, gameRunning = false;
+let level = 1, bossSpawned = false, bossHealth = 0;
+let timerInterval, spawnInterval;
+let audioCtx;
 
-function fixBug(bug) {
-  if(bug.dataset.type === 'trap') {
-    combo = 0;
-    updateComboDisplay();
-    return;
+const gameArea = document.getElementById('game-area');
+const scrollEl = document.getElementById('score');
+const timerEl = document.getElementById('timer');
+const highScoreEl = document.getElementById('high-score');
+const statsEl = document.getElementById('stats');
+const missionTextEl = document.getElementById('mission-text');
+
+const lang = {
+  en: {
+    bossSpawn: "NINJA KING SPOTTED!",
+    bossDead: "NINJA KING ELIMINATED!",
+    levelUp: "KITCHEN INFESTED!",
+    gameOver: "INSPECTOR ARRIVED!",
+    mission:(level,time) => `LEVEL ${level}: Game underconstraction! : ${time}s`
+  },
+  sw: {
+    bossSpawn: "NINJA MKUU AONEKANA!",
+    bossDead: "NINJA MKUU AMEUWAWA!",
+    levelUp: "JIKONI  LIMEVAMIWA!",
+    gameOver: "AFISA WA AFYA AMEFIKA!",
+    mission: (level, time) => `NGAZI ${level}: Endelelea kusafisha! Muda uliobaki: ${time}s`
   }
-combo++;
-maxCombo = Math.max(maxCombo, combo);
+};
 
-const multiplier =Math.min(1 +(combo * 0.1) ,3.0);
-const points =Math.floor(10 * multiplier);
+let currentLang = localStorage.getItem('preferred') || 'en';
 
-score += points;
-showComboText(`x${multiplier.toFixed(1)} + ${points}`, 'gold');
+function playNinjaSound() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-if(combo % 5 === 0) playSound('deploy');
-updateComboDisplay();
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = 'sawtooth';
+  osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.3);
+
+  gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime + 0.3);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.start();
+  osc.stop(audioCtx.currentTime + 0.3);
+
+
 }
 
-function updateComboDisplay() {
-  document.getElementById('combo').textContent = `COMBO: ${combo}`;
-  document.getElementById('combo').style.transform = combo > 0? 'scale(1.2)' : 'scale(1)';
-  document.getElementById('combo').style.color = combo >= 10? '#ff4500' : 'white';
+function startGame() {
+  console.log("Game started!");
+
+  gameRunning = false;
+  clearInterval(timerInterval);
+  clearInterval(spawnInterval);
+
+  score = 0;
+  timeLeft = 300;
+  level = 1;
+  combo = 0;
+  maxCombo = 0;
+  bossSpawned = false;
+  lastBossSpawnTime = 300;
+
+  gameArea.innerHTML = '';
+  scrollEl.textContent = `Score: ${score}`;
+  timerEl.textContent = `Time: ${timeLeft}s`;
+
+  gameRunning = true;
+  startTimer();
+  startSprawningBugs();
+  updateMissionText();
 }
 
-function showComboText(text, color) {
-  const el = document.createElement('div');
-  el.textContent = text;
-  el.style.cssText = `position:absolute;top:50%;left:50%;transform:translate(-50% ,-50%);
-  font-size:1.5rem,font-weight:bold;color:${color};z-index:20;animation:pop 0.8s`;
-  gameArea.appendChild(el);
-  setTimeout(() =>el.remove(), 800);
+function startTimer() {
+  timerInterval = setInterval(() => {
+    if (!gameRunning) return;
+
+    timeLeft--;
+    timerEl.textContent = `Time: ${timeLeft}s`;
+    updateMissionText();
+
+    if (timeLeft <= 0) {
+      endGame();
+    }
+  },1000);
+}
+
+let lastBossSpawnTime = 300;
+
+function startSprawningBugs() {
+  spawnInterval = setInterval(() => {
+    if (!gameRunning) return;
+
+    if((timeLeft <= 295 && lastBossSpawnTime - timeLeft >= 30) || (timeLeft === 295 &&!bossSpawned)) {
+    
+    
+      spawnBoss();
+      lastBossSpawnTime = timeLeft;
+      bossSpawned = true;
+    }
+
+
+    if (Math.random() < 0.3 + (level * 0.1)) {
+      sprawnBug();
+    }
+  },800 -(level * 50));
+}
+
+function sprawnBug() {
+  const bug = document.createElement('div');
+  bug.className = 'bug';
+  bug.innerHTML = '🏆'
+
+  let x = Math.random() *(gameArea.clientWidth - 40) 
+  let y = Math.random() *(gameArea.clientHeight - 40) 
+ 
+  bug.style.left = x + 'px';
+  bug.style.top = y + 'px';
+   
+  const moveInterval = setInterval(() => {
+    if (!gameRunning || !document.body.contains(bug)) {
+      clearInterval(moveInterval);
+      return;
+    }
+    x=Math.random() * (gameArea.clientWidth - 40);
+    y=Math.random() * (gameArea.clientHeight - 40);
+    bug.style.left = x + 'px';
+    bug.style.top = y + 'px';
+  },1000);
+
+  bug.onclick = () => {
+    clearInterval(moveInterval);
+    killBug(bug);
+  };
+
+  gameArea.appendChild(bug);
+  setTimeout(() => {
+    if (document.body.contains(bug)) {
+      clearInterval(moveInterval);
+      bug.remove();
+      combo = 0;
+    }
+  },5000);
+}
+    
+    
+function killBug(bug) {
+  if (!gameRunning) return;
+
+  combo++;
+  maxCombo = Math.max(maxCombo, combo);
+
+  const multiplier = Math.min(1 + (combo * 0.1), 3.0);
+  const points = Math.floor(10 * multiplier);
+
+  score += points;
+  scoreEl.textContent = `Score: ${score}`;
+
+  showEventText(`x${multiplier.toFixed(1)} +${points}`, 'gold');
+  bug.remove();
 }
 
 function spawnBoss() {
+  bossHealth = 10 + (level * 5);
+  playNinjaSound();
+
   const boss = document.createElement('div');
-  boss.innerHTML = '👺';
-  boss.dataset.hp = 5;
-  boss.style.cssText =`position:absolute;font-size:60px;left:40%;top:20% animation:bounce 2s infinite;z-index:15;cursor:pointer`;
+  boss.className = 'boss';
+  boss.innerHTML = `🥷<div style="font-size:10px;">HP: ${bossHealth}</div>`;
+  boss.style.left = Math.random() * (gameArea.offsetWidth - 80) + 'px';
+   boss.style.top = Math.random() * (gameArea.offsetHeight - 80) + 'px';
+   boss.style.zIndex = '999';
 
-  boss.onclick = () => {
-    boss.dataset.hp--;
-    boss.style.transform = 'scale(0.9)';
-    setTimeout(() =>boss.style.transform = 'scale(1)', 100);
+   boss.onclick = () => {
+    if (!gameRunning) return;
 
-    if(boss.dataset.hp <= 0) {
-      score += 200;
-      showEventText('BOSS DOWN! +200', 'gold');
-      playSound('deploy');
-      boss.remove();
-    } else {
-      showEventText(`HP: ${boss.dataset.hp})`, 'red');
-      spawnBug(); spawnBug();
-    }
-  };
+    bossHealth--;
+  boss.innerHTML = `🥷<div style="font-size:10px;">HP: ${bossHealth}</div>`;
+  boss.style.filter ='brightness(2) drop-shadow(0 0 10px red)';
+  setTimeout(() => boss.style.filter = 'none', 100);
 
-  gameArea.appendChild(boss);
-  setTimeout(()=>boss.remove(), 8000);
-}
-setTimeout(spawnBoss,20000);
+  if (bossHealth <= 0) {
+    score += 500 * level;
+    scoreEl.textContent = `Score: ${score}`;
+    showEventText(`${lang[currentLang].bossDead} +${500 * level}`, 'gold');
+    boss.remove();
 
-let  activeperk = null;
+    level++;
+    bossSpawned = false;
+    showEventText(lang[currentLang].levelUp);
+    updateMissionText();
+  } else {
+    showEventText(`HP: ${bossHealth}`, 'red');
+  }
+   };
 
-const perks = {
-  speedster: {name: 'Speedster', desc: '+20% time', effect: ()=> timeLeft += 6},
-  hacker: {name: 'Hacker', desc: 'Traps give +10 instead', effect: ()=> window.trapBonus =10},
-  lucky: {name: 'Lucky', desc: '30% more power-ups', effect: ()=>window.luckRate = 0.3}
-};
-
-function showperkSelection() {
-  const modal = document.createElement('div');
-  modal.style.cssText =`position: fixed;top:0;left:0;width:100;height:100;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:50`;
-
-  model.innerHTML = `
-  <div style="background:#0d1117;padding:30px;border-radius:20px;text-align:center;">
-    <h2>Choose your perk</h2>
-    ${Object.keys(perks).map(k=> `
-    <button onclick ="selectperk('${k}')" style="margin:10px;padding:15px 30px;">
-      <strong>${perks[k].name}</strong><br>
-      <small>${perks[k].desc}</small>
-      </button>
-      `).join('')}
-      </div>
-      `;
-      document.body.appendChild(modal);
-    }
-
-    function selectperk(perkkey) {
-      activeperk = perks[perkkey];
-      activeperk.effect();
-      document.body.querySelector('div[style*="position:fixed"]').remove();
-      startSpeedrun();
-    }
-
-
-
- function startTimer() {
-    const timerElement = document.getElementById('timer');
-    timerInterval = setInterval(() => {
-      if (!gameRunning) return;
-      timeLeft--;
-      timerElement.textContent = `Time: ${timeLeft}s`;
-
-      if (timeLeft <= 0) {
-        endGame();
-      }
-    },1000);
+   gameArea.appendChild(boss);
+   showEventText(lang[currentLang].bossSpawn, 'gold');
   }
 
- function startSpawningBugs() {
-    spawnInterval = setInterval(() => {
-      if (gameRunning && Math.random() < 0.3) {
-        spawnBug();
-      }
-    },800);
-  }
-
-
-  function spawnBug() {
-    const bug = document.createElement('div');
-    bug.className = 'bug';
-    bug.style.left = Math.random() * (gameArea.clientWidth -40) + 'px';
-    bug.style.top =Math.random() * (gameArea.clientHeight -40) + 'px';
-    bug.onclick = () => killBug(bug);
-    gameArea.appendChild(bug);
-  }
-
-  function showEventText(text) {
+  function showEventText(text,color = '#00ff88') {
     const eventDiv = document.createElement('div');
-    eventDiv.className ='event-text';
+    eventDiv.className = 'event-text';
     eventDiv.textContent = text;
     eventDiv.style.position = 'absolute';
     eventDiv.style.top = '50%';
     eventDiv.style.left = '50%';
     eventDiv.style.transform = 'translate(-50%, -50%)';
-    eventDiv.style.color = '#00ff88';
-    eventDiv.style.fontSize = '24px';
-    eventDiv.style.fontWeight = 'bold';
+    eventDiv.style.color = color;
+    eventDiv.style.fontWeight = 'bold'
     eventDiv.style.zIndex = '100';
+    eventDiv.style.pointerEvents ='none';
     gameArea.appendChild(eventDiv);
-
     setTimeout(() => eventDiv.remove(), 1500);
   }
 
-function startGame() {
-    console.log("Game started!");
-    gameRunning = true;
-    gameArea.innerHTML = '';
-    startTimer();
-    startSpawningBugs();
+  function updateMissionText() {
+    if(missionTextEl) {
+      missionEl.textContent = lang[currentLang].mission(level, timeLeft);
+    }
+  }
 
-}
+  function endGame() {
+    gameRunning = false;
+    clearInterval(timerInterval);
+    clearInterval(spawnInterval);
 
-    document.getElementById('score').textContent = `Score: ${score}`;
-    document.getElementById('timer').textContent = `Time: ${timeLeft}s`;
-    gameArea.innerHTML = '';
-
-    gameRunning = true;
-    startTimer();
-    startSpawningBugs();
-
+    showEventText(lang[currentLang].gameOver, 'red');
+    saveStats();
+  }
 
   function saveStats() {
-      const stats = {
-        highScore:Math.max(score, localStorage.getItem('kirongHS') || 0),
-        maxCombo: Math.max(maxCombo,localStorage.getItem('kirongCombo') || 0),
-        gamesPlayed:(parseInt(localStorage.getItem('kirongPlays') || 0) + 1)
-      };
+    const highScore = Math.max(score, localStorage.getItem('kirongHS') || 0);
+    const bestCombo = Math.max(maxCombo, localStorage.getItem('kirongCombo') || 0);
+    const gamesPlayed = (parseInt(localStorage.getItem('kirongPlays') || 0) +1);
 
-       
-      localStorage.setItem('kirongHS', stats.highScore);
-      localStorage.setItem('kirongCombo', stats.maxCombo);
-      localStorage.setItem('kirongplays', stats.gamesPlayed);
+    localStorage.setItem('kirongHS', highScore);
+    localStorage.setItem('kirongCombo', bestCombo);
+    localStorage.setItem('kirongPlays', gamesPlayed);
 
-      document.getElementById('high-score').textContent = stats.highScore;
-      document.getElementById('stats').innerHTML = `Best Combo: ${stats.maxCombo} | Games: ${stats.gamesPlayed}`;
+    if (highScoreEl) highScoreEl.textContent = highScore;
+    if (statsEl) statsEl.textContent = `Best Combo: ${bestCombo} | Games: ${gamesPlayed}`;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const highScore = localStorage.getItem('kirongHS') || 0;
+    const bestCombo = localStorage.getItem('kirongCombo') || 0;
+    const gamesPlayed = localStorage.getItem('kirongPlays') || 0;
+
+    if (highScoreEl) highScoreEl.textContent = highScore;
+    if (statsEl) statsEl.textContent = `Best Combo: ${bestCombo} | Games: ${gamesPlayed}`;
+  });
+
+  const chatbotToggle =
+  document.getElementById('chatbot-toggle');
+  const chatbotContainer = 
+  document.getElementById('chatbot-container');
+  
+  chatbotToggle.addEventListener('click', () => {
+    if (chatbotContainer.style.display === 'flex') {
+      chatbotContainer.style.display = 'none';
+    } else {
+      chatbotContainer.style.display = 'flex';
+    }
+  });
+
+  function addMessage(message,sender) {
+
+    const msgDiv = 
+    document.createElement('div');
+
+    msgDiv.classList.add(
+      sender === 'user'
+      ? 'user-message'
+      : 'bot-message'
+    );
+
+    msgDiv.textContent = message;
+    chatbotMessages.appendChild(msgDiv);
+
+    chatbotMessages.scrollTop =
+    chatbotMessages.scrollHeight;
+  }
+
+  function botReply(input) {
+    input = input.toLowerCase();
+
+    let response = 
+    "I'm not sure yet😅.Contact Job Kwemoi💪 on WhatApp.";
+  }
+
+  if(input.includes('prices') || input.includes('cost')) {
+    response = 
+    "Website pricing depends on features😎.Contact Job Kwemoi on WhatsApp.";
+  }
+    else if (input.includes('services')) {
+      response = 
+      "Kirong builds business websites,portfolios, e-commerce stores and UI/UX designs.";
     }
 
-    function endGame() {
-      gameRunning = false;
-      clearInterval(timerInterval);
-      clearInterval(spawnInterval);
-      saveStats();
+    else if(input.includes('whatsapp')) {
+      response = 
+      "You can contact Kirong Job Kwemoi directly on whatsapp 📲";
     }
+
+    else if(input.includes('seo')) {
+      response = 
+      "Yes websites are optimized for speed and Google ranking.";
+    }
+
+    else if(input.includes('hello') || input.includes ('hi')) {
+      response = 
+      "👋Hey there! Welcome to Kirong Job Kwemoi's portfolio.";
+    }
+
+    setTimeout(() => {
+      addMessage(response, 'bot');
+    }, 600); 
+
+  
+  
+  
+function handleChat(){
+
+  const userInput = 
+  chatbotInput.value.trim();
+
+  if(input === '') return;
+
+  addMessage(userInput, 'user');
+
+  chatbotInput.value = '';
+
+  botReply(userInput);
+}
+
+sendBtn.addEventListener('click', handleChat);
+
+chatbotInput.addEventListener('keypress' , (e) => {
+  if(e.key === 'Enter') {
+}
+});
+    
    
   </script>
 </body>
