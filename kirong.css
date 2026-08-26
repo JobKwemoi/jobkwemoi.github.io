@@ -133,3 +133,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 footer p{color:#94a3b8}
 ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#22c55e,#6D28D9);border-radius:100px}
 @media(max-width:768px){section{padding:50px 16px}.service-grid{grid-template-columns:1fr}.nav-dot{display:none}.lang-toggle{top:12px}h1{font-size:2.4rem}}
+/* MANSION HERO */
+#mansion-hero{animation:heroZoom 20s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.03)}}
+body.dark-mode #mansion-hero div[style*="248,250,252"]{background:linear-gradient(180deg,rgba(15,23,42,.2),rgba(2,6,23,.9))!important}
