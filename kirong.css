@@ -925,6 +925,101 @@ footer {
 }
 }
 
+/* ===== KIRONG AI PRO - MANSION GLOW 👑 ===== */
+
+/* Featured AI Card */
+.project-card[data-category="ai"] {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #6D28D9 !important;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1033 100%) !important;
+  box-shadow: 0 0 30px rgba(109, 40, 217, 0.3);
+  animation: mansionGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes mansionGlow {
+  0% { box-shadow: 0 0 20px rgba(109, 40, 217, 0.3); }
+  100% { box-shadow: 0 0 40px rgba(109, 40, 217, 0.6), 0 0 60px rgba(109, 40, 217, 0.2); }
+}
+
+/* Purple tag */
+.project-card[data-category="ai"] .tag-agri {
+  background: #6D28D9 !important;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  animation: pulseTag 2s infinite;
+}
+
+@keyframes pulseTag {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* AI Buttons */
+.project-card[data-category="ai"] .btn-live {
+  background: #6D28D9 !important;
+  transition: all 0.3s ease;
+}
+
+.project-card[data-category="ai"] .btn-live:hover {
+  background: #7c3aed !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.4);
+}
+
+/* Floating AI Button - Mansion Edition */
+.floating-AI {
+  background: linear-gradient(135deg, #6D28D9, #7c3aed) !important;
+  font-size: 1.8rem !important;
+  width: 60px !important;
+  height: 60px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(109, 40, 217, 0.5);
+  animation: floatAI 3s ease-in-out infinite;
+}
+
+@keyframes floatAI {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Stats - AI card highlight */
+.stat-card[style*="border-color"] {
+  background: linear-gradient(135deg, #0a0a0f, #1a1033);
+  border: 2px solid #6D28D9 !important;
+}
+
+/* Skills - AI tags glow */
+.skill-tag[style*="background:#6D28D9"],
+.skill-tag[style*="background:#25D366"] {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+/* Filter button active for AI */
+.filter-btn[data-filter="ai"].active {
+  background: #6D28D9 !important;
+  color: white !important;
+  border-color: #6D28D9 !important;
+}
+
+/* Loader - Kirong Mansion */
+#loader .load-text {
+  background: linear-gradient(90deg, #6D28D9, #25D366);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Pricing - Most Popular glow */
+.service-card[style*="border: 2px solid var(--accent)"] {
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.2);
+}
+
 
 
 
