@@ -32,6 +32,8 @@
   --green-dim:#1B9C4A;
   --red:#E63946;
   --amber:#F2A93B;
+  --purple:#8b5cf6;
+  --purple-dim:#6d28d9;
   --radius:18px;
   --radius-sm:10px;
   --font-display:'Space Grotesk',sans-serif;
@@ -172,6 +174,15 @@ img{max-width:100%;display:block;}
   transition:border-color .2s,background .2s;
 }
 .btn-ghost:hover{border-color:var(--green);background:rgba(37,211,102,0.08);}
+.btn-ai{
+  background:linear-gradient(135deg,var(--purple),var(--purple-dim));color:#fff;
+  border:none;font-family:inherit;font-size:1rem;
+}
+.btn-ai:hover{box-shadow:0 10px 24px rgba(139,92,246,0.4);}
+.hero-ai-note{
+  margin-top:14px;color:var(--text-muted);font-size:.8rem;max-width:440px;
+  opacity:0;animation:fadeUp .7s ease forwards;animation-delay:.65s;
+}
 
 /* phone mockup */
 .hero-phone{display:flex;justify-content:center;}
@@ -258,6 +269,60 @@ img{max-width:100%;display:block;}
 .bento-card h3{font-family:var(--font-display);margin:10px 0 8px;font-size:1.1rem;}
 .bento-card p{color:var(--text-muted);font-size:.9rem;line-height:1.6;}
 
+/* AI spotlight */
+.ai-section{
+  background:radial-gradient(circle at 20% 20%,rgba(139,92,246,0.08),transparent 60%);
+  border-radius:var(--radius);
+}
+.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.ai-eyebrow{color:var(--purple);}
+.ai-feature-list{list-style:none;margin:20px 0 28px;display:flex;flex-direction:column;gap:10px;}
+.ai-feature-list li{color:var(--text-muted);font-size:.92rem;display:flex;gap:10px;align-items:center;}
+.ai-preview-card{
+  background:var(--surface);border:1px solid rgba(139,92,246,0.3);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.ai-preview-header{
+  display:flex;align-items:center;gap:12px;padding:18px;
+  background:linear-gradient(135deg,rgba(139,92,246,0.18),rgba(109,40,217,0.1));
+  border-bottom:1px solid rgba(139,92,246,0.25);
+}
+.ai-crown{font-size:1.4rem;}
+.ai-preview-name{font-weight:700;font-family:var(--font-display);}
+.ai-preview-status{font-size:.72rem;color:var(--purple);}
+.ai-preview-body{padding:18px;min-height:220px;display:flex;flex-direction:column;gap:10px;}
+.ai-preview-body .ai-bubble{
+  max-width:80%;padding:9px 13px;border-radius:14px;font-size:.8rem;line-height:1.4;
+  opacity:0;transform:translateY(6px);animation:bubbleIn .4s ease forwards;
+}
+.ai-preview-body .ai-bubble.in{align-self:flex-start;background:var(--surface-2);border-bottom-left-radius:4px;}
+.ai-preview-body .ai-bubble.out{align-self:flex-end;background:linear-gradient(135deg,var(--purple),var(--purple-dim));color:#fff;border-bottom-right-radius:4px;}
+
+/* contact actions */
+.contact-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:24px 0;}
+.contact-actions .whatsapp-btn{margin:0;}
+
+/* AI modal */
+.ai-modal{
+  position:fixed;inset:0;background:rgba(4,8,6,0.7);backdrop-filter:blur(6px);
+  z-index:300;display:none;align-items:center;justify-content:center;padding:20px;
+}
+.ai-modal.open{display:flex;}
+.ai-modal-inner{
+  width:100%;max-width:460px;height:min(720px,88vh);background:var(--bg);
+  border:1px solid rgba(139,92,246,0.35);border-radius:20px;overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,0.5);
+}
+.ai-modal-header{
+  display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
+  background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(109,40,217,0.12));
+  border-bottom:1px solid rgba(139,92,246,0.25);color:var(--text);
+}
+.ai-modal-actions{display:flex;align-items:center;gap:14px;}
+.ai-modal-open{font-size:.78rem;color:var(--purple);}
+#aiModalClose{background:none;border:none;color:var(--text-muted);font-size:1.1rem;}
+.ai-modal-inner iframe{flex:1;width:100%;border:none;background:#0d0518;}
+
 /* projects */
 .filter-container{display:flex;gap:10px;justify-content:center;margin-bottom:40px;flex-wrap:wrap;}
 .filter-btn{
@@ -320,11 +385,13 @@ img{max-width:100%;display:block;}
 
 /* floating buttons */
 .floating-ai{
-  position:fixed;bottom:100px;right:26px;width:52px;height:52px;border-radius:50%;
-  background:var(--surface);border:1px solid var(--border);color:var(--green);
-  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;
-  z-index:60;box-shadow:var(--shadow);
+  position:fixed;bottom:100px;right:26px;width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,var(--purple),var(--purple-dim));border:none;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+  z-index:60;box-shadow:0 10px 24px rgba(139,92,246,0.4);
+  animation:pulseAi 2.4s ease-in-out infinite;
 }
+@keyframes pulseAi{0%,100%{box-shadow:0 10px 24px rgba(139,92,246,0.4);}50%{box-shadow:0 10px 30px rgba(139,92,246,0.7);}}
 #scrollTopBtn{
   position:fixed;bottom:34px;right:26px;width:52px;height:52px;border-radius:50%;
   background:var(--green);color:#04140A;border:none;font-size:1.2rem;z-index:60;
@@ -354,6 +421,8 @@ footer{
   .hero-phone{order:-1;margin-bottom:20px;}
   .phone-frame{width:220px;height:420px;}
   .about-grid{grid-template-columns:1fr;}
+  .ai-grid{grid-template-columns:1fr;}
+  .ai-grid .ai-preview{order:-1;}
   .bento{grid-template-columns:1fr 1fr;}
   .bento-large,.bento-wide{grid-column:span 2;}
   .projects-grid{grid-template-columns:1fr;}
@@ -422,13 +491,14 @@ footer{
       </h1>
       <p class="hero-sub" data-en="For mama mbogas, boda SACCOs and food vendors who want customers ordering while they sleep." data-swa="Kwa mama mboga, SACCO za boda na wauzaji wa chakula wanaotaka wateja waagize hata wakiwa wamelala.">For mama mbogas, boda SACCOs and food vendors who want customers ordering while they sleep.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/254792442670?text=Hello%20Job%2C%20I%20want%20a%20website" target="_blank" class="btn-primary">
-          <span data-en="Start a project" data-swa="Anza mradi">Start a project</span> →
-        </a>
-        <a href="#projects" class="btn-ghost">
-          <span data-en="See the work" data-swa="Ona kazi">See the work</span>
+        <button class="btn-primary btn-ai" id="heroAiBtn">
+          👑 <span data-en="Chat with Kirong AI" data-swa="Ongea na Kirong AI">Chat with Kirong AI</span>
+        </button>
+        <a href="https://wa.me/254792442670?text=Hello%20Job%2C%20I%20want%20a%20website" target="_blank" class="btn-ghost">
+          <span data-en="WhatsApp me directly" data-swa="Nipigie WhatsApp">WhatsApp me directly</span>
         </a>
       </div>
+      <p class="hero-ai-note" data-en="Kirong AI is my own build — it answers questions about pricing, timelines and process instantly, day or night." data-swa="Kirong AI ni ubunifu wangu mwenyewe — inajibu maswali ya bei, muda na mchakato papo hapo, mchana au usiku.">Kirong AI is my own build — it answers questions about pricing, timelines and process instantly, day or night.</p>
     </div>
 
     <div class="hero-phone" aria-hidden="true">
@@ -517,6 +587,37 @@ footer{
       <span class="bento-tag">06</span>
       <h3 data-en="Tech Consultation" data-swa="Ushauri wa Kiteknolojia">Tech Consultation</h3>
       <p data-en="Helping small businesses plan digital tools that fit their budget." data-swa="Kusaidia biashara ndogo kupanga zana za kidijitali zinazolingana na bajeti yao.">Helping small businesses plan digital tools that fit their budget.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KIRONG AI SPOTLIGHT -->
+<section id="kirong-ai" class="section ai-section">
+  <div class="section-grid ai-grid">
+    <div class="reveal">
+      <p class="section-eyebrow ai-eyebrow" data-en="MY OWN BUILD" data-swa="UBUNIFU WANGU">MY OWN BUILD</p>
+      <h2 class="section-title" data-en="Meet Kirong AI 👑" data-swa="Kutana na Kirong AI 👑">Meet Kirong AI 👑</h2>
+      <p class="section-text" data-en="Every client site I build can plug straight into Kirong AI — the assistant I engineered myself. It answers pricing and process questions instantly, drafts CVs, writes business copy, and even helps run WhatsApp Business replies while you're busy serving customers." data-swa="Kila tovuti ninayotengeneza inaweza kuunganishwa moja kwa moja na Kirong AI — msaidizi niliyetengeneza mwenyewe. Inajibu maswali ya bei na mchakato papo hapo, inaandika CV, inaandika maudhui ya biashara, na hata kusaidia majibu ya WhatsApp Business ukiwa na shughuli za kuhudumia wateja.">Every client site I build can plug straight into Kirong AI — the assistant I engineered myself. It answers pricing and process questions instantly, drafts CVs, writes business copy, and even helps run WhatsApp Business replies while you're busy serving customers.</p>
+      <ul class="ai-feature-list">
+        <li>💻 <span data-en="Code generator for websites & apps" data-swa="Kizalisha code za tovuti na apps">Code generator for websites & apps</span></li>
+        <li>📱 <span data-en="WhatsApp Business auto-replies" data-swa="Majibu ya kiotomatiki ya WhatsApp Business">WhatsApp Business auto-replies</span></li>
+        <li>💡 <span data-en="Business ideas tuned for the Kenyan market" data-swa="Mawazo ya biashara kwa soko la Kenya">Business ideas tuned for the Kenyan market</span></li>
+      </ul>
+      <button class="btn-primary btn-ai" id="aiSectionBtn">
+        👑 <span data-en="Try Kirong AI now" data-swa="Jaribu Kirong AI sasa">Try Kirong AI now</span>
+      </button>
+    </div>
+    <div class="ai-preview reveal" aria-hidden="true">
+      <div class="ai-preview-card">
+        <div class="ai-preview-header">
+          <span class="ai-crown">👑</span>
+          <div>
+            <div class="ai-preview-name">Kirong AI</div>
+            <div class="ai-preview-status">Royal Intelligence Active</div>
+          </div>
+        </div>
+        <div class="ai-preview-body" id="aiPreviewBody"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -626,9 +727,14 @@ footer{
   <div class="contact-inner reveal">
     <p class="section-eyebrow" data-en="LET'S TALK" data-swa="TUONGEE">LET'S TALK</p>
     <h2 class="section-title" data-en="Got a business in Kenya? Need a site in 3 days?" data-swa="Una biashara Kenya? Unahitaji tovuti ndani ya siku 3?">Got a business in Kenya? Need a site in 3 days?</h2>
-    <a href="https://wa.me/254792442670?text=Hello%20Job%20👋,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project" target="_blank" class="whatsapp-btn">
-      <span data-en="Message me on WhatsApp" data-swa="Nipigie WhatsApp">Message me on WhatsApp</span> 💬
-    </a>
+    <div class="contact-actions">
+      <button class="whatsapp-btn btn-ai" id="contactAiBtn">
+        <span data-en="Chat with Kirong AI now" data-swa="Ongea na Kirong AI sasa">Chat with Kirong AI now</span> 👑
+      </button>
+      <a href="https://wa.me/254792442670?text=Hello%20Job%20👋,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project" target="_blank" class="whatsapp-btn">
+        <span data-en="Message me on WhatsApp" data-swa="Nipigie WhatsApp">Message me on WhatsApp</span> 💬
+      </a>
+    </div>
     <div class="contact-meta">
       <span>📍 Nairobi, Kenya</span>
       <span>📩 <span id="emailText">kirongjob@gmail.com</span>
@@ -639,9 +745,23 @@ footer{
   </div>
 </section>
 
-<a href="https://kirongjob.vercel.app" target="_blank" class="floating-ai" title="Try my AI assistant">AI</a>
+<button class="floating-ai" id="floatingAiBtn" title="Chat with Kirong AI">👑</button>
 <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 <div class="toast" id="toast"></div>
+
+<!-- KIRONG AI MODAL -->
+<div class="ai-modal" id="aiModal">
+  <div class="ai-modal-inner">
+    <div class="ai-modal-header">
+      <span>👑 <strong>Kirong AI</strong></span>
+      <div class="ai-modal-actions">
+        <a href="https://kirongjob.vercel.app" target="_blank" class="ai-modal-open" data-en="Open full app ↗" data-swa="Fungua app kamili ↗">Open full app ↗</a>
+        <button id="aiModalClose" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <iframe id="aiFrame" src="" title="Kirong AI" loading="lazy"></iframe>
+  </div>
+</div>
 
 <footer>
   <p>© 2026 Job Kwemoi — All rights reserved.</p>
@@ -843,6 +963,60 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.textContent = 'Email copied ✅';
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+
+  /* ---------- KIRONG AI MODAL ---------- */
+  const AI_URL = 'https://kirongjob.vercel.app';
+  const aiModal = document.getElementById('aiModal');
+  const aiFrame = document.getElementById('aiFrame');
+  const aiTriggers = [
+    document.getElementById('heroAiBtn'),
+    document.getElementById('aiSectionBtn'),
+    document.getElementById('contactAiBtn'),
+    document.getElementById('floatingAiBtn')
+  ].filter(Boolean);
+
+  function openAiModal() {
+    if (!aiFrame.src) aiFrame.src = AI_URL;
+    aiModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAiModal() {
+    aiModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  aiTriggers.forEach(btn => btn.addEventListener('click', openAiModal));
+  document.getElementById('aiModalClose').addEventListener('click', closeAiModal);
+  aiModal.addEventListener('click', (e) => { if (e.target === aiModal) closeAiModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && aiModal.classList.contains('open')) closeAiModal(); });
+
+  /* ---------- AI PREVIEW CHAT ---------- */
+  const aiPreviewBody = document.getElementById('aiPreviewBody');
+  if (aiPreviewBody) {
+    const aiScript = [
+      { side: 'in', text: 'How much for a business website?' },
+      { side: 'out', text: 'Depends on features — typically KES 15k–40k. Want a quick quote? 👑' },
+      { side: 'in', text: 'Yes, e-commerce with WhatsApp orders' },
+      { side: 'out', text: 'Got it. Job usually delivers that in 3–5 days ✅' }
+    ];
+    let aiIndex = 0;
+    const aiPreviewIo = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { playAiPreview(); aiPreviewIo.unobserve(entry.target); }
+      });
+    }, { threshold: 0.4 });
+    aiPreviewIo.observe(aiPreviewBody);
+
+    function playAiPreview() {
+      if (aiIndex >= aiScript.length) return;
+      const msg = aiScript[aiIndex];
+      const bubble = document.createElement('div');
+      bubble.className = 'ai-bubble ' + msg.side;
+      bubble.textContent = msg.text;
+      aiPreviewBody.appendChild(bubble);
+      aiIndex++;
+      setTimeout(playAiPreview, 1400);
+    }
   }
 
   /* ---------- SCROLL TO TOP ---------- */
