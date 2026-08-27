@@ -1,81 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kirong Job Kwemoi | AI Developer Kenya 👑</title>
-<link rel="stylesheet" href="kirong.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Kwemoi | Web Developer Nairobi — Websites That Take WhatsApp Orders</title>
+<meta name="description" content="I build fast websites for mama mbogas, boda SACCOs & food vendors in Kenya. 40+ daily orders. 1.2s load on 3G. Based in Nairobi.">
+<meta name="keywords" content="web developer Kenya, website Nairobi, mama mboga website, bodaboda booking system, WhatsApp developer">
+<meta name="author" content="Job Kwemoi">
+<meta name="theme-color" content="#25D366">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+<meta property="og:title" content="Job Kwemoi | Web Developer Nairobi">
+<meta property="og:description" content="I build WhatsApp-order websites for mama mbogas & bodas. 40+ daily orders.">
+<meta property="og:image" content="https://jobkwemoi.github.io/kirong-image.png">
+<meta property="og:url" content="https://jobkwemoi.github.io">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="loader"><div style="color:#fff;font-weight:800;font-size:1.8rem;text-shadow:0 0 20px #6D28D9">Loading Mansion... 👑</div></div>
+
+<div id="loader"><span class="loader-text">jz@nairobi<span class="blink">_</span></span></div>
 <div class="progress-bar" id="progressBar"></div>
 
-<img class="avatar" src="kirong~2.jpg" alt="Kirong Job">
-<h1 class="lang-en"><span id="typed-text"></span><span class="cursor">|</span></h1>
-<h1 class="lang-swa" style="display:none"><span id="typed-text-swa"></span><span class="cursor">|</span></h1>
-<p style="text-align:center;color:var(--muted);font-weight:700;letter-spacing:.02em;text-shadow:0 0 12px rgba(109,40,217,.2)">AI Developer | SaaS Builder | UI/UX Designer</p>
-
-<div class="lang-toggle">
-<button id="btn-en" class="lang-btn active">EN</button>
-<button id="btn-swa" class="lang-btn">SWA</button>
+<!-- NAV -->
+<header class="nav">
+  <a href="#top" class="nav-logo">JK<span>.</span></a>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Work</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button id="btn-en" class="lang-btn active">EN</button>
+      <button id="btn-swa" class="lang-btn">SWA</button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <a href="https://wa.me/254792442670?text=Hello%20Job%2C%20I%20saw%20your%20site%20and%20want%20to%20discuss%20a%20project" target="_blank" class="btn-nav-cta">Chat</a>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="nav-mobile" id="navMobile">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Work</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact</a>
 </div>
 
-<section>
-<div class="stats-grid">
-<div class="stat-card"><span class="stat-number" data-target="1">0</span><span style="color:var(--muted);font-weight:600">AI SaaS Live</span></div>
-<div class="stat-card"><span class="stat-number" data-target="1.2">0</span><span style="color:var(--muted);font-weight:600">Seconds Load</span></div>
-<div class="stat-card"><span class="stat-number" data-target="20">0</span><span style="color:var(--muted);font-weight:600">Happy Clients</span></div>
+<!-- side scroll dots -->
+<div class="nav-dot">
+  <a href="#about" data-section="about" title="About"></a>
+  <a href="#services" data-section="services" title="Services"></a>
+  <a href="#projects" data-section="projects" title="Projects"></a>
+  <a href="#testimonials" data-section="testimonials" title="Reviews"></a>
+  <a href="#contact" data-section="contact" title="Contact"></a>
 </div>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow" data-en="WEB DEVELOPER · NAIROBI, KENYA" data-swa="MSANIDI PROGRAMU · NAIROBI, KENYA">WEB DEVELOPER · NAIROBI, KENYA</p>
+      <h1 class="hero-title">
+        <span data-en="I build websites that turn into" data-swa="Najenga tovuti zinazogeuka kuwa">I build websites that turn into</span>
+        <span class="hero-highlight" data-en="WhatsApp orders." data-swa="oda za WhatsApp.">WhatsApp orders.</span>
+      </h1>
+      <p class="hero-sub" data-en="For mama mbogas, boda SACCOs and food vendors who want customers ordering while they sleep." data-swa="Kwa mama mboga, SACCO za boda na wauzaji wa chakula wanaotaka wateja waagize hata wakiwa wamelala.">For mama mbogas, boda SACCOs and food vendors who want customers ordering while they sleep.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/254792442670?text=Hello%20Job%2C%20I%20want%20a%20website" target="_blank" class="btn-primary">
+          <span data-en="Start a project" data-swa="Anza mradi">Start a project</span> →
+        </a>
+        <a href="#projects" class="btn-ghost">
+          <span data-en="See the work" data-swa="Ona kazi">See the work</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-phone" aria-hidden="true">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-header">
+          <div class="phone-avatar">MC</div>
+          <div>
+            <div class="phone-name">Mama Chapo</div>
+            <div class="phone-status">online</div>
+          </div>
+        </div>
+        <div class="phone-body" id="phoneBody"></div>
+        <div class="phone-input">
+          <span>Type a message</span>
+          <div class="phone-mic">🎤</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-ticker">
+    <div class="stat-item">
+      <span class="stat-number" data-target="40">0</span><span class="stat-plus">+</span>
+      <span class="stat-label" data-en="daily orders" data-swa="oda kila siku">daily orders</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="1.2" data-decimal="true">0</span>s
+      <span class="stat-label" data-en="load time on 3G" data-swa="muda wa kupakia 3G">load time on 3G</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="20">0</span><span class="stat-plus">+</span>
+      <span class="stat-label" data-en="happy clients" data-swa="wateja wenye furaha">happy clients</span>
+    </div>
+  </div>
 </section>
 
-<section id="projects">
-<h2>Live Projects 👑</h2>
-<div class="filter">
-<button class="filter-btn active" data-filter="all">All</button>
-<button class="filter-btn" data-filter="ai">AI SaaS 🔥</button>
-<button class="filter-btn" data-filter="agri">Agri</button>
-<button class="filter-btn" data-filter="service">Transport</button>
-<button class="filter-btn" data-filter="food">Food</button>
-</div>
-
-<div class="project-card" data-category="ai">
-<span class="tag tag-ai">👑 FLAGSHIP - AI + M-Pesa</span>
-<h3>Kirong AI Pro — Intelligent Assistant</h3>
-<p><strong>Problem:</strong> Kenyan biz need AI but no M-Pesa.<br><strong>Solution:</strong> Groq Llama 3 + STK Push KES 199 + PWA.<br><strong>Result:</strong> Live at kirongjob.vercel.app</p>
-<a href="https://kirongjob.vercel.app" target="_blank" class="btn btn-purple">Try Live AI 👑</a>
-<a href="https://github.com/jobkwemoi" target="_blank" class="btn btn-ghost" style="margin-left:8px">View Code</a>
-</div>
-
-<div class="project-card" data-category="agri">
-<span class="tag tag-agri">Agri-Tech</span>
-<h3>Kisii Fresh Greens</h3><p>E-commerce + WhatsApp. 15-40+ daily orders</p>
-<a href="https://kisii-fresh-greens.netlify.app" target="_blank" class="btn btn-primary">Live Demo</a>
-</div>
-
-<div class="project-card" data-category="service">
-<span class="tag tag-service">Transport</span>
-<h3>Nakuru Nduthi Express</h3><p>Mobile booking + dispatch. 70% fewer missed calls</p>
-<a href="https://nakuru-boda-boda.netlify.app" target="_blank" class="btn btn-primary">Live Demo</a>
-</div>
-
-<div class="project-card" data-category="food">
-<span class="tag tag-food">Food</span>
-<h3>Mama Chapo</h3><p>One page menu + WhatsApp. 200-400+ orders daily</p>
-<a href="https://dreamy-tanuki-1c65c3.netlify.app" target="_blank" class="btn btn-primary">Live Demo</a>
-</div>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-grid about-grid">
+    <div class="reveal">
+      <p class="section-eyebrow" data-en="ABOUT" data-swa="KUHUSU">ABOUT</p>
+      <h2 class="section-title" data-en="Self-taught. Client-obsessed." data-swa="Nimejifunza mwenyewe. Ninajali wateja.">Self-taught. Client-obsessed.</h2>
+      <p class="section-text" data-en="I'm a developer and UI/UX designer based in Nairobi. I design and build the interface, wire up WhatsApp so orders land where the business already lives, and hand over a site you can actually update yourself." data-swa="Mimi ni msanidi programu na mbunifu wa UI/UX ninayeishi Nairobi. Nabuni na kutengeneza tovuti, nauganisha na WhatsApp ili oda zifike mahali biashara tayari iko, kisha nakukabidhi tovuti unayoweza kusasisha mwenyewe.">I'm a developer and UI/UX designer based in Nairobi. I design and build the interface, wire up WhatsApp so orders land where the business already lives, and hand over a site you can actually update yourself.</p>
+      <p class="section-text muted" data-en="No page builders that quietly break in six months. Clean code, under 3 second loads, and a handover doc in plain language." data-swa="Hakuna page builders zinazoharibika baada ya miezi sita. Code safi, muda wa kupakia chini ya sekunde 3, na maelekezo rahisi ya kutumia tovuti.">No page builders that quietly break in six months. Clean code, under 3 second loads, and a handover doc in plain language.</p>
+    </div>
+    <div class="terminal-card reveal">
+      <div class="terminal-bar"><span></span><span></span><span></span></div>
+      <div class="terminal-body" id="terminalBody"></div>
+    </div>
+  </div>
 </section>
 
-<section id="contact" style="text-align:center">
-<h2>Contact 📞</h2>
-<p style="font-weight:800;font-size:1.2rem;margin-bottom:20px;text-shadow:0 0 16px rgba(109,40,217,.25)">Stop losing customers. Pata website in 72hrs. Slots 3 tu 🤠</p>
-<a href="https://wa.me/254792442670" target="_blank" class="btn btn-purple" style="padding:16px 36px;font-size:1.1rem">WhatsApp Me</a>
-<p style="margin-top:22px">📍 Nairobi | 📩 kirongjob@gmail.com <button onclick="copyEmail(event)" style="margin-left:8px;background:var(--purple);border:none;color:#fff;padding:6px 14px;border-radius:100px;font-weight:700;box-shadow:0 0 16px rgba(109,40,217,.4)">Copy</button></p>
-<p style="margin-top:14px;color:var(--purple);font-weight:800;text-shadow:0 0 12px rgba(109,40,217,.4)"><span id="visitorCount">247</span> viewing now 🔥</p>
+<!-- SERVICES -->
+<section id="services" class="section">
+  <p class="section-eyebrow center" data-en="SERVICES" data-swa="HUDUMA">SERVICES</p>
+  <h2 class="section-title center" data-en="What I build" data-swa="Ninachojenga">What I build</h2>
+
+  <div class="bento reveal">
+    <div class="bento-card bento-large">
+      <span class="bento-tag">01</span>
+      <h3 data-en="Custom Web Development" data-swa="Utengenezaji wa Tovuti Maalum">Custom Web Development</h3>
+      <p data-en="Fully responsive sites built with HTML, CSS, JavaScript and React — shaped around your brand and how your customers actually order." data-swa="Tovuti zinazojibu kikamilifu kwa HTML, CSS, JavaScript na React — zilizoundwa kulingana na chapa yako na jinsi wateja wako wanavyoagiza.">Fully responsive sites built with HTML, CSS, JavaScript and React — shaped around your brand and how your customers actually order.</p>
+    </div>
+    <div class="bento-card">
+      <span class="bento-tag">02</span>
+      <h3 data-en="UI/UX Design" data-swa="Muundo wa UI/UX">UI/UX Design</h3>
+      <p data-en="Interfaces that feel obvious to use, on any phone." data-swa="Miundo inayoeleweka kwa urahisi, kwenye simu yoyote.">Interfaces that feel obvious to use, on any phone.</p>
+    </div>
+    <div class="bento-card">
+      <span class="bento-tag">03</span>
+      <h3 data-en="E-commerce + WhatsApp" data-swa="E-commerce + WhatsApp">E-commerce + WhatsApp</h3>
+      <p data-en="Product catalogs and checkouts that route straight into WhatsApp." data-swa="Katalogi za bidhaa na malipo yanayoenda moja kwa moja WhatsApp.">Product catalogs and checkouts that route straight into WhatsApp.</p>
+    </div>
+    <div class="bento-card">
+      <span class="bento-tag">04</span>
+      <h3 data-en="Portfolio & Branding" data-swa="Portfolio na Chapa">Portfolio & Branding</h3>
+      <p data-en="Sites that show your skills and win the client's trust fast." data-swa="Tovuti zinazoonyesha ujuzi wako na kuvutia wateja haraka.">Sites that show your skills and win the client's trust fast.</p>
+    </div>
+    <div class="bento-card bento-wide">
+      <span class="bento-tag">05</span>
+      <h3 data-en="SEO & Performance" data-swa="SEO na Utendaji">SEO & Performance</h3>
+      <p data-en="Optimized for search and speed — 1.2s loads on 3G, higher rankings." data-swa="Imeboreshwa kwa utafutaji na kasi — kupakia 1.2s kwenye 3G, viwango vya juu.">Optimized for search and speed — 1.2s loads on 3G, higher rankings.</p>
+    </div>
+    <div class="bento-card">
+      <span class="bento-tag">06</span>
+      <h3 data-en="Tech Consultation" data-swa="Ushauri wa Kiteknolojia">Tech Consultation</h3>
+      <p data-en="Helping small businesses plan digital tools that fit their budget." data-swa="Kusaidia biashara ndogo kupanga zana za kidijitali zinazolingana na bajeti yao.">Helping small businesses plan digital tools that fit their budget.</p>
+    </div>
+  </div>
 </section>
 
-<a href="https://kirongjob.vercel.app" class="floating">👑</a>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <p class="section-eyebrow center" data-en="LIVE WORK" data-swa="KAZI ZA MOJA KWA MOJA">LIVE WORK</p>
+  <h2 class="section-title center" data-en="Client sites, still taking orders" data-swa="Tovuti za wateja, bado zinachukua oda">Client sites, still taking orders</h2>
+
+  <div class="filter-container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="agri">Agri-Tech</button>
+    <button class="filter-btn" data-filter="service">Transport</button>
+    <button class="filter-btn" data-filter="food">Food</button>
+  </div>
+
+  <div class="projects-grid">
+    <article class="project-card reveal" data-category="agri">
+      <div class="project-head">
+        <span class="tag tag-agri">Agri-Tech</span>
+        <h3>Kisii Fresh Greens</h3>
+      </div>
+      <div class="project-chat">
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Vendors losing customers to weather and busy phone lines." data-swa="Wachuuzi kupoteza wateja kwa mvua na simu za kubanana.">Vendors losing customers to weather and busy phone lines.</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="E-commerce catalog with WhatsApp ordering." data-swa="Katalogi ya mtandaoni na oda za WhatsApp.">E-commerce catalog with WhatsApp ordering.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="15 → 40+ daily orders, zero extra overhead." data-swa="Oda 15 → 40+ kila siku, gharama za ziada sifuri.">15 → 40+ daily orders, zero extra overhead.</span></p>
+      </div>
+      <div class="project-stack">
+        <span>Vanilla JS</span><span>CSS Grid</span><span>WhatsApp API</span>
+      </div>
+      <a href="https://kisii-fresh-greens.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+    </article>
+
+    <article class="project-card reveal" data-category="service">
+      <div class="project-head">
+        <span class="tag tag-service">Transport</span>
+        <h3>Nakuru Nduthi Express</h3>
+      </div>
+      <div class="project-chat">
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Local SACCO losing riders' clients to big ride-hailing apps." data-swa="SACCO kupoteza wateja kwa apps kubwa za usafiri.">Local SACCO losing riders' clients to big ride-hailing apps.</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Mobile booking form with WhatsApp dispatch." data-swa="Fomu ya booking na dispatch ya WhatsApp.">Mobile booking form with WhatsApp dispatch.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="70% fewer missed calls, riders earn 30% more." data-swa="Simu zilizokosekana zimepungua 70%, mapato ya riders yamepanda 30%.">70% fewer missed calls, riders earn 30% more.</span></p>
+      </div>
+      <div class="project-stack">
+        <span>JS Forms</span><span>Maps Embed</span><span>Mobile-First</span>
+      </div>
+      <a href="https://nakuru-boda-boda.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+    </article>
+
+    <article class="project-card reveal" data-category="food">
+      <div class="project-head">
+        <span class="tag tag-food">Food</span>
+        <h3>Mama Chapo</h3>
+      </div>
+      <div class="project-chat">
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Great food, limited reach beyond the street corner." data-swa="Chakula kizuri, lakini wateja wachache.">Great food, limited reach beyond the street corner.</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="One-page menu with a live order calculator, WhatsApp checkout." data-swa="Menyu ya ukurasa mmoja na kikokotoo cha oda, malipo ya WhatsApp.">One-page menu with a live order calculator, WhatsApp checkout.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="200–400+ orders daily. She hired an assistant." data-swa="Oda 200–400+ kila siku. Ameajiri msaidizi.">200–400+ orders daily. She hired an assistant.</span></p>
+      </div>
+      <div class="project-stack">
+        <span>CSS Animation</span><span>JS Calculator</span><span>1.2s on 3G</span>
+      </div>
+      <a href="https://dreamy-tanuki-1c65c3.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+    </article>
+  </div>
+</section>
+
+<!-- SKILLS MARQUEE -->
+<section class="marquee-section">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX</span><span>SEO</span><span>WhatsApp API</span>
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX</span><span>SEO</span><span>WhatsApp API</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+  <p class="section-eyebrow center" data-en="REVIEWS" data-swa="USHUHUDA">REVIEWS</p>
+  <h2 class="section-title center" data-en="What clients say" data-swa="Wateja wanasema nini">What clients say</h2>
+
+  <div class="testimonial-grid">
+    <div class="voice-note reveal">
+      <div class="voice-icon">▶</div>
+      <div class="voice-wave"></div>
+      <p data-en="&ldquo;This website changed my business. I used to wait for customers in the sun. Now my phone buzzes with orders all day.&rdquo;" data-swa="&ldquo;Tovuti hii imebadilisha biashara yangu. Nilikuwa nasubiri wateja juani. Sasa simu yangu inalia na oda siku nzima.&rdquo;">"This website changed my business. I used to wait for customers in the sun. Now my phone buzzes with orders all day."</p>
+      <span class="voice-author">— Kerubo, Daraja Mbili Market vendor</span>
+    </div>
+    <div class="voice-note reveal">
+      <div class="voice-icon">▶</div>
+      <div class="voice-wave"></div>
+      <p data-en="&ldquo;We were getting beaten by the big apps. Now customers trust us because they know the riders — it's local and reliable.&rdquo;" data-swa="&ldquo;Tulikuwa tunashindwa na apps kubwa. Sasa wateja wanatuamini kwa sababu wanawajua riders — ni ya karibu na inategemewa.&rdquo;">"We were getting beaten by the big apps. Now customers trust us because they know the riders — it's local and reliable."</p>
+      <span class="voice-author">— Peter Karanja, Chairman, Nakuru Nduthi SACCO</span>
+    </div>
+    <div class="voice-note reveal">
+      <div class="voice-icon">▶</div>
+      <div class="voice-wave"></div>
+      <p data-en="&ldquo;We don't use computers, but what Job put on our phones works even while we sleep. No more wasting ingredients.&rdquo;" data-swa="&ldquo;Hatutumii kompyuta, lakini kile Job aliweka kwa simu zetu kinafanya kazi hata tukiwa tumelala. Hatupotezi tena viungo.&rdquo;">"We don't use computers, but what Job put on our phones works even while we sleep. No more wasting ingredients."</p>
+      <span class="voice-author">— Emily Kosgei, Mama Chapo</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="contact-inner reveal">
+    <p class="section-eyebrow" data-en="LET'S TALK" data-swa="TUONGEE">LET'S TALK</p>
+    <h2 class="section-title" data-en="Got a business in Kenya? Need a site in 3 days?" data-swa="Una biashara Kenya? Unahitaji tovuti ndani ya siku 3?">Got a business in Kenya? Need a site in 3 days?</h2>
+    <a href="https://wa.me/254792442670?text=Hello%20Job%20👋,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project" target="_blank" class="whatsapp-btn">
+      <span data-en="Message me on WhatsApp" data-swa="Nipigie WhatsApp">Message me on WhatsApp</span> 💬
+    </a>
+    <div class="contact-meta">
+      <span>📍 Nairobi, Kenya</span>
+      <span>📩 <span id="emailText">kirongjob@gmail.com</span>
+        <button onclick="copyEmail(event)" class="copy-btn">Copy</button>
+      </span>
+    </div>
+    <p class="visitor-line"><span id="visitorCount">247</span> <span data-en="people viewing this page right now" data-swa="watu wanaangalia ukurasa huu sasa">people viewing this page right now</span> 🔥</p>
+  </div>
+</section>
+
+<a href="https://kirongjob.vercel.app" target="_blank" class="floating-ai" title="Try my AI assistant">AI</a>
+<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 <div class="toast" id="toast"></div>
-<script src="javascript.js"></script>
-<footer><p>© 2026 Kirong Job Kwemoi | Built inside Purple Mansion 🏡💜</p></footer>
+
+<footer>
+  <p>© 2026 Job Kwemoi — All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://facebook.com/Job.White.140" target="_blank">Facebook</a>
+    <a href="https://wa.me/254792442670" target="_blank">WhatsApp</a>
+  </div>
+  <p class="footer-quote">Learning today 📚. Building tomorrow 🏗️. Impacting generations 🌍.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
