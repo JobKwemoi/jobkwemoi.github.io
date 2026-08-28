@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Job Kwemoi | Web Developer Nairobi — Websites That Take WhatsApp Orders</title>
+<title>Kirong Job Kwemoi | Web Developer Nairobi — Websites That Take WhatsApp Orders</title>
 <meta name="description" content="I build fast websites for mama mbogas, boda SACCOs & food vendors in Kenya. 40+ daily orders. 1.2s load on 3G. Based in Nairobi.">
 <meta name="keywords" content="web developer Kenya, website Nairobi, mama mboga website, bodaboda booking system, WhatsApp developer">
-<meta name="author" content="Job Kwemoi">
-<meta name="theme-color" content="#25D366">
+<meta name="author" content="Kirong Job Kwemoi">
+<meta name="theme-color" content="#8b5cf6">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
-<meta property="og:title" content="Job Kwemoi | Web Developer Nairobi">
+<meta property="og:title" content="Kirong Job Kwemoi | Web Developer Nairobi">
 <meta property="og:description" content="I build WhatsApp-order websites for mama mbogas & bodas. 40+ daily orders.">
 <meta property="og:image" content="https://jobkwemoi.github.io/kirong-image.png">
 <meta property="og:url" content="https://jobkwemoi.github.io">
@@ -42,15 +42,36 @@
   --shadow:0 20px 60px rgba(0,0,0,0.35);
 }
 [data-theme="light"]{
-  --bg:#F5F7F4;
-  --bg-alt:#EDF1EC;
+  --bg:#F7F4FD;
+  --bg-alt:#EFE9FB;
   --surface:#FFFFFF;
-  --surface-2:#F0F3EF;
-  --border:rgba(10,20,15,0.08);
-  --text:#0C1512;
-  --text-muted:#5C6E67;
-  --shadow:0 20px 60px rgba(10,20,15,0.08);
+  --surface-2:#F3EEFC;
+  --border:rgba(139,92,246,0.18);
+  --text:#1E1533;
+  --text-muted:#6B5F8A;
+  --shadow:0 20px 60px rgba(139,92,246,0.14);
 }
+[data-theme="light"] .hero-glow{
+  background:radial-gradient(circle,rgba(139,92,246,0.18),transparent 70%);
+}
+[data-theme="light"] .stat-number,
+[data-theme="light"] .eyebrow,
+[data-theme="light"] .section-eyebrow:not(.ai-eyebrow){color:var(--purple-dim);}
+[data-theme="light"] .btn-primary:not(.btn-ai){background:var(--purple);color:#fff;}
+[data-theme="light"] .btn-primary:not(.btn-ai):hover{box-shadow:0 10px 24px rgba(139,92,246,0.35);}
+[data-theme="light"] .hero-highlight{color:var(--purple-dim);}
+[data-theme="light"] .phone-avatar{background:var(--purple);color:#fff;}
+[data-theme="light"] .phone-status{color:var(--purple-dim);}
+[data-theme="light"] .phone-bubble.out{background:var(--purple);color:#fff;}
+[data-theme="light"] .terminal-body .cmd,
+[data-theme="light"] .bento-tag,
+[data-theme="light"] .btn-live,
+[data-theme="light"] .voice-author{color:var(--purple-dim);}
+[data-theme="light"] .btn-live{border-color:var(--purple-dim);}
+[data-theme="light"] .tag-agri{background:rgba(139,92,246,0.12);color:var(--purple-dim);}
+[data-theme="light"] .filter-btn.active,
+[data-theme="light"] .filter-btn:hover{background:var(--purple);border-color:var(--purple);}
+[data-theme="light"] .lang-btn.active{background:var(--purple);color:#fff;}
 
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -269,6 +290,46 @@ img{max-width:100%;display:block;}
 .bento-card h3{font-family:var(--font-display);margin:10px 0 8px;font-size:1.1rem;}
 .bento-card p{color:var(--text-muted);font-size:.9rem;line-height:1.6;}
 
+/* trust strip */
+.trust-strip{
+  max-width:1200px;margin:0 auto;padding:24px 5%;display:flex;justify-content:center;
+  gap:36px;flex-wrap:wrap;border-top:1px solid var(--border);color:var(--text-muted);font-size:.85rem;
+}
+
+/* pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+.price-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:30px 26px;display:flex;flex-direction:column;position:relative;
+}
+.price-card.featured{border-color:var(--purple);box-shadow:0 20px 50px rgba(139,92,246,0.2);transform:scale(1.03);}
+.price-tag{
+  position:absolute;top:-13px;left:26px;background:linear-gradient(135deg,var(--purple),var(--purple-dim));
+  color:#fff;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:99px;
+}
+.price-card h3{font-family:var(--font-display);font-size:1.2rem;margin-bottom:6px;}
+.price-amount{font-family:var(--font-mono);font-size:1.6rem;font-weight:700;color:var(--green);margin-bottom:10px;}
+.price-card.featured .price-amount{color:var(--purple);}
+.price-desc{color:var(--text-muted);font-size:.88rem;margin-bottom:18px;line-height:1.5;}
+.price-card ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px;flex:1;}
+.price-card li{color:var(--text-muted);font-size:.85rem;padding-left:20px;position:relative;}
+.price-card li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;}
+.price-card.featured li::before{color:var(--purple);}
+.price-cta{width:100%;justify-content:center;text-align:center;}
+
+/* faq */
+.faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;}
+.faq-q{
+  width:100%;background:none;border:none;color:var(--text);padding:18px 20px;
+  display:flex;justify-content:space-between;align-items:center;font-size:.95rem;font-weight:600;text-align:left;
+}
+.faq-toggle{color:var(--purple);font-size:1.2rem;transition:transform .3s;}
+.faq-item.open .faq-toggle{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-a p{padding:0 20px 18px;color:var(--text-muted);font-size:.88rem;line-height:1.6;}
+
 /* AI spotlight */
 .ai-section{
   background:radial-gradient(circle at 20% 20%,rgba(139,92,246,0.08),transparent 60%);
@@ -426,6 +487,8 @@ footer{
   .bento{grid-template-columns:1fr 1fr;}
   .bento-large,.bento-wide{grid-column:span 2;}
   .projects-grid{grid-template-columns:1fr;}
+  .pricing-grid{grid-template-columns:1fr;}
+  .price-card.featured{transform:none;}
   .testimonial-grid{grid-template-columns:1fr;}
 }
 @media(max-width:520px){
@@ -444,7 +507,7 @@ footer{
 
 <!-- NAV -->
 <header class="nav">
-  <a href="#top" class="nav-logo">JK<span>.</span></a>
+  <a href="#top" class="nav-logo">Kirong<span>.</span></a>
   <nav class="nav-links">
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -536,7 +599,13 @@ footer{
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <span>✅ <span data-en="3-day delivery" data-swa="Uwasilishaji siku 3">3-day delivery</span></span>
+  <span>🔒 <span data-en="You own the code" data-swa="Unamiliki code">You own the code</span></span>
+  <span>👑 <span data-en="AI-powered support" data-swa="Msaada wa AI">AI-powered support</span></span>
+  <span>🇰🇪 <span data-en="Built for the Kenyan market" data-swa="Imejengwa kwa soko la Kenya">Built for the Kenyan market</span></span>
+</div>
 <section id="about" class="section">
   <div class="section-grid about-grid">
     <div class="reveal">
@@ -629,58 +698,92 @@ footer{
 
   <div class="filter-container">
     <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="agri">Agri-Tech</button>
-    <button class="filter-btn" data-filter="service">Transport</button>
-    <button class="filter-btn" data-filter="food">Food</button>
+    <button class="filter-btn" data-filter="fitness">Fitness</button>
+    <button class="filter-btn" data-filter="fashion">Fashion</button>
+    <button class="filter-btn" data-filter="education">Education</button>
+    <button class="filter-btn" data-filter="beauty">Beauty</button>
+    <button class="filter-btn" data-filter="electronics">Electronics</button>
   </div>
 
   <div class="projects-grid">
-    <article class="project-card reveal" data-category="agri">
+    <article class="project-card reveal" data-category="fitness">
       <div class="project-head">
-        <span class="tag tag-agri">Agri-Tech</span>
-        <h3>Kisii Fresh Greens</h3>
+        <span class="tag tag-agri">Fitness</span>
+        <h3>Nyeri Runners Fit</h3>
       </div>
       <div class="project-chat">
-        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Vendors losing customers to weather and busy phone lines." data-swa="Wachuuzi kupoteza wateja kwa mvua na simu za kubanana.">Vendors losing customers to weather and busy phone lines.</span></p>
-        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="E-commerce catalog with WhatsApp ordering." data-swa="Katalogi ya mtandaoni na oda za WhatsApp.">E-commerce catalog with WhatsApp ordering.</span></p>
-        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="15 → 40+ daily orders, zero extra overhead." data-swa="Oda 15 → 40+ kila siku, gharama za ziada sifuri.">15 → 40+ daily orders, zero extra overhead.</span></p>
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Trainer managing bookings by phone — missed calls, double bookings." data-swa="Coach akipanga booking kwa simu — akikosa call, watu wawili wakija saa moja.">Trainer managing bookings by phone — missed calls, double bookings.</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Booking site with live slots + WhatsApp confirmation." data-swa="Tovuti ya kubukiwa yenye nafasi za wakati + uthibitisho wa WhatsApp.">Booking site with live slots + WhatsApp confirmation.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="120+ sessions booked monthly, zero double bookings." data-swa="Vipindi 120+ kila mwezi, hakuna tena booking mbili kwa wakati mmoja.">120+ sessions booked monthly, zero double bookings.</span></p>
       </div>
       <div class="project-stack">
         <span>Vanilla JS</span><span>CSS Grid</span><span>WhatsApp API</span>
       </div>
-      <a href="https://kisii-fresh-greens.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+      <a href="https://nyeri-runners.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
     </article>
 
-    <article class="project-card reveal" data-category="service">
+    <article class="project-card reveal" data-category="fashion">
       <div class="project-head">
-        <span class="tag tag-service">Transport</span>
-        <h3>Nakuru Nduthi Express</h3>
+        <span class="tag tag-food">Fashion</span>
+        <h3>Thrift & Chic Nairobi</h3>
       </div>
       <div class="project-chat">
-        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Local SACCO losing riders' clients to big ride-hailing apps." data-swa="SACCO kupoteza wateja kwa apps kubwa za usafiri.">Local SACCO losing riders' clients to big ride-hailing apps.</span></p>
-        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Mobile booking form with WhatsApp dispatch." data-swa="Fomu ya booking na dispatch ya WhatsApp.">Mobile booking form with WhatsApp dispatch.</span></p>
-        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="70% fewer missed calls, riders earn 30% more." data-swa="Simu zilizokosekana zimepungua 70%, mapato ya riders yamepanda 30%.">70% fewer missed calls, riders earn 30% more.</span></p>
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Selling mitumba via Instagram DMs only — slow replies lost sales." data-swa="Kuuza mitumba kwa Instagram DM tu — majibu ya polepole yalipoteza mauzo.">Selling mitumba via Instagram DMs only — slow replies lost sales.</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Product catalog site with instant WhatsApp order buttons." data-swa="Tovuti ya katalogi na buttons za oda za WhatsApp papo hapo.">Product catalog site with instant WhatsApp order buttons.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="10 → 60+ orders a week, same-day Nairobi delivery." data-swa="Oda 10 → 60+ kwa wiki, delivery siku hiyo hiyo Nairobi.">10 → 60+ orders a week, same-day Nairobi delivery.</span></p>
       </div>
       <div class="project-stack">
-        <span>JS Forms</span><span>Maps Embed</span><span>Mobile-First</span>
+        <span>JS</span><span>CSS Grid</span><span>WhatsApp API</span>
       </div>
-      <a href="https://nakuru-boda-boda.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+      <a href="https://chic-nairobi.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
     </article>
 
-    <article class="project-card reveal" data-category="food">
+    <article class="project-card reveal" data-category="education">
       <div class="project-head">
-        <span class="tag tag-food">Food</span>
-        <h3>Mama Chapo</h3>
+        <span class="tag" style="background:rgba(139,92,246,0.15);color:var(--purple);">Education</span>
+        <h3>Bright Minds Tuition</h3>
       </div>
       <div class="project-chat">
-        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Great food, limited reach beyond the street corner." data-swa="Chakula kizuri, lakini wateja wachache.">Great food, limited reach beyond the street corner.</span></p>
-        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="One-page menu with a live order calculator, WhatsApp checkout." data-swa="Menyu ya ukurasa mmoja na kikokotoo cha oda, malipo ya WhatsApp.">One-page menu with a live order calculator, WhatsApp checkout.</span></p>
-        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="200–400+ orders daily. She hired an assistant." data-swa="Oda 200–400+ kila siku. Ameajiri msaidizi.">200–400+ orders daily. She hired an assistant.</span></p>
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Parents calling repeatedly asking the same fee & schedule questions." data-swa="Wazazi wakipiga simu mara kwa mara wakiuliza maswali yale yale ya ada na ratiba.">Parents calling repeatedly asking the same fee & schedule questions.</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Site with Kirong AI embedded to answer instantly + WhatsApp enrollment." data-swa="Tovuti yenye Kirong AI ndani kujibu papo hapo + usajili wa WhatsApp.">Site with Kirong AI embedded to answer instantly + WhatsApp enrollment.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="60% fewer front-desk calls, 3x more enrollment inquiries." data-swa="Simu za ofisi zimepungua 60%, maulizo ya usajili yamepanda mara 3.">60% fewer front-desk calls, 3x more enrollment inquiries.</span></p>
       </div>
       <div class="project-stack">
-        <span>CSS Animation</span><span>JS Calculator</span><span>1.2s on 3G</span>
+        <span>HTML/CSS/JS</span><span>Kirong AI</span><span>WhatsApp API</span>
       </div>
-      <a href="https://dreamy-tanuki-1c65c3.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+      <a href="https://bright-min.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+    </article>
+
+    <article class="project-card reveal" data-category="beauty">
+      <div class="project-head">
+        <span class="tag" style="background:rgba(242,115,159,0.15);color:#F2739F;">Beauty</span>
+        <h3>Malaika Beauty Salon</h3>
+      </div>
+      <div class="project-chat">
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Walk-ins piling up with no way to see prices or book ahead." data-swa="Wateja wakija bila kujua bei au kubuki mapema — foleni ndefu.">Walk-ins piling up with no way to see prices or book ahead.</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Service menu with prices + open-slot booking on WhatsApp." data-swa="Menyu ya huduma na bei + booking ya nafasi wazi kwa WhatsApp.">Service menu with prices + open-slot booking on WhatsApp.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="90+ bookings a week, 70% fewer wait-time complaints." data-swa="Booking 90+ kwa wiki, malalamiko ya kusubiri yamepungua 70%.">90+ bookings a week, 70% fewer wait-time complaints.</span></p>
+      </div>
+      <div class="project-stack">
+        <span>Vanilla JS</span><span>CSS Grid</span><span>WhatsApp API</span>
+      </div>
+      <a href="https://beautie-salon.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
+    </article>
+
+    <article class="project-card reveal" data-category="electronics">
+      <div class="project-head">
+        <span class="tag" style="background:rgba(56,189,248,0.15);color:#38BDF8;">Electronics</span>
+        <h3>TechHub Electronics</h3>
+      </div>
+      <div class="project-chat">
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Customers calling repeatedly to ask 'mko na hio bado?'" data-swa="Wateja wakipiga simu mara kwa mara kuuliza 'mko na hio bado?'">Customers calling repeatedly to ask "mko na hio bado?"</span></p>
+        <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Live stock catalog with prices + WhatsApp reserve buttons." data-swa="Katalogi ya stock papo hapo na bei + buttons za kuhifadhi kwa WhatsApp.">Live stock catalog with prices + WhatsApp reserve buttons.</span></p>
+        <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="80% fewer repetitive calls, 150+ items reserved monthly." data-swa="Simu za kurudia zimepungua 80%, bidhaa 150+ zimehifadhiwa kila mwezi.">80% fewer repetitive calls, 150+ items reserved monthly.</span></p>
+      </div>
+      <div class="project-stack">
+        <span>JS</span><span>CSS Grid</span><span>WhatsApp API</span>
+      </div>
+      <a href="https://techhub-electro.netlify.app" target="_blank" class="btn-live"><span data-en="Live demo" data-swa="Ona live">Live demo</span> ↗</a>
     </article>
   </div>
 </section>
@@ -718,6 +821,87 @@ footer{
       <div class="voice-wave"></div>
       <p data-en="&ldquo;We don't use computers, but what Job put on our phones works even while we sleep. No more wasting ingredients.&rdquo;" data-swa="&ldquo;Hatutumii kompyuta, lakini kile Job aliweka kwa simu zetu kinafanya kazi hata tukiwa tumelala. Hatupotezi tena viungo.&rdquo;">"We don't use computers, but what Job put on our phones works even while we sleep. No more wasting ingredients."</p>
       <span class="voice-author">— Emily Kosgei, Mama Chapo</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section">
+  <p class="section-eyebrow center" data-en="PRICING" data-swa="BEI">PRICING</p>
+  <h2 class="section-title center" data-en="Simple, upfront pricing" data-swa="Bei rahisi, wazi">Simple, upfront pricing</h2>
+
+  <div class="pricing-grid">
+    <div class="price-card reveal">
+      <h3 data-en="Starter" data-swa="Mwanzo">Starter</h3>
+      <p class="price-amount">KES 15,000</p>
+      <p class="price-desc" data-en="One-page site with WhatsApp ordering. Live in 3 days." data-swa="Tovuti ya ukurasa mmoja na oda za WhatsApp. Live ndani ya siku 3.">One-page site with WhatsApp ordering. Live in 3 days.</p>
+      <ul>
+        <li data-en="Mobile-first design" data-swa="Muundo wa simu kwanza">Mobile-first design</li>
+        <li data-en="WhatsApp order button" data-swa="Kitufe cha oda WhatsApp">WhatsApp order button</li>
+        <li data-en="1.2s load time" data-swa="Muda wa kupakia 1.2s">1.2s load time</li>
+      </ul>
+      <a href="https://wa.me/254792442670?text=Hello%20Kirong%2C%20I%20want%20the%20Starter%20package" target="_blank" class="btn-ghost price-cta"><span data-en="Get started" data-swa="Anza">Get started</span></a>
+    </div>
+    <div class="price-card featured reveal">
+      <span class="price-tag" data-en="Most popular" data-swa="Maarufu zaidi">Most popular</span>
+      <h3 data-en="Business" data-swa="Biashara">Business</h3>
+      <p class="price-amount">KES 30,000</p>
+      <p class="price-desc" data-en="Multi-page site, product catalog, and Kirong AI assistant embedded." data-swa="Tovuti ya kurasa nyingi, katalogi ya bidhaa, na Kirong AI ndani yake.">Multi-page site, product catalog, and Kirong AI assistant embedded.</p>
+      <ul>
+        <li data-en="Everything in Starter" data-swa="Kila kitu cha Mwanzo">Everything in Starter</li>
+        <li data-en="Product catalog / e-commerce" data-swa="Katalogi ya bidhaa">Product catalog / e-commerce</li>
+        <li data-en="Kirong AI chat embedded" data-swa="Kirong AI imejumuishwa">Kirong AI chat embedded</li>
+        <li data-en="Basic SEO setup" data-swa="Mpangilio wa SEO">Basic SEO setup</li>
+      </ul>
+      <button class="btn-primary btn-ai price-cta" id="pricingAiBtn"><span data-en="Ask Kirong AI" data-swa="Uliza Kirong AI">Ask Kirong AI</span></button>
+    </div>
+    <div class="price-card reveal">
+      <h3 data-en="Custom" data-swa="Maalum">Custom</h3>
+      <p class="price-amount" data-en="Let's talk" data-swa="Tuongee">Let's talk</p>
+      <p class="price-desc" data-en="Booking systems, dispatch tools, or anything with custom logic." data-swa="Mifumo ya booking, dispatch, au chochote chenye mantiki maalum.">Booking systems, dispatch tools, or anything with custom logic.</p>
+      <ul>
+        <li data-en="Custom features & integrations" data-swa="Vipengele maalum">Custom features & integrations</li>
+        <li data-en="Ongoing support available" data-swa="Msaada wa kudumu">Ongoing support available</li>
+        <li data-en="Scoped after a free call" data-swa="Bei baada ya mazungumzo bure">Scoped after a free call</li>
+      </ul>
+      <a href="https://wa.me/254792442670?text=Hello%20Kirong%2C%20I%20need%20a%20custom%20project" target="_blank" class="btn-ghost price-cta"><span data-en="Discuss project" data-swa="Ongea kuhusu mradi">Discuss project</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <p class="section-eyebrow center" data-en="FAQ" data-swa="MASWALI">FAQ</p>
+  <h2 class="section-title center" data-en="Common questions" data-swa="Maswali ya kawaida">Common questions</h2>
+
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-q">
+        <span data-en="How fast can my site go live?" data-swa="Tovuti yangu itakuwa live haraka kiasi gani?">How fast can my site go live?</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-a"><p data-en="Simple sites: 3 days. Sites with a product catalog or booking system: 5–7 days after we agree on content." data-swa="Tovuti rahisi: siku 3. Tovuti zenye katalogi au booking: siku 5–7 baada ya kukubaliana maudhui.">Simple sites: 3 days. Sites with a product catalog or booking system: 5–7 days after we agree on content.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">
+        <span data-en="Do I own the code and domain?" data-swa="Je, ninamiliki code na domain?">Do I own the code and domain?</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-a"><p data-en="Yes — 100%. No lock-in, no monthly platform fees. You get the files and can move hosts anytime." data-swa="Ndio — 100%. Hakuna lock-in, hakuna ada za kila mwezi. Unapata faili zote na unaweza kubadilisha hosting wakati wowote.">Yes — 100%. No lock-in, no monthly platform fees. You get the files and can move hosts anytime.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">
+        <span data-en="What does Kirong AI do on my site?" data-swa="Kirong AI inafanya nini kwenye tovuti yangu?">What does Kirong AI do on my site?</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-a"><p data-en="It answers visitor questions instantly, helps draft replies, and can be set up to handle common customer queries while you're busy." data-swa="Inajibu maswali ya wageni papo hapo, inasaidia kuandika majibu, na inaweza kusanidiwa kushughulikia maswali ya kawaida ukiwa na shughuli.">It answers visitor questions instantly, helps draft replies, and can be set up to handle common customer queries while you're busy.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">
+        <span data-en="How do I pay?" data-swa="Nalipaje?">How do I pay?</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-a"><p data-en="M-Pesa. Usually 50% deposit to start, 50% on delivery." data-swa="M-Pesa. Kawaida asilimia 50 mwanzoni, asilimia 50 baada ya kukamilika.">M-Pesa. Usually 50% deposit to start, 50% on delivery.</p></div>
     </div>
   </div>
 </section>
@@ -764,7 +948,7 @@ footer{
 </div>
 
 <footer>
-  <p>© 2026 Job Kwemoi — All rights reserved.</p>
+  <p>© 2026 Kirong Job Kwemoi — All rights reserved.</p>
   <div class="footer-links">
     <a href="https://facebook.com/Job.White.140" target="_blank">Facebook</a>
     <a href="https://wa.me/254792442670" target="_blank">WhatsApp</a>
@@ -895,7 +1079,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { cmd: '$ stack --frontend', out: 'HTML5, CSS3, JavaScript, React' },
     { cmd: '$ stack --styling', out: 'Tailwind CSS, Vanilla CSS' },
     { cmd: '$ stack --deploy', out: 'Netlify, basic SEO setup' },
-    { cmd: '$ whoami', out: 'Job Kwemoi — developer, Nairobi 🇰🇪' }
+    { cmd: '$ whoami', out: 'Kirong Job Kwemoi — developer, Nairobi 🇰🇪' }
   ];
   const termIo = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -973,6 +1157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('heroAiBtn'),
     document.getElementById('aiSectionBtn'),
     document.getElementById('contactAiBtn'),
+    document.getElementById('pricingAiBtn'),
     document.getElementById('floatingAiBtn')
   ].filter(Boolean);
 
@@ -1018,6 +1203,16 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(playAiPreview, 1400);
     }
   }
+
+  /* ---------- FAQ ACCORDION ---------- */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
 
   /* ---------- SCROLL TO TOP ---------- */
   document.getElementById('scrollTopBtn').addEventListener('click', () => {
