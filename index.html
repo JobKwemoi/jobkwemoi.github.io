@@ -421,7 +421,7 @@ img{max-width:100%;display:block;}
 @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
 /* testimonials */
-.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
 .voice-note{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
   padding:22px;display:flex;flex-direction:column;gap:14px;
@@ -552,7 +552,7 @@ footer{
         <span data-en="I build websites that turn into" data-swa="Najenga tovuti zinazogeuka kuwa">I build websites that turn into</span>
         <span class="hero-highlight" data-en="WhatsApp orders." data-swa="oda za WhatsApp.">WhatsApp orders.</span>
       </h1>
-      <p class="hero-sub" data-en="For mama mbogas, boda SACCOs and food vendors who want customers ordering while they sleep." data-swa="Kwa mama mboga, SACCO za boda na wauzaji wa chakula wanaotaka wateja waagize hata wakiwa wamelala.">For mama mbogas, boda SACCOs and food vendors who want customers ordering while they sleep.</p>
+      <p class="hero-sub" data-en="For salons, gyms, boutiques, tutoring centers and electronics shops who want customers ordering while they sleep." data-swa="Kwa saluni, gym, maduka ya mitindo, vituo vya masomo na maduka ya vifaa vya umeme vinavyotaka wateja waagize hata wakiwa wamelala.">For salons, gyms, boutiques, tutoring centers and electronics shops who want customers ordering while they sleep.</p>
       <div class="hero-actions">
         <button class="btn-primary btn-ai" id="heroAiBtn">
           👑 <span data-en="Chat with Kirong AI" data-swa="Ongea na Kirong AI">Chat with Kirong AI</span>
@@ -792,8 +792,8 @@ footer{
 <section class="marquee-section">
   <div class="marquee">
     <div class="marquee-track">
-      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX</span><span>SEO</span><span>WhatsApp API</span>
-      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX</span><span>SEO</span><span>WhatsApp API</span>
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX</span><span>SEO</span><span>WhatsApp API</span><span>Booking Systems</span><span>E-commerce</span><span>AI Integration</span><span>Netlify</span>
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX</span><span>SEO</span><span>WhatsApp API</span><span>Booking Systems</span><span>E-commerce</span><span>AI Integration</span><span>Netlify</span>
     </div>
   </div>
 </section>
@@ -807,20 +807,32 @@ footer{
     <div class="voice-note reveal">
       <div class="voice-icon">▶</div>
       <div class="voice-wave"></div>
-      <p data-en="&ldquo;This website changed my business. I used to wait for customers in the sun. Now my phone buzzes with orders all day.&rdquo;" data-swa="&ldquo;Tovuti hii imebadilisha biashara yangu. Nilikuwa nasubiri wateja juani. Sasa simu yangu inalia na oda siku nzima.&rdquo;">"This website changed my business. I used to wait for customers in the sun. Now my phone buzzes with orders all day."</p>
-      <span class="voice-author">— Kerubo, Daraja Mbili Market vendor</span>
+      <p data-en="&ldquo;My phone used to ring nonstop with people asking for open slots. Now clients just book themselves — I show up and train.&rdquo;" data-swa="&ldquo;Simu yangu ilikuwa inalia bila kikomo watu wakiuliza nafasi. Sasa wateja wanajibuki wenyewe — mimi nafika tu na kufundisha.&rdquo;">"My phone used to ring nonstop with people asking for open slots. Now clients just book themselves — I show up and train."</p>
+      <span class="voice-author">— Coach Dennis, Nyeri Runners Fit</span>
     </div>
     <div class="voice-note reveal">
       <div class="voice-icon">▶</div>
       <div class="voice-wave"></div>
-      <p data-en="&ldquo;We were getting beaten by the big apps. Now customers trust us because they know the riders — it's local and reliable.&rdquo;" data-swa="&ldquo;Tulikuwa tunashindwa na apps kubwa. Sasa wateja wanatuamini kwa sababu wanawajua riders — ni ya karibu na inategemewa.&rdquo;">"We were getting beaten by the big apps. Now customers trust us because they know the riders — it's local and reliable."</p>
-      <span class="voice-author">— Peter Karanja, Chairman, Nakuru Nduthi SACCO</span>
+      <p data-en="&ldquo;I was losing sales replying to DMs one by one. Now people see the catalog, tap, and order — my Fridays sell out by evening.&rdquo;" data-swa="&ldquo;Nilikuwa napoteza mauzo kwa kujibu DM moja baada ya nyingine. Sasa watu wanaona katalogi, wanabonyeza, wanaagiza — Ijumaa zangu zinaisha jioni.&rdquo;">"I was losing sales replying to DMs one by one. Now people see the catalog, tap, and order — my Fridays sell out by evening."</p>
+      <span class="voice-author">— Wanjiru, Thrift & Chic Nairobi</span>
     </div>
     <div class="voice-note reveal">
       <div class="voice-icon">▶</div>
       <div class="voice-wave"></div>
-      <p data-en="&ldquo;We don't use computers, but what Job put on our phones works even while we sleep. No more wasting ingredients.&rdquo;" data-swa="&ldquo;Hatutumii kompyuta, lakini kile Job aliweka kwa simu zetu kinafanya kazi hata tukiwa tumelala. Hatupotezi tena viungo.&rdquo;">"We don't use computers, but what Job put on our phones works even while we sleep. No more wasting ingredients."</p>
-      <span class="voice-author">— Emily Kosgei, Mama Chapo</span>
+      <p data-en="&ldquo;Parents used to call our front desk five times a day asking the same fee questions. The AI answers them now — we can focus on teaching.&rdquo;" data-swa="&ldquo;Wazazi walikuwa wakipiga simu ofisini mara tano kwa siku wakiuliza maswali ya ada yale yale. Sasa AI inajibu — sisi tunaendelea kufundisha.&rdquo;">"Parents used to call our front desk five times a day asking the same fee questions. The AI answers them now — we can focus on teaching."</p>
+      <span class="voice-author">— Mrs. Achieng, Director, Bright Minds Tuition</span>
+    </div>
+    <div class="voice-note reveal">
+      <div class="voice-icon">▶</div>
+      <div class="voice-wave"></div>
+      <p data-en="&ldquo;Clients see the price list before they even walk in. No more arguments at the chair — they book the slot they want and show up ready.&rdquo;" data-swa="&ldquo;Wateja wanaona bei kabla hata hawajaingia. Hakuna tena mabishano kwenye kiti — wanabuki nafasi wanayotaka na kufika tayari.&rdquo;">"Clients see the price list before they even walk in. No more arguments at the chair — they book the slot they want and show up ready."</p>
+      <span class="voice-author">— Malaika, Owner, Malaika Beauty Salon</span>
+    </div>
+    <div class="voice-note reveal">
+      <div class="voice-icon">▶</div>
+      <div class="voice-wave"></div>
+      <p data-en="&ldquo;'Mko na hio bado?' was every other call. Now they check the site, reserve it, and just come pick it up. Huge time saver.&rdquo;" data-swa="&ldquo;'Mko na hio bado?' ilikuwa kila simu nyingine. Sasa wanaangalia site, wanahifadhi, wanakuja kuchukua tu. Muda mwingi umeokolewa.&rdquo;">"'Mko na hio bado?' was every other call. Now they check the site, reserve it, and just come pick it up. Huge time saver."</p>
+      <span class="voice-author">— Brian, TechHub Electronics</span>
     </div>
   </div>
 </section>
