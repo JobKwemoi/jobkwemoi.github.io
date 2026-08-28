@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/kirong-headshot.jpg" width="140" height="140" style="border-radius:50%;" alt="Kirong Job Kwemoi" />
+<img src="kirong-headshot.jpg" width="140" height="140" style="border-radius:50%;" alt="Kirong Job Kwemoi" />
 
 # Kirong Job Kwemoi
 
