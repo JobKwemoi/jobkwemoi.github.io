@@ -128,20 +128,78 @@ button{font-family:inherit;cursor:pointer;}
 :focus-visible{outline:2px solid var(--green);outline-offset:3px;}
 img{max-width:100%;display:block;}
 
-/* ===== LOADER ===== */
+/* ===== KIRONG BOOT LOADER V2 ===== */
 #loader{
-  position:fixed;inset:0;background:var(--bg);z-index:999;
+  position:fixed;inset:0;background:var(--bg);z-index:9999;
   display:flex;align-items:center;justify-content:center;
-  transition:opacity .5s ease, visibility .5s ease;
+  opacity:1;visibility:visible;
+  transition:opacity .65s ease,visibility .65s ease;
+  overflow:hidden;
 }
-#loader.hidden{opacity:0;visibility:hidden;}
-.loader-text{font-family:var(--font-mono);color:var(--green);font-size:1.1rem;letter-spacing:.05em;}
-.blink{animation:blink 1s step-start infinite;}
-@keyframes blink{50%{opacity:0;}}
+#loader::before{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(139,92,246,.13),transparent 68%);
+  filter:blur(12px);pointer-events:none;
+}
+#loader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+.loader-shell{position:relative;width:min(520px,88vw);text-align:center;z-index:1;}
+.loader-brand{
+  font-family:var(--font-display);font-size:clamp(2.2rem,8vw,4rem);font-weight:700;
+  letter-spacing:-.06em;line-height:1;margin-bottom:12px;
+  animation:loaderBrandIn .8s ease both;
+}
+.loader-brand span{color:var(--green);}
+.loader-kicker{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.22em;
+  color:var(--text-muted);margin-bottom:34px;text-transform:uppercase;
+  animation:loaderFade .8s .15s ease both;
+}
+.loader-crown{
+  display:block;font-size:1.8rem;margin-bottom:13px;
+  animation:crownFloat 1.8s ease-in-out infinite;
+}
+.loader-quote{
+  min-height:52px;padding:0 10px;color:var(--text);
+  font-family:var(--font-display);font-size:clamp(1rem,3vw,1.25rem);
+  line-height:1.5;font-weight:500;
+  transition:opacity .25s ease,transform .25s ease;
+}
+.loader-quote.changing{opacity:0;transform:translateY(5px);}
+.loader-meta{
+  display:flex;justify-content:space-between;align-items:center;gap:15px;
+  margin:27px 0 10px;font-family:var(--font-mono);font-size:.68rem;
+  color:var(--text-muted);letter-spacing:.08em;
+}
+.loader-status{color:var(--green);}
+.loader-track{
+  height:4px;background:var(--surface-2);border:1px solid var(--border);
+  border-radius:99px;overflow:hidden;
+}
+.loader-fill{
+  width:0%;height:100%;border-radius:99px;
+  background:linear-gradient(90deg,var(--green),var(--purple));
+  box-shadow:0 0 18px rgba(139,92,246,.45);
+  transition:width .12s linear;
+}
+.loader-percent{
+  margin-top:10px;font-family:var(--font-mono);font-size:.65rem;
+  color:var(--text-muted);letter-spacing:.08em;
+}
+@keyframes loaderBrandIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes loaderFade{from{opacity:0}to{opacity:1}}
+@keyframes crownFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(2deg)}}
 
 .progress-bar{
   position:fixed;top:0;left:0;height:3px;background:var(--green);
-  width:0%;z-index:1000;transition:width .1s ease;
+  width:0%;z-index:10000;transition:width .1s ease;
+}
+@media(max-width:520px){
+  .loader-kicker{margin-bottom:28px;font-size:.58rem;}
+  .loader-meta{margin-top:22px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .loader-brand,.loader-kicker,.loader-crown{animation:none;}
+  .loader-quote{transition:none;}
 }
 
 /* ===== NAV ===== */
@@ -544,7 +602,19 @@ footer{
 </head>
 <body>
 
-<div id="loader"><span class="loader-text">Kenyan,genz@nairobi<span class="blink">_</span></span></div>
+<div id="loader" role="status" aria-live="polite" aria-label="Loading Kirong portfolio">
+  <div class="loader-shell">
+    <span class="loader-crown">👑</span>
+    <div class="loader-brand">Kirong<span>.</span></div>
+    <div class="loader-kicker">DIGITAL BUILDER · KENYA</div>
+    <div class="loader-quote" id="loaderQuote">Don't just dream it. Build it.</div>
+    <div class="loader-meta">
+      <span id="loaderStatus" class="loader-status">INITIALIZING...</span>
+      <span id="loaderPercent">0%</span>
+    </div>
+    <div class="loader-track" aria-hidden="true"><div class="loader-fill" id="loaderFill"></div></div>
+  </div>
+</div>
 <div class="progress-bar" id="progressBar"></div>
 
 <!-- NAV -->
@@ -1014,10 +1084,66 @@ footer{
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- LOADER ---------- */
-  window.addEventListener('load', () => {
-    setTimeout(() => document.getElementById('loader').classList.add('hidden'), 400);
-  });
+  /* ---------- KIRONG BOOT LOADER V2 ---------- */
+  const loader = document.getElementById('loader');
+  const loaderFill = document.getElementById('loaderFill');
+  const loaderPercent = document.getElementById('loaderPercent');
+  const loaderStatus = document.getElementById('loaderStatus');
+  const loaderQuote = document.getElementById('loaderQuote');
+
+  const loaderQuotes = [
+    "Don't just dream it. Build it.",
+    "Ideas become powerful when you build them.",
+    "Learning today. Building tomorrow. Impacting generations. 👑"
+  ];
+
+  const quoteIndex = Math.floor(Math.random() * loaderQuotes.length);
+  loaderQuote.textContent = loaderQuotes[quoteIndex];
+
+  const bootStarted = performance.now();
+  const bootDuration = 1650;
+  let bootFinished = false;
+
+  function updateBoot(progress){
+    const value = Math.min(100, Math.round(progress));
+    loaderFill.style.width = value + '%';
+    loaderPercent.textContent = value + '%';
+    if(value < 35) loaderStatus.textContent = 'INITIALIZING...';
+    else if(value < 72) loaderStatus.textContent = 'LOADING EXPERIENCE...';
+    else if(value < 100) loaderStatus.textContent = 'POLISHING DETAILS...';
+    else loaderStatus.textContent = 'READY ✓';
+  }
+
+  function finishBoot(){
+    if(bootFinished) return;
+    bootFinished = true;
+    updateBoot(100);
+    setTimeout(() => loader.classList.add('hidden'), 280);
+  }
+
+  function bootFrame(now){
+    const progress = ((now - bootStarted) / bootDuration) * 100;
+    updateBoot(progress);
+    if(progress < 100){
+      requestAnimationFrame(bootFrame);
+    } else if(document.readyState === 'complete'){
+      finishBoot();
+    }
+  }
+
+  requestAnimationFrame(bootFrame);
+  window.addEventListener('load', finishBoot, {once:true});
+
+  // Rotate to another quote once during the boot sequence.
+  setTimeout(() => {
+    if(!loaderQuote) return;
+    loaderQuote.classList.add('changing');
+    setTimeout(() => {
+      const nextIndex = (quoteIndex + 1) % loaderQuotes.length;
+      loaderQuote.textContent = loaderQuotes[nextIndex];
+      loaderQuote.classList.remove('changing');
+    }, 250);
+  }, 650);
 
   /* ---------- PROGRESS BAR ---------- */
   const progressBar = document.getElementById('progressBar');
