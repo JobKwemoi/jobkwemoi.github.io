@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://jobkwemoi.github.io/sitemap.xml
