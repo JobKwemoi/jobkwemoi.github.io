@@ -128,78 +128,97 @@ button{font-family:inherit;cursor:pointer;}
 :focus-visible{outline:2px solid var(--green);outline-offset:3px;}
 img{max-width:100%;display:block;}
 
-/* ===== KIRONG BOOT LOADER V2 ===== */
+/* ===== PREMIUM SOFTWARE LOADER ===== */
 #loader{
   position:fixed;inset:0;background:var(--bg);z-index:9999;
   display:flex;align-items:center;justify-content:center;
+  overflow:hidden;isolation:isolate;
   opacity:1;visibility:visible;
-  transition:opacity .65s ease,visibility .65s ease;
-  overflow:hidden;
-}
-#loader::before{
-  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
-  background:radial-gradient(circle,rgba(139,92,246,.13),transparent 68%);
-  filter:blur(12px);pointer-events:none;
+  transition:opacity .65s cubic-bezier(.4,0,.2,1),visibility .65s;
 }
 #loader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
-.loader-shell{position:relative;width:min(520px,88vw);text-align:center;z-index:1;}
+#loader::before{
+  content:"";position:absolute;inset:0;z-index:-3;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(139,92,246,.13),transparent 34%),
+    radial-gradient(circle at 18% 85%,rgba(37,211,102,.07),transparent 28%),
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:auto,auto,42px 42px,42px 42px;
+}
+#loader::after{
+  content:"";position:absolute;inset:-20%;z-index:-2;
+  background:conic-gradient(from 180deg at 50% 50%,transparent 0deg,rgba(139,92,246,.08) 70deg,transparent 145deg,rgba(37,211,102,.06) 220deg,transparent 300deg);
+  animation:loaderOrbit 8s linear infinite;
+}
+.loader-shell{
+  width:min(520px,calc(100% - 42px));
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+}
+.loader-mark{
+  width:68px;height:68px;border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;display:grid;place-items:center;position:relative;
+  background:rgba(19,27,23,.72);backdrop-filter:blur(18px);
+  box-shadow:0 0 0 1px rgba(139,92,246,.08),0 18px 60px rgba(0,0,0,.4);
+  animation:markFloat 2.4s ease-in-out infinite;
+}
+.loader-mark::before{
+  content:"";position:absolute;inset:-5px;border-radius:24px;
+  border:1px solid rgba(139,92,246,.25);border-left-color:var(--green);
+  animation:markSpin 1.8s linear infinite;
+}
+.loader-crown{font-size:1.65rem;filter:drop-shadow(0 0 12px rgba(139,92,246,.35));}
 .loader-brand{
-  font-family:var(--font-display);font-size:clamp(2.2rem,8vw,4rem);font-weight:700;
-  letter-spacing:-.06em;line-height:1;margin-bottom:12px;
-  animation:loaderBrandIn .8s ease both;
+  margin-top:22px;font-family:var(--font-display);font-size:clamp(1.55rem,5vw,2.05rem);
+  font-weight:700;letter-spacing:.18em;color:var(--text);
 }
-.loader-brand span{color:var(--green);}
-.loader-kicker{
-  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.22em;
-  color:var(--text-muted);margin-bottom:34px;text-transform:uppercase;
-  animation:loaderFade .8s .15s ease both;
-}
-.loader-crown{
-  display:block;font-size:1.8rem;margin-bottom:13px;
-  animation:crownFloat 1.8s ease-in-out infinite;
+.loader-brand span{color:var(--purple);}
+.loader-subtitle{
+  margin-top:7px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.22em;
+  color:var(--text-muted);text-transform:uppercase;
 }
 .loader-quote{
-  min-height:52px;padding:0 10px;color:var(--text);
-  font-family:var(--font-display);font-size:clamp(1rem,3vw,1.25rem);
-  line-height:1.5;font-weight:500;
-  transition:opacity .25s ease,transform .25s ease;
+  min-height:48px;max-width:430px;margin:30px auto 22px;
+  font-family:var(--font-display);font-size:clamp(.92rem,2.8vw,1.08rem);
+  line-height:1.55;color:var(--text);opacity:0;
+  animation:quoteIn .65s ease .25s forwards;
 }
-.loader-quote.changing{opacity:0;transform:translateY(5px);}
-.loader-meta{
-  display:flex;justify-content:space-between;align-items:center;gap:15px;
-  margin:27px 0 10px;font-family:var(--font-mono);font-size:.68rem;
-  color:var(--text-muted);letter-spacing:.08em;
+.loader-quote::before,.loader-quote::after{color:var(--purple);font-weight:700;}
+.loader-quote::before{content:'“';margin-right:3px;}
+.loader-quote::after{content:'”';margin-left:3px;}
+.loader-status-row{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:9px;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;
+  color:var(--text-muted);text-transform:uppercase;
 }
-.loader-status{color:var(--green);}
+.loader-status{display:flex;align-items:center;gap:8px;}
+.loader-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:statusPulse 1.2s ease-in-out infinite;}
+.loader-percent{color:var(--green);font-variant-numeric:tabular-nums;}
 .loader-track{
-  height:4px;background:var(--surface-2);border:1px solid var(--border);
-  border-radius:99px;overflow:hidden;
+  width:100%;height:4px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.25);
 }
 .loader-fill{
-  width:0%;height:100%;border-radius:99px;
-  background:linear-gradient(90deg,var(--green),var(--purple));
-  box-shadow:0 0 18px rgba(139,92,246,.45);
-  transition:width .12s linear;
+  width:0%;height:100%;border-radius:inherit;
+  background:linear-gradient(90deg,var(--purple),var(--green));
+  box-shadow:0 0 18px rgba(37,211,102,.32);transition:width .12s linear;
 }
-.loader-percent{
-  margin-top:10px;font-family:var(--font-mono);font-size:.65rem;
-  color:var(--text-muted);letter-spacing:.08em;
+.loader-meta{
+  width:100%;display:flex;justify-content:space-between;margin-top:13px;
+  font-family:var(--font-mono);font-size:.6rem;color:var(--text-muted);opacity:.72;
 }
-@keyframes loaderBrandIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
-@keyframes loaderFade{from{opacity:0}to{opacity:1}}
-@keyframes crownFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(2deg)}}
-
+.loader-version{color:var(--purple);}
+@keyframes loaderOrbit{to{transform:rotate(360deg);}}
+@keyframes markSpin{to{transform:rotate(360deg);}}
+@keyframes markFloat{50%{transform:translateY(-4px);}}
+@keyframes quoteIn{to{opacity:1;transform:translateY(0);}}
+@keyframes statusPulse{50%{opacity:.35;transform:scale(.75);}}
+@media (prefers-reduced-motion:reduce){
+  #loader::after,.loader-mark,.loader-mark::before,.loader-dot{animation:none;}
+}
 .progress-bar{
-  position:fixed;top:0;left:0;height:3px;background:var(--green);
-  width:0%;z-index:10000;transition:width .1s ease;
-}
-@media(max-width:520px){
-  .loader-kicker{margin-bottom:28px;font-size:.58rem;}
-  .loader-meta{margin-top:22px;}
-}
-@media(prefers-reduced-motion:reduce){
-  .loader-brand,.loader-kicker,.loader-crown{animation:none;}
-  .loader-quote{transition:none;}
+  position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--green));
+  width:0%;z-index:10000;transition:width .1s ease;box-shadow:0 0 12px rgba(37,211,102,.25);
 }
 
 /* ===== NAV ===== */
@@ -602,17 +621,18 @@ footer{
 </head>
 <body>
 
-<div id="loader" role="status" aria-live="polite" aria-label="Loading Kirong portfolio">
+<div id="loader" aria-label="Loading Kirong portfolio">
   <div class="loader-shell">
-    <span class="loader-crown">👑</span>
-    <div class="loader-brand">Kirong<span>.</span></div>
-    <div class="loader-kicker">DIGITAL BUILDER · KENYA</div>
+    <div class="loader-mark" aria-hidden="true"><span class="loader-crown">👑</span></div>
+    <div class="loader-brand">KIRONG<span>.</span></div>
+    <div class="loader-subtitle">Digital Builder · AI Developer</div>
     <div class="loader-quote" id="loaderQuote">Don't just dream it. Build it.</div>
-    <div class="loader-meta">
-      <span id="loaderStatus" class="loader-status">INITIALIZING...</span>
-      <span id="loaderPercent">0%</span>
+    <div class="loader-status-row">
+      <div class="loader-status"><span class="loader-dot"></span><span id="loaderStatus">Initializing</span></div>
+      <span class="loader-percent" id="loaderPercent">0%</span>
     </div>
     <div class="loader-track" aria-hidden="true"><div class="loader-fill" id="loaderFill"></div></div>
+    <div class="loader-meta"><span>ESTABLISHING EXPERIENCE</span><span class="loader-version">KIRONG OS / 2.0</span></div>
   </div>
 </div>
 <div class="progress-bar" id="progressBar"></div>
@@ -1084,66 +1104,70 @@ footer{
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- KIRONG BOOT LOADER V2 ---------- */
+  /* ---------- PREMIUM SOFTWARE LOADER ---------- */
   const loader = document.getElementById('loader');
+  const loaderQuote = document.getElementById('loaderQuote');
   const loaderFill = document.getElementById('loaderFill');
   const loaderPercent = document.getElementById('loaderPercent');
   const loaderStatus = document.getElementById('loaderStatus');
-  const loaderQuote = document.getElementById('loaderQuote');
 
   const loaderQuotes = [
-    "Don't just dream it. Build it.",
-    "Ideas become powerful when you build them.",
-    "Learning today. Building tomorrow. Impacting generations. 👑"
+    'Don\'t just dream it. Build it.',
+    'Ideas become powerful when you build them.',
+    'Building tomorrow, one digital experience at a time.'
   ];
 
   const quoteIndex = Math.floor(Math.random() * loaderQuotes.length);
-  loaderQuote.textContent = loaderQuotes[quoteIndex];
+  if (loaderQuote) loaderQuote.textContent = loaderQuotes[quoteIndex];
 
-  const bootStarted = performance.now();
-  const bootDuration = 1650;
-  let bootFinished = false;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const loaderStart = performance.now();
+  const minimumDisplay = reducedMotion ? 250 : 1800;
+  const maximumDisplay = reducedMotion ? 400 : 2600;
+  const statusSteps = [
+    [18, 'Initializing'],
+    [42, 'Loading interface'],
+    [68, 'Preparing experience'],
+    [88, 'Almost ready'],
+    [100, 'Ready']
+  ];
+  let loaderDone = false;
+  let visualProgress = 0;
 
-  function updateBoot(progress){
-    const value = Math.min(100, Math.round(progress));
-    loaderFill.style.width = value + '%';
-    loaderPercent.textContent = value + '%';
-    if(value < 35) loaderStatus.textContent = 'INITIALIZING...';
-    else if(value < 72) loaderStatus.textContent = 'LOADING EXPERIENCE...';
-    else if(value < 100) loaderStatus.textContent = 'POLISHING DETAILS...';
-    else loaderStatus.textContent = 'READY ✓';
+  function updateLoader(value, status) {
+    visualProgress = Math.max(visualProgress, Math.min(100, value));
+    if (loaderFill) loaderFill.style.width = visualProgress + '%';
+    if (loaderPercent) loaderPercent.textContent = Math.round(visualProgress) + '%';
+    if (loaderStatus && status) loaderStatus.textContent = status;
   }
 
-  function finishBoot(){
-    if(bootFinished) return;
-    bootFinished = true;
-    updateBoot(100);
-    setTimeout(() => loader.classList.add('hidden'), 280);
+  function hideLoader() {
+    if (loaderDone || !loader) return;
+    loaderDone = true;
+    updateLoader(100, 'Ready');
+    setTimeout(() => loader.classList.add('hidden'), reducedMotion ? 80 : 260);
   }
 
-  function bootFrame(now){
-    const progress = ((now - bootStarted) / bootDuration) * 100;
-    updateBoot(progress);
-    if(progress < 100){
-      requestAnimationFrame(bootFrame);
-    } else if(document.readyState === 'complete'){
-      finishBoot();
-    }
+  function runLoader() {
+    const elapsed = performance.now() - loaderStart;
+    const progress = Math.min(88, (elapsed / maximumDisplay) * 88);
+    let status = 'Initializing';
+    for (const step of statusSteps) if (progress >= step[0]) status = step[1];
+    updateLoader(progress, status);
+    if (!loaderDone) requestAnimationFrame(runLoader);
   }
 
-  requestAnimationFrame(bootFrame);
-  window.addEventListener('load', finishBoot, {once:true});
+  updateLoader(0, 'Initializing');
+  requestAnimationFrame(runLoader);
 
-  // Rotate to another quote once during the boot sequence.
-  setTimeout(() => {
-    if(!loaderQuote) return;
-    loaderQuote.classList.add('changing');
-    setTimeout(() => {
-      const nextIndex = (quoteIndex + 1) % loaderQuotes.length;
-      loaderQuote.textContent = loaderQuotes[nextIndex];
-      loaderQuote.classList.remove('changing');
-    }, 250);
-  }, 650);
+  window.addEventListener('load', () => {
+    const elapsed = performance.now() - loaderStart;
+    const remaining = Math.max(0, minimumDisplay - elapsed);
+    setTimeout(hideLoader, remaining);
+  });
+
+  // Safety fallback: the visitor should never be trapped behind the loader.
+  setTimeout(hideLoader, maximumDisplay + 300);
 
   /* ---------- PROGRESS BAR ---------- */
   const progressBar = document.getElementById('progressBar');
