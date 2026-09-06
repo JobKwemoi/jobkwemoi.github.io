@@ -11,6 +11,7 @@ I build fast, WhatsApp-connected websites for real Kenyan businesses — and the
 [![Portfolio](https://img.shields.io/badge/Portfolio-jobkwemoi.github.io-25D366?style=for-the-badge)](https://jobkwemoi.github.io)
 [![Kirong AI](https://img.shields.io/badge/Kirong_AI-Live-8b5cf6?style=for-the-badge)](https://kirongjob.vercel.app)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/254792442670)
+[![License](https://img.shields.io/github/license/JobKwemoi/jobkwemoi.github.io?style=for-the-badge)](https://github.com/JobKwemoi/jobkwemoi.github.io/blob/main/LICENSE)
 
 </div>
 
@@ -18,9 +19,9 @@ I build fast, WhatsApp-connected websites for real Kenyan businesses — and the
 
 ## 👋 About Me
 
-I'm Kirong Job Kwemoi, a self-taught web developer and UI/UX designer based in Nairobi, Kenya. I design and build websites for small and growing businesses — salons, gyms, boutiques, tutoring centers, electronics shops — and wire them straight into WhatsApp, since that's where Kenyan customers already are.
+I'm Kirong Job Kwemoi, a self-taught web developer and UI/UX designer based in Nairobi, Kenya. I design and build websites for small and growing businesses — salons, gyms, boutiques, tutoring ce[...]
 
-I also built **[Kirong AI](https://kirongjob.vercel.app)**, my own multi-provider AI assistant, which I embed directly into client sites to answer visitor questions, draft replies, and handle common queries instantly — day or night.
+I also built **[Kirong AI](https://kirongjob.vercel.app)**, my own multi-provider AI assistant, which I embed directly into client sites to answer visitor questions, draft replies, and handle comm[...]
 
 No page builders that quietly break in six months. Clean code, fast loads, and a handover you can actually maintain yourself.
 
@@ -55,7 +56,7 @@ No page builders that quietly break in six months. Clean code, fast loads, and a
 
 **[kirongjob.vercel.app](https://kirongjob.vercel.app)**
 
-A multi-provider AI assistant I engineered from the ground up — chat, project vault, code generator, CV builder, email writer, business idea generator, WhatsApp Business auto-replies, blog engine, and a School Mode for students. I embed it into client sites so businesses have a 24/7 assistant answering pricing, scheduling, and product questions while they focus on running their business.
+A multi-provider AI assistant I engineered from the ground up — chat, project vault, code generator, CV builder, email writer, business idea generator, WhatsApp Business auto-replies, blog engin[...]
 
 ---
 
