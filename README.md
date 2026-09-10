@@ -11,7 +11,7 @@ I build fast, WhatsApp-connected websites for real Kenyan businesses — and the
 [![Portfolio](https://img.shields.io/badge/Portfolio-jobkwemoi.github.io-25D366?style=for-the-badge)](https://jobkwemoi.github.io)
 [![Kirong AI](https://img.shields.io/badge/Kirong_AI-Live-8b5cf6?style=for-the-badge)](https://kirongjob.vercel.app)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/254792442670)
-[![License](https://img.shields.io/github/license/JobKwemoi/jobkwemoi.github.io?style=for-the-badge)](https://github.com/JobKwemoi/jobkwemoi.github.io/blob/main/LICENSE)
+
 
 </div>
 
