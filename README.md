@@ -29,4 +29,4 @@ Next.js, React, TypeScript, Node.js, Tailwind CSS, Firebase, M-Pesa API, WhatsAp
 
 **Built by Kirong Job Kwemoi — https://jobkwemoi.github.io/**
 
-> If you search "Kirong Job Kwemoi" on Google, this portfolio should be #1. If not yet, I'm working on it.
+
