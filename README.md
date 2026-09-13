@@ -1,32 +1,44 @@
-# Kirong Job Kwemoi — Software Developer & UI/UX Designer Nairobi, Kenya
+# Kirong Job Kwemoi — Software Developer · Nairobi, Kenya
 
-Hi, I'm **Kirong Job Kwemoi**. I design and build fast, WhatsApp-connected websites, web apps and AI systems for people building something real.
+> I design and build digital products for people building something real.
 
 **Live Portfolio:** https://jobkwemoi.github.io/  
-**Alt:** https://kirongjob.vercel.app
-
-### What I Build
-- Fast business websites that take WhatsApp orders
-- Web applications (MERN / Next.js)
-- AI integrations & automations
-- UI/UX Design for startups in Kenya
-
-### Tech Stack
-Next.js, React, TypeScript, Node.js, Tailwind CSS, Firebase, M-Pesa API, WhatsApp Business API
-
-### About Me
-- Name: Kirong Job Kwemoi
-- Location: Nairobi, Kenya
-- Role: Software Developer & UI/UX Designer
-- Contact: WhatsApp via portfolio
-
-### Projects
-1. **Ecommerce + WhatsApp** — Store that sends orders directly to WhatsApp
-2. **AI Assistant** — Business assistant that replies to customers
-3. **Church CMS** — System for churches to manage members & tithes
+**Kirong AI:** Built-in assistant for your business website  
+**Location:** Nairobi, Kenya — Available worldwide  
+**Contact:** kirongjob@gmail.com | WhatsApp via site
 
 ---
 
-**Built by Kirong Job Kwemoi — https://jobkwemoi.github.io/**
+### Who is Kirong Job Kwemoi?
+I'm **Kirong Job Kwemoi**, Software Developer & UI/UX Designer. I build websites, web applications and product experiences built around real goals, real users and real work.
 
+My focus: clarity, reliability and practical use. I choose tools for the problem, not the trend.
 
+### What I Build
+**01. Custom Web Development** - Modern front-end, product-focused  
+**02. UI/UX Design** - Clear interfaces, thoughtful flows, 100% responsive  
+**03. E-commerce + WhatsApp** - Catalogs that take orders straight to WhatsApp  
+**04. Portfolio & Branding** - Sites that make people contact you  
+**05. SEO & Performance** - Technical SEO that Google loves  
+**06. Kirong AI 👑** - My own product: answers pricing, drafts CVs, handles WhatsApp auto-replies
+
+### Selected Work
+- **Nyeri Runners Fit** - Booking site + WhatsApp → 120+ sessions/month
+- **Thrift & Chic Nairobi** - Catalog + WhatsApp → 10 to 60+ orders/week
+- **Bright Minds Tuition** - Site + Kirong AI → 60% fewer calls
+- **Malaika Beauty Salon** - Booking system → 90+ bookings/week
+- **TechHub Electronics** - Live stock catalog → 150+ items reserved/month
+
+### Stack
+HTML5, CSS3, JavaScript, React, Tailwind, WhatsApp API, Booking Systems, AI Integration, Netlify
+
+### Pricing
+- **Starter: KES 15,000** - One-page, mobile-first, WhatsApp button
+- **Business: KES 30,000** - Most popular, e-commerce, Kirong AI, SEO
+- **Custom: Let's talk** - Web apps & internal tools
+
+Built with principle: You own the code. Clear timelines. No unnecessary tracking.
+
+---
+© 2026 **Kirong Job Kwemoi** — Learning today 📚. Building tomorrow 🏗️. Impacting generations 🌍.  
+https://jobkwemoi.github.io/
