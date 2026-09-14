@@ -865,6 +865,11 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
 .trust-check-full{width:20px;height:20px;border-radius:50%;background:var(--green);color:#04140A;display:flex;align-items:center;justify-content:center;font-size:.68rem;flex-shrink:0;}
 
 /* ===== PERFORMANCE ===== */
+.perf-device-label{
+  text-align:center;font-family:var(--font-mono);font-size:.8rem;
+  color:var(--text-muted);letter-spacing:.05em;margin:0 0 12px;text-transform:uppercase;
+}
+.perf-device-label:not(:first-of-type){margin-top:28px;}
 .perf-grid-full{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;}
 .perf-card-full{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 16px;text-align:center;}
 .perf-score-full{font-family:var(--font-display);font-size:2rem;color:var(--green);}
@@ -1425,7 +1430,10 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
 <section id="performance" class="section">
   <p class="section-eyebrow center" data-en="PROOF, NOT PROMISES" data-swa="UTHIBITISHO, SI MANENO">PROOF, NOT PROMISES</p>
   <h2 class="section-title center" data-en="Measured performance." data-swa="Utendaji uliopimwa.">Measured performance.</h2>
-  <div class="perf-grid-full" id="perfGridFull"></div>
+  <p class="perf-device-label" data-en="📱 Mobile" data-swa="📱 Simu">📱 Mobile</p>
+  <div class="perf-grid-full" id="perfGridMobile"></div>
+  <p class="perf-device-label" data-en="🖥️ Desktop" data-swa="🖥️ Kompyuta">🖥️ Desktop</p>
+  <div class="perf-grid-full" id="perfGridDesktop"></div>
   <p class="perf-note-full" id="perfNoteFull" style="text-align:center;"></p>
 </section>
 
@@ -1595,12 +1603,18 @@ const PRICING_URGENCY_COPY = {
    instead of a made-up number until you fill these in.
    ============================================================ */
 const PERFORMANCE_SCORES = {
-  measuredOn: null, // e.g. "2026-09-12"
-  scores: {
-    performance: null,
-    accessibility: null,
-    bestPractices: null,
-    seo: null
+  measuredOn: "Sep 14, 2026",
+  mobile: {
+    performance: 86,
+    accessibility: 100,
+    bestPractices: 100,
+    seo: 100
+  },
+  desktop: {
+    performance: 97,
+    accessibility: 96,
+    bestPractices: 100,
+    seo: 100
   }
 };
 
@@ -1709,18 +1723,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- PERFORMANCE SECTION ---------- */
   function renderPerformance() {
-    const grid = document.getElementById('perfGridFull');
+    const gridMobile = document.getElementById('perfGridMobile');
+    const gridDesktop = document.getElementById('perfGridDesktop');
     const note = document.getElementById('perfNoteFull');
-    if (!grid) return;
+    if (!gridMobile || !gridDesktop) return;
     const labels = { performance: 'Fast loading', accessibility: 'Accessibility', bestPractices: 'Best practices', seo: 'SEO' };
-    grid.innerHTML = Object.entries(PERFORMANCE_SCORES.scores).map(([key, val]) => {
-      const display = val === null
-        ? '<span class="perf-score-full pending">Not yet audited</span>'
-        : '<span class="perf-score-full">' + val + '</span>';
-      return '<div class="perf-card-full">' + display + '<div class="perf-label-full">' + labels[key] + '</div></div>';
-    }).join('');
+    function renderGrid(scores) {
+      if (!scores) {
+        return Object.keys(labels).map(key =>
+          '<div class="perf-card-full"><span class="perf-score-full pending">Not yet audited</span><div class="perf-label-full">' + labels[key] + '</div></div>'
+        ).join('');
+      }
+      return Object.entries(scores).map(([key, val]) => {
+        const display = val === null || val === undefined
+          ? '<span class="perf-score-full pending">Not yet audited</span>'
+          : '<span class="perf-score-full">' + val + '</span>';
+        return '<div class="perf-card-full">' + display + '<div class="perf-label-full">' + labels[key] + '</div></div>';
+      }).join('');
+    }
+    gridMobile.innerHTML = renderGrid(PERFORMANCE_SCORES.mobile);
+    gridDesktop.innerHTML = renderGrid(PERFORMANCE_SCORES.desktop);
     note.textContent = PERFORMANCE_SCORES.measuredOn
-      ? 'Last measured ' + PERFORMANCE_SCORES.measuredOn + ' via Lighthouse.'
+      ? 'Last measured ' + PERFORMANCE_SCORES.measuredOn + ' via Lighthouse (PageSpeed Insights).'
       : 'Scores will appear here once the live site has been audited with Lighthouse.';
   }
   renderPerformance();
