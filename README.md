@@ -1,44 +1,61 @@
-# Kirong Job Kwemoi — Software Developer · Nairobi, Kenya
+# Kirong Job Kwemoi — Software Developer & AI Builder | Nairobi, Kenya
 
-> I design and build digital products for people building something real.
+Personal portfolio and live product site for **Kirong Job Kwemoi**, a
+Software Developer, AI Builder and UI/UX Designer based in Nairobi, Kenya.
+Live at **[jobkwemoi.github.io](https://jobkwemoi.github.io/)**.
 
-**Live Portfolio:** https://jobkwemoi.github.io/  
-**Kirong AI:** Built-in assistant for your business website  
-**Location:** Nairobi, Kenya — Available worldwide  
-**Contact:** kirongjob@gmail.com | WhatsApp via site
+I design and build fast, WhatsApp-connected websites, web applications
+and AI-integrated systems for real businesses in Kenya and beyond —
+bilingual (English/Swahili), mobile-first, and built to convert
+visitors into customers.
+
+## 🔗 Live Links
+
+- **Portfolio:** https://jobkwemoi.github.io/
+- **Kirong AI (live assistant):** https://kirongjob.vercel.app
+
+## 👑 Kirong AI
+
+Kirong AI is my own AI assistant, embedded directly into this portfolio
+and available to every client site I build. It runs on a
+**multi-provider AI stack** — OpenAI, Groq, Gemini, OpenRouter,
+HuggingFace, Cerebras and Pollinations — so it stays fast and reliable
+even if one provider slows down. It handles:
+
+- Instant answers on pricing, process and availability
+- WhatsApp Business auto-replies
+- Code generation for websites and apps
+- CV drafting and business copywriting
+- Business ideas tuned for the Kenyan market
+
+## 🧰 Tech Stack
+
+**Frontend:** HTML5, CSS3, Vanilla JavaScript, React (project-dependent)
+**AI / LLM Integration:** OpenAI, Groq, Gemini, OpenRouter, HuggingFace,
+Cerebras, Pollinations
+**Deployment:** GitHub Pages, Netlify, Vercel
+**Other:** WhatsApp Business API integration, technical SEO, schema.org
+structured data, bilingual (EN/SWA) content system
+
+## ✨ What's on the site
+
+- Case studies with real before/after results for real Kenyan
+  businesses (salons, tuition centers, electronics shops, fitness
+  studios, thrift stores)
+- Verified client testimonials
+- Instant project cost estimator (tiers + add-ons + live WhatsApp
+  quote generation)
+- Trust & Security section (HTTPS, secure forms, no unnecessary
+  tracking)
+- Live availability status, synced across the whole site from one
+  variable
+
+## 📬 Contact
+
+Get in touch via WhatsApp or email — links are on the live site at
+[jobkwemoi.github.io](https://jobkwemoi.github.io/#contact).
 
 ---
 
-### Who is Kirong Job Kwemoi?
-I'm **Kirong Job Kwemoi**, Software Developer & UI/UX Designer. I build websites, web applications and product experiences built around real goals, real users and real work.
-
-My focus: clarity, reliability and practical use. I choose tools for the problem, not the trend.
-
-### What I Build
-**01. Custom Web Development** - Modern front-end, product-focused  
-**02. UI/UX Design** - Clear interfaces, thoughtful flows, 100% responsive  
-**03. E-commerce + WhatsApp** - Catalogs that take orders straight to WhatsApp  
-**04. Portfolio & Branding** - Sites that make people contact you  
-**05. SEO & Performance** - Technical SEO that Google loves  
-**06. Kirong AI 👑** - My own product: answers pricing, drafts CVs, handles WhatsApp auto-replies
-
-### Selected Work
-- **Nyeri Runners Fit** - Booking site + WhatsApp → 120+ sessions/month
-- **Thrift & Chic Nairobi** - Catalog + WhatsApp → 10 to 60+ orders/week
-- **Bright Minds Tuition** - Site + Kirong AI → 60% fewer calls
-- **Malaika Beauty Salon** - Booking system → 90+ bookings/week
-- **TechHub Electronics** - Live stock catalog → 150+ items reserved/month
-
-### Stack
-HTML5, CSS3, JavaScript, React, Tailwind, WhatsApp API, Booking Systems, AI Integration, Netlify
-
-### Pricing
-- **Starter: KES 15,000** - One-page, mobile-first, WhatsApp button
-- **Business: KES 30,000** - Most popular, e-commerce, Kirong AI, SEO
-- **Custom: Let's talk** - Web apps & internal tools
-
-Built with principle: You own the code. Clear timelines. No unnecessary tracking.
-
----
-© 2026 **Kirong Job Kwemoi** — Learning today 📚. Building tomorrow 🏗️. Impacting generations 🌍.  
-https://jobkwemoi.github.io/
+*Built and maintained by Kirong Job Kwemoi — Software Developer, AI
+Builder & UI/UX Designer, Nairobi, Kenya.*
