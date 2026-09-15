@@ -1,34 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- PRIMARY SEO - FINAL 3 TITLES -->
+<!-- PRIMARY SEO - RESTORED + 3 TITLES -->
 <title>Kirong Job Kwemoi | Software Developer, AI Developer & UI/UX Designer Nairobi, Kenya</title>
 <meta name="description" content="I'm Kirong Job Kwemoi, Software Developer, AI Developer & UI/UX Designer in Nairobi, Kenya. I build fast, WhatsApp-connected websites, web apps & AI systems like Kirong AI for real businesses. Kenya-based, available worldwide.">
 <meta name="keywords" content="Kirong Job Kwemoi, Job Kwemoi, Job Kirong, Kirong Job, Software Developer Nairobi, AI Developer Kenya, UI/UX Designer Nairobi, Web Developer Kenya">
 <meta name="author" content="Kirong Job Kwemoi">
 
-<!-- INDEXING -->
+<!-- INDEXING - RESTORED -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://jobkwemoi.github.io/">
 <meta name="google-site-verification" content="d64297f47c465ab7">
 
-<!-- THEME & ICON -->
+<!-- THEME & ICON - RESTORED -->
 <meta name="theme-color" content="#07090D">
 <meta name="color-scheme" content="dark light">
 <link rel="icon" type="image/jpeg" href="https://jobkwemoi.github.io/kirong-headshot.jpg">
 <link rel="apple-touch-icon" href="https://jobkwemoi.github.io/kirong-headshot.jpg">
 
-<!-- PERFORMANCE -->
+<!-- PERFORMANCE - RESTORED -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="https://jobkwemoi.github.io/kirong-headshot.jpg" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
 
-<!-- OPEN GRAPH -->
+<!-- OPEN GRAPH - RESTORED -->
 <meta property="og:title" content="Kirong Job Kwemoi | Software Developer, AI Developer & UI/UX Designer Nairobi">
 <meta property="og:description" content="Software Developer, AI Developer & UI/UX Designer in Nairobi building fast websites that take WhatsApp orders + AI integrations like Kirong AI.">
 <meta property="og:image" content="https://jobkwemoi.github.io/kirong-headshot.jpg">
@@ -41,13 +39,13 @@
 <meta property="og:locale" content="en_KE">
 <meta property="og:type" content="website">
 
-<!-- TWITTER / X -->
+<!-- TWITTER / X - RESTORED -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kirong Job Kwemoi | Software Developer, AI Developer & UI/UX Designer Nairobi">
 <meta name="twitter:description" content="I build fast, WhatsApp-connected websites for Kenyan businesses + AI systems like Kirong AI.">
 <meta name="twitter:image" content="https://jobkwemoi.github.io/kirong-headshot.jpg">
 
-<!-- SCHEMA -->
+<!-- SCHEMA - RESTORED + UI/UX -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -70,7 +68,6 @@
 }
 </script>
 </head>
-
 <style>
 /* ===== TOKENS ===== */
 :root{
@@ -592,6 +589,21 @@ img{max-width:100%;display:block;}
   border-bottom:1px solid var(--purple);padding-bottom:2px;background:none;border-top:none;border-left:none;border-right:none;
 }
 
+
+/* Kirong AI technical case study */
+.project-card-ai{position:relative;overflow:hidden;}
+.project-card-ai::before{content:"";position:absolute;inset:-40% auto auto 60%;width:180px;height:180px;background:radial-gradient(circle,rgba(139,92,246,.18),transparent 68%);pointer-events:none;}
+.case-architecture{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;align-items:center;margin-top:14px;}
+.case-arch-node{padding:12px 8px;border:1px solid var(--border);background:var(--surface-2);border-radius:12px;text-align:center;font:600 .68rem var(--font-mono);color:var(--text);}
+.case-arch-node small{display:block;margin-top:4px;color:var(--text-muted);font:500 .58rem var(--font-body);}
+.case-arch-arrow{text-align:center;color:var(--purple);font-weight:800;}
+.case-tech-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px;}
+.case-tech-card{border:1px solid var(--border);background:var(--surface-2);border-radius:12px;padding:13px;}
+.case-tech-card strong{display:block;font-family:var(--font-display);font-size:.78rem;margin-bottom:5px;}
+.case-tech-card span{color:var(--text-muted);font-size:.72rem;line-height:1.5;}
+.case-note{border-left:3px solid var(--purple);padding:12px 14px;background:rgba(139,92,246,.07);border-radius:0 10px 10px 0;color:var(--text-muted);font-size:.78rem;line-height:1.6;}
+@media(max-width:700px){.case-architecture{grid-template-columns:1fr;}.case-arch-arrow{transform:rotate(90deg);}.case-tech-grid{grid-template-columns:1fr;}}
+
 /* marquee */
 .marquee-section{padding:40px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;}
 .marquee{width:100%;}
@@ -873,6 +885,56 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
   color:var(--text-muted);font-size:.85rem;font-family:var(--font-mono);
   opacity:0;transition:opacity .2s ease;pointer-events:none;background:var(--bg);
 }
+
+
+/* ===== KIRONG 3.0 UPGRADE LAYER ===== */
+:root{--glass:rgba(255,255,255,.055);--max:1240px;}
+body{min-height:100vh;}
+::selection{background:rgba(139,92,246,.38);}
+.nav-logo{letter-spacing:-.04em;}
+.nav-links a{position:relative;padding:4px 0;}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:linear-gradient(90deg,var(--purple),var(--green));transition:right .25s ease;}
+.nav-links a:hover::after,.nav-links a.is-active::after{right:0;}
+.command-btn{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:36px;padding:0 9px;border:1px solid var(--border);background:var(--surface);color:var(--text-muted);border-radius:10px;font:600 .66rem var(--font-mono);letter-spacing:.02em;transition:.2s;}
+.command-btn:hover{border-color:var(--purple);color:var(--text);transform:translateY(-1px);}
+.hero-proof-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;opacity:0;animation:fadeUp .7s ease .72s forwards;}
+.hero-proof-row span{padding:7px 10px;border:1px solid var(--border);background:rgba(255,255,255,.025);border-radius:999px;color:var(--text-muted);font-size:.72rem;}
+[data-theme="light"] .hero-proof-row span{background:rgba(15,23,42,.025);}
+.hero-inner,.section,.trust-strip,.client-strip{max-width:var(--max);}
+.section{width:100%;}
+.bento-card,.project-card,.price-card,.voice-note,.dashboard-card,.estimator-shell,.terminal-card,.ai-preview-card{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;}
+.bento-card:hover,.project-card:hover,.voice-note:hover{box-shadow:0 22px 55px rgba(0,0,0,.18);}
+.project-card:hover{transform:translateY(-5px);}
+[data-theme="light"] .bento-card:hover,[data-theme="light"] .project-card:hover,[data-theme="light"] .voice-note:hover{box-shadow:0 20px 45px rgba(15,23,42,.10);}
+.btn-primary,.btn-ghost,.whatsapp-btn,.btn-nav-cta,.command-btn{will-change:transform;}
+.brief-btn{margin:0;display:inline-flex;align-items:center;gap:8px;}
+.brief-modal,.command-modal{position:fixed;inset:0;background:rgba(3,6,10,.72);backdrop-filter:blur(10px);z-index:700;display:none;align-items:center;justify-content:center;padding:20px;}
+.brief-modal.open,.command-modal.open{display:flex;}
+.brief-dialog{width:min(620px,100%);max-height:min(760px,92vh);overflow:auto;background:var(--bg-alt);border:1px solid rgba(139,92,246,.35);border-radius:24px;box-shadow:0 40px 120px rgba(0,0,0,.5);padding:34px;}
+.brief-close{position:absolute;margin:-18px 0 0 520px;width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:1rem;}
+.brief-head h2{font:700 clamp(1.7rem,4vw,2.3rem) var(--font-display);margin-bottom:8px;}
+.brief-head p:not(.section-eyebrow){color:var(--text-muted);line-height:1.6;margin-bottom:22px;}
+.brief-form{display:flex;flex-direction:column;gap:16px;}
+.brief-form label{font-size:.82rem;font-weight:600;color:var(--text-muted);}
+.brief-form input,.brief-form select,.brief-form textarea{display:block;width:100%;margin-top:7px;padding:13px 14px;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);font:inherit;outline:none;}
+.brief-form input:focus,.brief-form select:focus,.brief-form textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(139,92,246,.12);}
+.brief-form textarea{resize:vertical;min-height:92px;}
+.brief-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;}
+.brief-actions button{border:none;}
+.command-dialog{width:min(680px,100%);background:var(--bg-alt);border:1px solid rgba(139,92,246,.32);border-radius:18px;box-shadow:0 40px 120px rgba(0,0,0,.5);overflow:hidden;}
+.command-top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--border);font:700 .72rem var(--font-mono);letter-spacing:.1em;color:var(--purple);}
+.command-top kbd,.command-hint kbd{border:1px solid var(--border);background:var(--surface);border-radius:6px;padding:3px 7px;font:600 .62rem var(--font-mono);color:var(--text-muted);}
+#commandInput{width:100%;border:0;border-bottom:1px solid var(--border);background:transparent;color:var(--text);padding:17px 16px;font:500 1rem var(--font-body);outline:none;}
+.command-list{padding:8px;max-height:360px;overflow:auto;}
+.command-item{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;border:0;background:transparent;color:var(--text);padding:12px;border-radius:10px;text-align:left;font:500 .9rem var(--font-body);cursor:pointer;}
+.command-item:hover,.command-item.active{background:rgba(139,92,246,.12);}
+.command-item small{color:var(--text-muted);font:600 .65rem var(--font-mono);}
+.command-hint{padding:10px 14px 14px;border-top:1px solid var(--border);color:var(--text-muted);font-size:.7rem;display:flex;align-items:center;gap:6px;}
+.command-empty{padding:18px;color:var(--text-muted);text-align:center;font-size:.85rem;}
+body.modal-open{overflow:hidden;}
+@media(max-width:900px){.command-btn{display:none;}.brief-close{position:static;float:right;margin:-8px -8px 0 0;}.brief-dialog{padding:24px;}}
+@media(max-width:520px){.hero-proof-row span{font-size:.67rem;padding:6px 8px;}.brief-actions{flex-direction:column;}.brief-actions button{width:100%;justify-content:center;}.command-dialog{border-radius:16px;}.command-hint{display:none;}}
+@media(prefers-reduced-motion:reduce){.hero-proof-row{animation:none;opacity:1;}.nav-links a::after{transition:none;}}
 </style>
 </head>
 <body>
@@ -917,6 +979,7 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
       <button id="btn-swa" class="lang-btn">SWA</button>
     </div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <button class="command-btn" id="commandBtn" type="button" aria-label="Open command menu">⌘K</button>
     <a href="https://wa.me/254792442670?text=Hello%20Job%2C%20I%20saw%20your%20site%20and%20want%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="btn-nav-cta">Chat</a>
   </div>
   <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
@@ -970,6 +1033,9 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
         </a>
       </div>
       <p class="hero-ai-note" data-en="Kirong AI is one of my own products — a live, working assistant embedded right here, not just a case study on a slide." data-swa="Kirong AI ni ubunifu wangu mwenyewe — msaidizi wa kweli anayefanya kazi papa hapa, si mfano tu wa kuonyesha.">Kirong AI is one of my own products — a live, working assistant embedded right here, not just a case study on a slide.</p>
+      <div class="hero-proof-row" aria-label="Key capabilities">
+        <span>⚡ Fast builds</span><span>💬 WhatsApp-first</span><span>🤖 AI-ready</span><span>🇰🇪 Kenya-based</span>
+      </div>
     </div>
 
     <div class="hero-phone" aria-hidden="true">
@@ -1125,9 +1191,29 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
     <button class="filter-btn" data-filter="education">Education</button>
     <button class="filter-btn" data-filter="beauty">Beauty</button>
     <button class="filter-btn" data-filter="electronics">Electronics</button>
+    <button class="filter-btn" data-filter="ai">AI Systems</button>
   </div>
 
   <div class="projects-grid">
+    <article class="project-card reveal project-card-ai" data-category="ai">
+      <div class="project-head">
+        <span class="tag" style="background:rgba(139,92,246,0.15);color:var(--purple);">AI SYSTEM</span>
+        <h3>Kirong AI</h3>
+      </div>
+      <div class="project-chat">
+        <p><strong>Architecture</strong><span>Custom agent engine with Plan → Act → Observe orchestration, multi-provider AI routing, persistent workspace state and risk-gated tool execution.</span></p>
+        <p><strong>Data layer</strong><span>Private Vercel Blob persistence for chats, memory, projects, files, research, agent runs and audit records.</span></p>
+        <p><strong>Execution</strong><span>Real code can run inside an isolated Vercel Sandbox, while high-risk actions pause for explicit approval.</span></p>
+      </div>
+      <div class="project-stack">
+        <span>Node.js</span><span>OpenAI</span><span>Groq</span><span>Vercel Blob</span><span>Vercel Sandbox</span>
+      </div>
+      <div class="project-actions">
+        <button class="btn-case" data-case="kirong-ai">View technical case study</button>
+        <a href="https://kirongjob.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live">Live product ↗</a>
+      </div>
+    </article>
+
     <article class="project-card reveal" data-category="fitness">
       <div class="project-head">
         <span class="tag tag-agri">Fitness</span>
@@ -1478,28 +1564,28 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
 
   <div class="faq-list">
     <div class="faq-item reveal">
-      <button class="faq-q">
+      <button class="faq-q" type="button">
         <span data-en="How fast can my site go live?" data-swa="Tovuti yangu itakuwa live haraka kiasi gani?">How fast can my site go live?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-a"><p data-en="Simple sites: 3 days. Sites with a product catalog or booking system: 5–7 days after we agree on content." data-swa="Tovuti rahisi: siku 3. Tovuti zenye katalogi au booking: siku 5–7 baada ya kukubaliana maudhui.">Simple sites: 3 days. Sites with a product catalog or booking system: 5–7 days after we agree on content.</p></div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q">
+      <button class="faq-q" type="button">
         <span data-en="Do I own the code and domain?" data-swa="Je, ninamiliki code na domain?">Do I own the code and domain?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-a"><p data-en="Yes — 100%. No lock-in, no monthly platform fees. You get the files and can move hosts anytime." data-swa="Ndio — 100%. Hakuna lock-in, hakuna ada za kila mwezi. Unapata faili zote na unaweza kubadilisha hosting wakati wowote.">Yes — 100%. No lock-in, no monthly platform fees. You get the files and can move hosts anytime.</p></div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q">
+      <button class="faq-q" type="button">
         <span data-en="What does Kirong AI do on my site?" data-swa="Kirong AI inafanya nini kwenye tovuti yangu?">What does Kirong AI do on my site?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-a"><p data-en="It answers visitor questions instantly, and can be set up as a full autonomous agent — planning and running multi-step tasks like research, drafting, or even writing and testing code, pausing to ask you before anything risky." data-swa="Inajibu maswali ya wageni papo hapo, na inaweza kusanidiwa kuwa agent kamili inayojitegemea — kupanga na kutekeleza kazi za hatua nyingi kama utafiti, kuandika, au hata kuandika na kupima code, ikisimama kukuuliza kabla ya kitendo chochote chenye hatari.">It answers visitor questions instantly, and can be set up as a full autonomous agent — planning and running multi-step tasks like research, drafting, or even writing and testing code, pausing to ask you before anything risky.</p></div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q">
+      <button class="faq-q" type="button">
         <span data-en="How do I pay?" data-swa="Nalipaje?">How do I pay?</span>
         <span class="faq-toggle">+</span>
       </button>
@@ -1554,6 +1640,49 @@ footer{position:relative}footer:before{content:"";display:block;width:100%;heigh
 <!-- CASE STUDY MODAL -->
 <div class="case-modal" id="caseModal">
   <div class="case-modal-inner" id="caseModalInner"></div>
+</div>
+
+<!-- QUICK PROJECT BRIEF MODAL -->
+<div class="brief-modal" id="briefModal" aria-hidden="true">
+  <div class="brief-dialog" role="dialog" aria-modal="true" aria-labelledby="briefTitle">
+    <button class="brief-close" id="briefClose" type="button" aria-label="Close project brief">✕</button>
+    <div class="brief-head">
+      <p class="section-eyebrow">PROJECT BRIEF</p>
+      <h2 id="briefTitle">Tell me what you're building.</h2>
+      <p>Answer a few quick questions. I'll turn them into a ready-to-send WhatsApp brief.</p>
+    </div>
+    <form id="briefForm" class="brief-form">
+      <label>What do you need?
+        <select id="briefType" required>
+          <option value="Business website">Business website</option>
+          <option value="E-commerce / product catalog">E-commerce / product catalog</option>
+          <option value="Booking / appointment system">Booking / appointment system</option>
+          <option value="AI tool / assistant">AI tool / assistant</option>
+          <option value="Custom web app">Custom web app</option>
+        </select>
+      </label>
+      <label>What should it help you achieve?
+        <input id="briefGoal" required maxlength="120" placeholder="e.g. get more WhatsApp orders">
+      </label>
+      <label>Anything important to include?
+        <textarea id="briefNotes" maxlength="300" rows="3" placeholder="Pages, booking, payments, AI, catalog, integrations... (optional)"></textarea>
+      </label>
+      <div class="brief-actions">
+        <button class="btn-primary" type="submit">Send brief to WhatsApp →</button>
+        <button class="btn-ghost" type="button" id="briefCancel">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- COMMAND PALETTE -->
+<div class="command-modal" id="commandModal" aria-hidden="true">
+  <div class="command-dialog" role="dialog" aria-modal="true" aria-labelledby="commandTitle">
+    <div class="command-top"><span id="commandTitle">KIRONG COMMAND</span><kbd>ESC</kbd></div>
+    <input id="commandInput" autocomplete="off" placeholder="Jump to a section…" aria-label="Search sections">
+    <div class="command-list" id="commandList"></div>
+    <div class="command-hint">Press <kbd>Ctrl</kbd><span>+</span><kbd>K</kbd> anytime</div>
+  </div>
 </div>
 
 <footer>
@@ -1611,6 +1740,34 @@ const PERFORMANCE_SCORES = {
    CASE STUDIES — full data for the "View case study" modals
    ============================================================ */
 const CASE_STUDIES = {
+  "kirong-ai": {
+    tag: "AI Engineering", client: "Kirong AI", tagline: "A production-oriented AI workspace with a custom agent engine",
+    devTime: "Iterative product build", type: "AI workspace / agent platform",
+    problem: "A useful AI product needs more than a chat box: it needs persistent state, tools, controlled execution, recovery, approvals and a clear boundary between model decisions and server authority.",
+    solution: "Built a custom application-level agent engine around a strict Plan → Act → Observe loop. The planner proposes one JSON action at a time; the server classifies its risk, applies permission rules, executes approved tools, records the observation and persists a checkpoint before continuing.",
+    before: "Generic chat experience with limited workflow state and no visible execution boundary.",
+    after: "A multi-provider AI workspace with projects, memory, files, research, agent runs, approvals, audit history and controlled execution workflows.",
+    features: ["Custom Plan → Act → Observe agent loop", "Multi-provider AI routing with fallback providers", "Persistent chats, memory, projects, files and research", "Checkpointing, pause/resume and stale-run recovery", "Server-authoritative risk policy with approval gates", "Named Researcher / Builder / Reviewer sub-agent roles", "Isolated Vercel Sandbox code execution", "Prompt-injection wrapping for external content", "Audit logging and per-project permission overrides", "M-Pesa STK Pro upgrade flow"],
+    stack: ["Node.js 22", "OpenAI SDK", "Groq SDK", "Vercel Blob", "Vercel Sandbox", "PDF Parse", "Mammoth", "Vercel"],
+    results: [{v:"7.1.0", m:"Current product build"},{v:"Multi-provider", m:"AI routing"},{v:"Plan → Act → Observe", m:"Agent architecture"}],
+    live: "https://kirongjob.vercel.app",
+    architecture: [
+      {name:"User", sub:"Goal / approval"},
+      {name:"Agent Engine", sub:"Plan → Act → Observe"},
+      {name:"Risk Policy", sub:"Server-authoritative gate"},
+      {name:"Tools", sub:"Search · Files · Research · Sandbox"},
+      {name:"Persistence", sub:"Vercel Blob + checkpoints"}
+    ],
+    techCards: [
+      {name:"AI Router", text:"Routes agent planning and chat work across configured providers including OpenAI, Groq, Cerebras, OpenRouter and Gemini support."},
+      {name:"Data Layer", text:"Private Vercel Blob stores chats, memory, projects, files, research, agent runs and audit records, partitioned by device/workspace context."},
+      {name:"Agent Runtime", text:"One action per planning step, real tool observations, bounded step budgets, checkpoint persistence and resumable runs."},
+      {name:"Execution", text:"Vercel Sandbox provides isolated Firecracker-based execution for allowed code workflows; numeric calculations also use a bounded evaluator."},
+      {name:"Safety", text:"Every action is reclassified server-side. Non-low-risk actions can require explicit human approval, with decisions recorded in the audit trail."},
+      {name:"Knowledge", text:"Uploaded PDF/DOCX/text sources are extracted and made available to the agent; the current implementation uses bounded text/keyword retrieval rather than a vector database."}
+    ],
+    note: "Architecture note: the current build does not claim LangChain, LlamaIndex, Pinecone, ChromaDB or pgvector. Those would be future options if semantic/vector retrieval becomes necessary at larger knowledge-base scale."
+  },
   nyeri: {
     tag: "Fitness", client: "Nyeri Runners Fit", tagline: "From missed calls to a fully booked calendar",
     devTime: "5 days", type: "Booking system",
@@ -1789,6 +1946,17 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>Tech stack</h4>
           <div class="project-stack">${cs.stack.map(t => `<span>${t}</span>`).join('')}</div>
         </div>
+        ${cs.architecture ? `
+        <div class="case-modal-section">
+          <h4>Architecture</h4>
+          <div class="case-architecture">${cs.architecture.map((n,i) => `${i ? '<div class="case-arch-arrow" aria-hidden="true">→</div>' : ''}<div class="case-arch-node">${n.name}<small>${n.sub}</small></div>`).join('')}</div>
+        </div>
+        <div class="case-modal-section">
+          <h4>Engineering layers</h4>
+          <div class="case-tech-grid">${cs.techCards.map(c => `<div class="case-tech-card"><strong>${c.name}</strong><span>${c.text}</span></div>`).join('')}</div>
+        </div>
+        <div class="case-modal-section"><div class="case-note">${cs.note}</div></div>
+        ` : ''}
         <div class="case-modal-section">
           <h4>Results</h4>
           <div class="case-results-grid">${cs.results.map(r => `<div class="case-result-card"><div class="case-result-value">${r.v}</div><div class="case-result-metric">${r.m}</div></div>`).join('')}</div>
@@ -2232,6 +2400,60 @@ document.addEventListener('DOMContentLoaded', () => {
       q.setAttribute('aria-expanded', String(!isOpen));
     });
   });
+
+
+
+  /* ---------- QUICK PROJECT BRIEF ---------- */
+  const briefModal = document.getElementById('briefModal');
+  const briefBtn = document.getElementById('briefBtn');
+  const briefClose = document.getElementById('briefClose');
+  const briefCancel = document.getElementById('briefCancel');
+  const briefForm = document.getElementById('briefForm');
+  function openBrief(){ if(!briefModal) return; briefModal.classList.add('open'); briefModal.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open'); setTimeout(()=>document.getElementById('briefType')?.focus(),50); }
+  function closeBrief(){ if(!briefModal) return; briefModal.classList.remove('open'); briefModal.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open'); }
+  briefBtn?.addEventListener('click',openBrief);
+  briefClose?.addEventListener('click',closeBrief);
+  briefCancel?.addEventListener('click',closeBrief);
+  briefModal?.addEventListener('click',e=>{if(e.target===briefModal)closeBrief();});
+  briefForm?.addEventListener('submit',e=>{
+    e.preventDefault();
+    const type=document.getElementById('briefType').value;
+    const goal=document.getElementById('briefGoal').value.trim();
+    const notes=document.getElementById('briefNotes').value.trim();
+    const text=`Hello Kirong 👋, I'd like to discuss a ${type}. Goal: ${goal}.${notes?` Important details: ${notes}`:''}`;
+    window.open('https://wa.me/254792442670?text='+encodeURIComponent(text),'_blank','noopener');
+    closeBrief();
+  });
+
+  /* ---------- COMMAND PALETTE ---------- */
+  const commandModal=document.getElementById('commandModal');
+  const commandBtn=document.getElementById('commandBtn');
+  const commandInput=document.getElementById('commandInput');
+  const commandList=document.getElementById('commandList');
+  const commandItems=[
+    ['About','about'],['Services','services'],['Kirong AI','kirong-ai'],['Work / Projects','projects'],['Process','process'],['Reviews','testimonials'],['Estimator','estimator'],['Pricing','pricing'],['FAQ','faq'],['Contact','contact']
+  ];
+  function renderCommands(filter=''){
+    const q=filter.toLowerCase().trim();
+    const rows=commandItems.filter(x=>x[0].toLowerCase().includes(q));
+    commandList.innerHTML=rows.length?rows.map((x,i)=>`<button class="command-item ${i===0?'active':''}" data-target="${x[1]}"><span>${x[0]}</span><small>#${x[1]}</small></button>`).join(''):'<div class="command-empty">No matching section.</div>';
+    commandList.querySelectorAll('.command-item').forEach(btn=>btn.addEventListener('click',()=>{document.getElementById(btn.dataset.target)?.scrollIntoView({behavior:'smooth'});closeCommand();}));
+  }
+  function openCommand(){if(!commandModal)return; commandModal.classList.add('open');commandModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');renderCommands();setTimeout(()=>{commandInput.value='';commandInput.focus();},20);}
+  function closeCommand(){if(!commandModal)return;commandModal.classList.remove('open');commandModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');}
+  commandBtn?.addEventListener('click',openCommand);
+  commandInput?.addEventListener('input',()=>renderCommands(commandInput.value));
+  commandModal?.addEventListener('click',e=>{if(e.target===commandModal)closeCommand();});
+  document.addEventListener('keydown',e=>{
+    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openCommand();}
+    if(e.key==='Escape'){closeBrief();closeCommand();}
+  });
+
+  /* ---------- ACTIVE NAV LINKS ---------- */
+  const navAnchors=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const sectionMap=navAnchors.map(a=>({a,id:a.getAttribute('href').slice(1)})).filter(x=>document.getElementById(x));
+  const navSpy=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navAnchors.forEach(a=>a.classList.remove('is-active'));const item=sectionMap.find(x=>x.id===entry.target.id);item?.a.classList.add('is-active');}})},{rootMargin:'-35% 0px -55% 0px',threshold:0});
+  sectionMap.forEach(x=>navSpy.observe(document.getElementById(x.id)));
 
   /* ---------- SCROLL TO TOP ---------- */
   document.getElementById('scrollTopBtn').addEventListener('click', () => {
