@@ -1,52 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jobkwemoi.github.io/</loc>
     <lastmod>2026-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://jobkwemoi.github.io/kirong-headshot.jpg</image:loc>
-      <image:caption>Kirong Job Kwemoi - Software &amp; AI Developer Nairobi Kenya</image:caption>
-      <image:title>Kirong Job Kwemoi</image:title>
-    </image:image>
   </url>
-
   <url>
     <loc>https://jobkwemoi.github.io/kirong-ai.html</loc>
     <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://jobkwemoi.github.io/software-developer-nairobi.html</loc>
     <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://jobkwemoi.github.io/ai-developer-kenya.html</loc>
     <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://jobkwemoi.github.io/web-developer-nairobi.html</loc>
     <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://jobkwemoi.github.io/uiux-designer-kenya.html</loc>
     <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
 </urlset>
