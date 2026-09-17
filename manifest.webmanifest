@@ -1,0 +1,23 @@
+{
+  "name": "Kirong AI — Royal Intelligence",
+  "short_name": "Kirong AI",
+  "description": "Kirong AI — build, learn, create and ship with persistent projects, memory, tools and files.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07060d",
+  "theme_color": "#6D28D9",
+  "lang": "en",
+  "categories": ["productivity", "utilities", "education"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "New chat", "url": "/?source=pwa#new", "description": "Start a new conversation with Kirong" }
+  ]
+}
