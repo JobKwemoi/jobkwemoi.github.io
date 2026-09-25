@@ -17,7 +17,7 @@
 
 <meta name="author" content="Kirong Job Kwemoi">
 <meta name="application-name" content="Kirong Job Kwemoi">
-<meta name="generator" content="Kirong Portfolio">
+<meta name="generator" content="Kirong Job Kwemoi Portfolio">
 
 <!-- =========================================================
      SEO / SEARCH ENGINE INDEXING
@@ -937,14 +937,6 @@ img{max-width:100%;display:block;}
 .visitor-line{color:var(--amber);font-weight:600;font-size:.9rem;}
 
 /* floating buttons */
-.floating-ai{
-  position:fixed;bottom:100px;right:26px;width:56px;height:56px;border-radius:50%;
-  background:linear-gradient(135deg,var(--purple),var(--purple-dim));border:none;color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
-  z-index:60;box-shadow:0 10px 24px rgba(139,92,246,0.4);
-  animation:pulseAi 2.4s ease-in-out infinite;
-}
-@keyframes pulseAi{0%,100%{box-shadow:0 10px 24px rgba(139,92,246,0.4);}50%{box-shadow:0 10px 30px rgba(139,92,246,0.7);}}
 #scrollTopBtn{
   position:fixed;bottom:34px;right:26px;width:52px;height:52px;border-radius:50%;
   background:var(--green);color:#04140A;border:none;font-size:1.2rem;z-index:60;
@@ -1188,6 +1180,88 @@ body.modal-open{overflow:hidden;}
 @media(max-width:900px){.command-btn{display:none;}.brief-close{position:static;float:right;margin:-8px -8px 0 0;}.brief-dialog{padding:24px;}}
 @media(max-width:520px){.hero-proof-row span{font-size:.67rem;padding:6px 8px;}.brief-actions{flex-direction:column;}.brief-actions button{width:100%;justify-content:center;}.command-dialog{border-radius:16px;}.command-hint{display:none;}}
 @media(prefers-reduced-motion:reduce){.hero-proof-row{animation:none;opacity:1;}.nav-links a::after{transition:none;}}
+
+
+/* =========================================================
+   KIRONG STEERING LAYER — PORTFOLIO EVOLUTION
+========================================================= */
+:root{
+  --ks-accent:#9b7cff;
+  --ks-accent-2:#c4b5fd;
+  --ks-panel:rgba(12,15,22,.94);
+  --ks-panel-light:rgba(255,255,255,.96);
+  --ks-line:rgba(255,255,255,.12);
+  --ks-shadow:0 28px 90px rgba(0,0,0,.45);
+}
+.kirong-steering-launcher{
+  position:fixed;right:22px;bottom:22px;z-index:1200;
+  display:flex;align-items:center;gap:10px;
+  padding:11px 15px;border:1px solid var(--ks-line);border-radius:999px;
+  background:rgba(10,12,18,.88);backdrop-filter:blur(18px);
+  color:#fff;box-shadow:0 14px 45px rgba(0,0,0,.28);cursor:pointer;
+  font:600 13px/1.1 var(--font-body);transition:.22s ease;
+}
+.kirong-steering-launcher:hover{transform:translateY(-2px);border-color:rgba(155,124,255,.55);box-shadow:0 18px 55px rgba(85,52,160,.25)}
+.kirong-steering-mark{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--ks-accent),#6d4aff);font:700 11px/1 var(--font-display);letter-spacing:.04em}
+.kirong-steering-status{display:block;color:#9ca3af;font-size:10px;font-weight:500;margin-top:3px}
+.kirong-steering-drawer{position:fixed;inset:0;z-index:1190;pointer-events:none;opacity:0;transition:opacity .2s ease}
+.kirong-steering-drawer.open{pointer-events:auto;opacity:1}
+.kirong-steering-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.48);backdrop-filter:blur(4px)}
+.kirong-steering-panel{
+  position:absolute;right:18px;bottom:18px;width:min(430px,calc(100vw - 36px));max-height:min(720px,calc(100vh - 36px));
+  display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--ks-line);border-radius:24px;
+  background:var(--ks-panel);color:#fff;box-shadow:var(--ks-shadow);transform:translateY(18px) scale(.98);transition:transform .25s ease;
+}
+.kirong-steering-drawer.open .kirong-steering-panel{transform:none}
+.kirong-steering-head{padding:18px 18px 14px;border-bottom:1px solid var(--ks-line);display:flex;align-items:center;justify-content:space-between;gap:14px}
+.kirong-steering-brand{display:flex;align-items:center;gap:11px}.kirong-steering-brand strong{font:700 15px/1.1 var(--font-display)}.kirong-steering-brand small{display:block;margin-top:4px;color:#9ca3af;font-size:11px}
+.kirong-steering-close{width:34px;height:34px;border-radius:10px;border:1px solid var(--ks-line);background:transparent;color:#d1d5db;cursor:pointer}
+.kirong-steering-context{padding:14px 18px 4px;color:#aeb5c3;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+.kirong-steering-body{padding:10px 18px 18px;overflow:auto}.kirong-steering-body h3{margin:0 0 8px;font:600 24px/1.15 var(--font-display);letter-spacing:-.02em}.kirong-steering-body p{margin:0;color:#b9c0cc;line-height:1.65;font-size:13px}
+.kirong-steering-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}.kirong-steering-action{border:1px solid var(--ks-line);background:rgba(255,255,255,.045);color:#fff;border-radius:13px;padding:13px;text-align:left;cursor:pointer;transition:.18s}.kirong-steering-action:hover{border-color:rgba(155,124,255,.5);background:rgba(155,124,255,.09)}.kirong-steering-action strong{display:block;font-size:13px}.kirong-steering-action span{display:block;margin-top:4px;color:#9ca3af;font-size:11px;line-height:1.4}
+.kirong-steering-steps{margin-top:18px;display:grid;gap:8px}.kirong-steering-step{appearance:none;-webkit-appearance:none;width:100%;display:flex;gap:10px;align-items:flex-start;padding:12px 11px;border:1px solid rgba(255,255,255,.10);border-radius:12px;background:rgba(255,255,255,.045);color:#e5e7eb;text-align:left;font:inherit;cursor:pointer;box-sizing:border-box;transition:background .18s ease,border-color .18s ease,transform .18s ease}.kirong-steering-step:hover{background:rgba(155,124,255,.10);border-color:rgba(155,124,255,.34);transform:translateY(-1px)}.kirong-steering-step:focus-visible{outline:2px solid rgba(196,181,253,.9);outline-offset:2px}.kirong-steering-step b{display:grid;place-items:center;width:22px;height:22px;border-radius:7px;background:rgba(155,124,255,.13);color:#c4b5fd;font-size:10px;flex:0 0 22px}.kirong-steering-step span{font-size:12px;color:#c8ced8;line-height:1.45}.kirong-steering-step span strong{color:#f3f4f6;font-weight:700}
+.kirong-steering-footer{padding:12px 18px;border-top:1px solid var(--ks-line);display:flex;gap:8px}.kirong-steering-footer a,.kirong-steering-footer button{flex:1;text-align:center;border-radius:11px;padding:10px 12px;font:600 12px var(--font-body);text-decoration:none;cursor:pointer}.ks-primary{background:#fff;color:#0b0d12;border:1px solid #fff}.ks-secondary{background:transparent;color:#fff;border:1px solid var(--ks-line)}
+.kirong-tour-banner{margin:0 auto 26px;width:min(1120px,calc(100% - 40px));padding:18px 20px;border:1px solid rgba(155,124,255,.2);border-radius:18px;background:linear-gradient(135deg,rgba(155,124,255,.08),rgba(255,255,255,.02));display:flex;align-items:center;justify-content:space-between;gap:18px}.kirong-tour-banner strong{display:block;font:600 16px var(--font-display)}.kirong-tour-banner p{margin:5px 0 0;color:var(--text-muted);font-size:12px}.kirong-tour-banner button{white-space:nowrap}
+[data-theme="light"] .kirong-steering-panel{background:var(--ks-panel-light);color:#111827;border-color:rgba(15,23,42,.12)}
+[data-theme="light"] .kirong-steering-body p,[data-theme="light"] .kirong-steering-action span,[data-theme="light"] .kirong-steering-context{color:#667085}
+[data-theme="light"] .kirong-steering-action{background:#f8f9fc;color:#111827;border-color:rgba(15,23,42,.1)}
+[data-theme="light"] .kirong-steering-step{background:#f8f9fc;color:#111827;border-color:rgba(15,23,42,.10)}
+[data-theme="light"] .kirong-steering-step span{color:#475467}
+[data-theme="light"] .kirong-steering-step span strong{color:#111827}
+[data-theme="light"] .kirong-steering-footer{border-color:rgba(15,23,42,.1)}
+[data-theme="light"] .ks-secondary{color:#111827;border-color:rgba(15,23,42,.12)}
+@media(max-width:700px){
+ .kirong-steering-launcher{right:14px;bottom:14px;padding:10px 12px}.kirong-steering-panel{right:10px;bottom:10px;width:calc(100vw - 20px);max-height:calc(100vh - 20px);border-radius:20px}.kirong-steering-actions{grid-template-columns:1fr}.kirong-tour-banner{width:calc(100% - 28px);margin-bottom:20px;align-items:flex-start;flex-direction:column}.kirong-tour-banner button{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.kirong-steering-drawer,.kirong-steering-panel,.kirong-steering-launcher{transition:none}}
+
+
+/* =========================================================
+   PHASE 3 — LEAD INTELLIGENCE / SMART MATCH
+========================================================= */
+.ks-intelligence{margin-top:18px;padding:14px;border:1px solid rgba(155,124,255,.22);border-radius:15px;background:rgba(155,124,255,.06)}
+.ks-intelligence-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#a78bfa;font-weight:700}
+.ks-intelligence h4{margin:5px 0 6px;font:600 16px/1.2 var(--font-display)}
+.ks-intelligence p{font-size:11px!important;line-height:1.5!important}
+.ks-intelligence-row{display:flex;gap:8px;margin-top:10px}
+.ks-intelligence-input{min-width:0;flex:1;border:1px solid var(--ks-line);border-radius:10px;background:rgba(255,255,255,.045);color:#fff;padding:10px 11px;font:500 12px var(--font-body);outline:none}
+.ks-intelligence-input:focus{border-color:rgba(155,124,255,.7);box-shadow:0 0 0 3px rgba(155,124,255,.1)}
+.ks-intelligence-submit{border:1px solid #fff;background:#fff;color:#0b0d12;border-radius:10px;padding:10px 13px;font:700 11px var(--font-body);cursor:pointer;white-space:nowrap}
+.ks-match{display:none;margin-top:11px;padding:11px;border-radius:11px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.ks-match.show{display:block}
+.ks-match strong{display:block;font-size:12px}
+.ks-match span{display:block;margin-top:4px;color:#aeb5c3;font-size:11px;line-height:1.45}
+.ks-match-actions{display:flex;gap:7px;margin-top:9px}
+.ks-match-actions button{flex:1;border-radius:9px;padding:8px 9px;font:600 10px var(--font-body);cursor:pointer}
+.ks-match-primary{border:1px solid #fff;background:#fff;color:#0b0d12}
+.ks-match-secondary{border:1px solid var(--ks-line);background:transparent;color:#fff}
+.ks-signal-note{margin-top:9px!important;font-size:10px!important;color:#818895!important}
+[data-theme="light"] .ks-intelligence-input{color:#111827;background:#fff;border-color:rgba(15,23,42,.12)}
+[data-theme="light"] .ks-match{background:#f8f9fc;border-color:rgba(15,23,42,.08)}
+[data-theme="light"] .ks-match span{color:#667085}
+[data-theme="light"] .ks-match-secondary{color:#111827;border-color:rgba(15,23,42,.12)}
+@media(max-width:700px){.ks-intelligence-row{flex-direction:column}.ks-intelligence-submit{width:100%}}
+
 </style>
 </head>
 <body>
@@ -1216,7 +1290,7 @@ body.modal-open{overflow:hidden;}
   <nav class="nav-links">
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#kirong-ai" class="nav-ai-link">Kirong AI 👑</a>
+    <a href="#kirong-ai" class="nav-ai-link">Kirong AI</a>
     <a href="#projects">Work</a>
     <a href="#process">Process</a>
     <a href="#testimonials">Reviews</a>
@@ -1240,7 +1314,7 @@ body.modal-open{overflow:hidden;}
 <div class="nav-mobile" id="navMobile">
   <a href="#about">About</a>
   <a href="#services">Services</a>
-  <a href="#kirong-ai">Kirong AI 👑</a>
+  <a href="#kirong-ai">Kirong AI</a>
   <a href="#projects">Work</a>
   <a href="#process">Process</a>
   <a href="#testimonials">Reviews</a>
@@ -1279,7 +1353,7 @@ body.modal-open{overflow:hidden;}
       <p class="hero-sub" data-en="I design and build websites, WhatsApp-connected systems and AI tools for businesses that can't afford to be invisible online." data-swa="Ninabuni na kujenga tovuti, mifumo inayounganishwa na WhatsApp, na zana za AI kwa biashara zisizoweza kumudu kutokuwepo mtandaoni.">I design and build websites, WhatsApp-connected systems and AI tools for businesses that can't afford to be invisible online.</p>
       <div class="hero-actions">
         <button class="btn-primary btn-ai" id="heroAiBtn">
-          👑 <span data-en="Chat with Kirong AI" data-swa="Ongea na Kirong AI">Chat with Kirong AI</span>
+          <span data-en="Chat with Kirong AI" data-swa="Ongea na Kirong AI">Chat with Kirong AI</span>
         </button>
         <a href="https://wa.me/254792442670?text=Hello%20Job%2C%20I%20want%20a%20website" target="_blank" rel="noopener noreferrer" class="btn-ghost">
           <span data-en="WhatsApp me directly" data-swa="Nipigie WhatsApp">WhatsApp me directly</span>
@@ -1287,7 +1361,7 @@ body.modal-open{overflow:hidden;}
       </div>
       <p class="hero-ai-note" data-en="Kirong AI is one of my own products — a live, working assistant embedded right here, not just a case study on a slide." data-swa="Kirong AI ni ubunifu wangu mwenyewe — msaidizi wa kweli anayefanya kazi papa hapa, si mfano tu wa kuonyesha.">Kirong AI is one of my own products — a live, working assistant embedded right here, not just a case study on a slide.</p>
       <div class="hero-proof-row" aria-label="Key capabilities">
-        <span>⚡ Fast builds</span><span>💬 WhatsApp-first</span><span>🤖 AI-ready</span><span>🇰🇪 Kenya-based</span>
+        <span>Fast builds</span><span>WhatsApp-first</span><span>AI-ready</span><span>Kenya-based</span>
       </div>
     </div>
 
@@ -1342,6 +1416,11 @@ body.modal-open{overflow:hidden;}
   <span>🔒 <span data-en="You own the code" data-swa="Unamiliki code">You own the code</span></span>
   <span>◆ <span data-en="AI & automation available" data-swa="AI na automation zinapatikana">AI & automation available</span></span>
   <span>🌍 <span data-en="Kenya-based · available worldwide" data-swa="Kutoka Kenya · inapatikana duniani">Kenya-based · available worldwide</span></span>
+</div>
+
+<div class="kirong-tour-banner reveal">
+  <div><strong>Explore the portfolio with Kirong.</strong><p>Ask questions, take the guided tour, or jump straight into the work.</p></div>
+  <button class="btn-primary" type="button" onclick="document.getElementById('kirongSteeringLauncher')?.click()">Start exploring</button>
 </div>
 <section id="about" class="section" aria-labelledby="about-title">
   <div class="section-grid about-grid">
@@ -1882,7 +1961,6 @@ body.modal-open{overflow:hidden;}
 
 </main>
 
-<button class="floating-ai" id="floatingAiBtn" title="Chat with Kirong AI">👑</button>
 <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 <div class="toast" id="toast"></div>
 
@@ -1956,6 +2034,53 @@ body.modal-open{overflow:hidden;}
   </div>
   <p class="footer-quote">Real products for real businesses — Nairobi and beyond. 🌍</p>
 </footer>
+
+<!-- KIRONG STEERING / CONTEXTUAL PORTFOLIO GUIDE -->
+<button class="kirong-steering-launcher" id="kirongSteeringLauncher" type="button" aria-controls="kirongSteeringDrawer" aria-expanded="false">
+  <span><strong>Ask AI</strong><span class="kirong-steering-status">Portfolio guide</span></span>
+</button>
+
+<div class="kirong-steering-drawer" id="kirongSteeringDrawer" aria-hidden="true">
+  <div class="kirong-steering-backdrop" data-ks-close></div>
+  <aside class="kirong-steering-panel" role="dialog" aria-modal="true" aria-labelledby="ksTitle">
+    <div class="kirong-steering-head">
+      <div class="kirong-steering-brand">
+        <span class="kirong-steering-mark">K</span>
+        <div><strong>Kirong</strong><small id="ksSubtitle">Portfolio guide</small></div>
+      </div>
+      <button class="kirong-steering-close" type="button" data-ks-close aria-label="Close Kirong guide">×</button>
+    </div>
+    <div class="kirong-steering-context" id="ksContext">Current area · Home</div>
+    <div class="kirong-steering-body">
+      <h3 id="ksTitle">What would you like to explore?</h3>
+      <p id="ksIntro">I can guide you through Job Kwemoi's work, explain how Kirong AI was built, or help turn an idea into a clear project brief.</p>
+      <div class="kirong-steering-actions" id="ksActions"></div>
+      <div class="kirong-steering-steps" id="ksTourSteps" hidden></div>
+      <div class="ks-intelligence" id="ksIntelligence">
+        <span class="ks-intelligence-label">Smart match</span>
+        <h4>Tell me what you need.</h4>
+        <p>I’ll match your goal to the most relevant work and next step.</p>
+        <form class="ks-intelligence-row" id="ksIntentForm">
+          <input class="ks-intelligence-input" id="ksIntentInput" maxlength="220" autocomplete="off" placeholder="e.g. I need an AI assistant for my business">
+          <button class="ks-intelligence-submit" type="submit">Find a match</button>
+        </form>
+        <div class="ks-match" id="ksMatch" aria-live="polite">
+          <strong id="ksMatchTitle"></strong>
+          <span id="ksMatchText"></span>
+          <div class="ks-match-actions">
+            <button class="ks-match-primary" id="ksMatchPrimary" type="button">Explore</button>
+            <button class="ks-match-secondary" id="ksMatchBrief" type="button">Start brief</button>
+          </div>
+        </div>
+        <p class="ks-signal-note">Session-only guidance. Nothing is sent anywhere until you choose a contact action.</p>
+      </div>
+
+    </div>
+    <div class="kirong-steering-footer">
+      <button class="ks-secondary" id="ksTourBtn" type="button">Take a tour</button>
+      <a class="ks-primary" href="https://kirongjob.vercel.app" target="_blank" rel="noopener noreferrer">Chat with Kirong ↗</a>
+    </div>
+  </aside>
 
 <script>
 /* ============================================================
@@ -2518,7 +2643,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('aiSectionBtn'),
     document.getElementById('contactAiBtn'),
     document.getElementById('pricingAiBtn'),
-    document.getElementById('floatingAiBtn')
   ].filter(Boolean);
 
   function openAiModal() {
@@ -2725,6 +2849,174 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+
+/* =========================================================
+   KIRONG STEERING ENGINE
+========================================================= */
+(function initKirongSteering(){
+  const launcher=document.getElementById('kirongSteeringLauncher');
+  const drawer=document.getElementById('kirongSteeringDrawer');
+  const contextEl=document.getElementById('ksContext');
+  const titleEl=document.getElementById('ksTitle');
+  const introEl=document.getElementById('ksIntro');
+  const actionsEl=document.getElementById('ksActions');
+  const stepsEl=document.getElementById('ksTourSteps');
+  const tourBtn=document.getElementById('ksTourBtn');
+  if(!launcher||!drawer) return;
+
+  const sectionData={
+    top:{label:'Home',title:'Start with the short tour.',intro:"I can show you what Job builds, introduce Kirong AI, or help you start a project.",actions:[['Meet Job','Get the short version of who built this.','about'],['Explore the work','See selected projects and live work.','projects'],['Start a project','Turn your idea into a project brief.','brief']]},
+    about:{label:'About',title:'Want to know the builder?',intro:"This section covers Job Kwemoi's background, approach, and the kind of work he builds.",actions:[['Read the story','Explore the background and working philosophy.','about'],['See what he builds','Jump to services.','services'],['Ask Kirong','Ask the full AI about Job or his work.','chat']]},
+    services:{label:'Services',title:'What are you trying to build?',intro:'Tell me the outcome you need and I can point you to the most relevant service and examples.',actions:[['Web project','Explore custom websites and web systems.','projects'],['AI / automation','See the Kirong AI work.','kirong-ai'],['Get a project brief','Start scoping your idea.','brief']]},
+    'kirong-ai':{label:'Kirong AI',title:'This is the build behind the guide.',intro:'Kirong AI is Job’s own AI product. You can explore the case study here or open the live system.',actions:[['Understand the build','Read the architecture and product story.','kirong-ai'],['Open live Kirong','Talk to the live AI.','chat'],['Explore other work','See the rest of the portfolio.','projects']]},
+    projects:{label:'Work',title:'Explore the work.',intro:'I can point you to a project, explain what problem it solved, or take you through the portfolio in sequence.',actions:[['Case studies','Open selected project details.','projects'],['How it is built','See the process behind the work.','process'],['I have a project','Start a project brief.','brief']]},
+    process:{label:'Process',title:'How does a project move from idea to launch?',intro:'The process section explains how discovery, design, development, testing, and handoff fit together.',actions:[['See the work','Go back to projects.','projects'],['Ask a technical question','Use the live Kirong system.','chat'],['Start my project','Create a clear brief.','brief']]},
+    testimonials:{label:'Reviews',title:'Want proof before you decide?',intro:'Explore the work and client feedback, then ask Kirong about the type of project you are considering.',actions:[['Explore projects','See the underlying work.','projects'],['See services','Match your need to a service.','services'],['Start a project','Prepare an inquiry.','brief']]},
+    estimator:{label:'Estimator',title:'Already have a rough scope?',intro:'Use the estimator for a starting point, then turn the result into a real conversation when the project needs custom scoping.',actions:[['Use estimator','Jump to pricing tools.','estimator'],['Custom project','Prepare a custom brief.','brief'],['Talk to Kirong','Ask the live AI.','chat']]},
+    contact:{label:'Contact',title:'Ready to talk?',intro:'If you already know what you need, I can help structure the request before you contact Job.',actions:[['Build a project brief','Answer a few useful questions.','brief'],['WhatsApp Job','Open the direct contact flow.','whatsapp'],['Explore first','Go back and tour the work.','top']]}
+  };
+
+  const tour=[
+    ['01','Meet the builder','Learn who Job Kwemoi is and how he approaches software, AI and product design.','about'],
+    ['02','See what he builds','Explore services and the systems behind them.','services'],
+    ['03','Meet Kirong AI','Understand the flagship AI product and open the live system.','kirong-ai'],
+    ['04','Explore the work','Browse selected projects and case studies.','projects'],
+    ['05','See the process','Understand how an idea becomes a shipped product.','process'],
+    ['06','Start something','Turn your idea into a structured project brief.','brief']
+  ];
+
+  function currentSection(){
+    const ids=['top','about','services','kirong-ai','projects','process','testimonials','estimator','contact'];
+    let current='top';
+    let best=-Infinity;
+    ids.forEach(id=>{const el=document.getElementById(id);if(!el)return;const d=Math.abs(el.getBoundingClientRect().top-150);if(el.getBoundingClientRect().top<=220&&d<best*-1){}});
+    ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=220) current=id;});
+    return current;
+  }
+
+  function go(target){
+    if(target==='chat'){window.open('https://kirongjob.vercel.app','_blank','noopener');return;}
+    if(target==='whatsapp'){window.open('https://wa.me/254792442670?text='+encodeURIComponent('Hello Job, I found your portfolio and would like to discuss a project.'),'_blank','noopener');return;}
+    if(target==='brief'){
+      document.getElementById('briefBtn')?.click();
+      return;
+    }
+    document.getElementById(target)?.scrollIntoView({behavior:'smooth',block:'start'});
+    setTimeout(()=>render(target),250);
+  }
+
+  function render(id=currentSection()){
+    const data=sectionData[id]||sectionData.top;
+    contextEl.textContent='Current area · '+data.label;
+    titleEl.textContent=data.title;
+    introEl.textContent=data.intro;
+    stepsEl.hidden=true;
+    actionsEl.innerHTML=data.actions.map((a,i)=>`<button class="kirong-steering-action" type="button" data-ks-target="${a[2]}"><strong>${a[0]}</strong><span>${a[1]}</span></button>`).join('');
+    actionsEl.querySelectorAll('[data-ks-target]').forEach(btn=>btn.addEventListener('click',()=>go(btn.dataset.ksTarget)));
+  }
+
+  function renderTour(){
+    contextEl.textContent='Guided tour · 6 stops';
+    titleEl.textContent='Let me show you around.';
+    introEl.textContent='You can jump to any stop. The tour never blocks the normal portfolio navigation.';
+    actionsEl.innerHTML='';
+    stepsEl.hidden=false;
+    stepsEl.innerHTML=tour.map(t=>`<button class="kirong-steering-step" type="button" data-ks-target="${t[3]}"><b>${t[0]}</b><span><strong>${t[1]}</strong><br>${t[2]}</span></button>`).join('');
+    stepsEl.querySelectorAll('[data-ks-target]').forEach(btn=>btn.addEventListener('click',()=>go(btn.dataset.ksTarget)));
+  }
+
+  function open(){
+    render();drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');launcher.setAttribute('aria-expanded','true');
+    document.body.classList.add('modal-open');
+  }
+  function close(){drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true');launcher.setAttribute('aria-expanded','false');document.body.classList.remove('modal-open');}
+
+  launcher.addEventListener('click',open);
+  drawer.querySelectorAll('[data-ks-close]').forEach(el=>el.addEventListener('click',close));
+  tourBtn.addEventListener('click',renderTour);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open'))close();});
+  window.addEventListener('scroll',()=>{if(drawer.classList.contains('open')&&!stepsEl.hidden) return; if(drawer.classList.contains('open')) render();},{passive:true});
+
+  // Make the guide context-aware even before it is opened.
+  render();
+})();
+
+/* =========================================================
+   PHASE 3 — CONTEXTUAL LEAD INTELLIGENCE
+   Client-side session guidance only. No visitor data is sent
+   until the visitor explicitly chooses a contact/handoff action.
+========================================================= */
+(function initLeadIntelligence(){
+  const form=document.getElementById('ksIntentForm');
+  const input=document.getElementById('ksIntentInput');
+  const match=document.getElementById('ksMatch');
+  const matchTitle=document.getElementById('ksMatchTitle');
+  const matchText=document.getElementById('ksMatchText');
+  const primary=document.getElementById('ksMatchPrimary');
+  const brief=document.getElementById('ksMatchBrief');
+  if(!form||!input||!match) return;
+
+  const profiles=[
+    {key:'ai',terms:['ai','assistant','agent','chatbot','llm','automation','artificial intelligence','rag','model'],title:'AI / automation project',text:'Your need sounds closest to Kirong AI work: assistants, agent workflows, automation and AI-powered products.',target:'kirong-ai'},
+    {key:'commerce',terms:['shop','store','ecommerce','e-commerce','catalog','products','orders','sell','selling','online shop'],title:'Business / commerce website',text:'A product-focused website with a clear customer journey, catalog and conversion flow looks like the closest match.',target:'projects'},
+    {key:'booking',terms:['booking','appointment','reservation','schedule','calendar','book clients'],title:'Booking / appointment system',text:'A booking flow or business web system is likely the relevant direction. I can show related work or scope yours.',target:'projects'},
+    {key:'web',terms:['website','web app','webapp','landing page','portfolio','site','website design','redesign'],title:'Website / web application',text:'Your request fits custom web development and UI/UX work. Explore the projects, then turn your idea into a brief.',target:'projects'},
+    {key:'design',terms:['ui','ux','design','interface','brand','redesign','user experience'],title:'UI/UX project',text:'Your request sounds design-led. I can show the product/interface work and help define what the final experience should achieve.',target:'services'}
+  ];
+  let lastMatch=null;
+  const session={started:Date.now(),sections:[],intent:null};
+  function rememberSection(id){if(id&&!session.sections.includes(id)) session.sections.push(id);}
+  const sectionIds=['about','services','kirong-ai','projects','process','testimonials','estimator','pricing','contact'];
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting) rememberSection(e.target.id)}),{threshold:.35});
+  sectionIds.forEach(id=>{const el=document.getElementById(id);if(el)observer.observe(el)});
+
+  function score(text,p){
+    const q=text.toLowerCase();
+    return p.terms.reduce((n,t)=>n+(q.includes(t)?1:0),0);
+  }
+  function classify(text){
+    const ranked=profiles.map(p=>({...p,score:score(text,p)})).sort((a,b)=>b.score-a.score);
+    if(!ranked[0].score){
+      return {key:'custom',title:'Custom project',text:'I don’t want to guess. Your idea may need a custom scope, so the best next step is a short project brief.',target:'brief'};
+    }
+    return ranked[0];
+  }
+  function show(profile){
+    lastMatch=profile; session.intent=profile.key;
+    matchTitle.textContent=profile.title;
+    matchText.textContent=profile.text;
+    primary.textContent=profile.target==='brief'?'Build the brief':'Explore the match';
+    match.classList.add('show');
+  }
+  form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;show(classify(q));});
+  primary.addEventListener('click',()=>{
+    if(!lastMatch)return;
+    if(lastMatch.target==='brief'){document.getElementById('briefBtn')?.click();return;}
+    document.getElementById(lastMatch.target)?.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  brief.addEventListener('click',()=>document.getElementById('briefBtn')?.click());
+
+  // Lightweight session intent cues: if someone spends time around work/pricing,
+  // the guide can offer a relevant nudge without tracking them externally.
+  setTimeout(()=>{
+    if(session.sections.includes('projects')||session.sections.includes('estimator')||session.sections.includes('pricing')){
+      const launcher=document.getElementById('kirongSteeringLauncher');
+      launcher?.setAttribute('data-lead-ready','true');
+    }
+  },9000);
+
+  window.kirongLeadSession={getSummary:()=>({
+    intent:session.intent,
+    sections:session.sections.slice(),
+    seconds:Math.round((Date.now()-session.started)/1000)
+  })};
+})();
+
 </script>
+
+
+</div>
+
 </body>
 </html>
