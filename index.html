@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!--
+  © Kirong Job Kwemoi — kirongjob.dev / jobkwemoi.github.io
+  All code, copy, design and case-study content on this page are
+  original work and are not licensed for reuse, resale, or reposting
+  as a template. If you're browsing this as a dev checking out how
+  something was built — welcome, have a look around. If you're here
+  to lift the design or the copy wholesale — don't; commission your
+  own instead: https://wa.me/254792442670
+-->
 <html lang="en">
 <head>
 
@@ -1245,6 +1254,10 @@ body.modal-open{overflow:hidden;}
       <button id="btn-en" class="lang-btn active">EN</button>
       <button id="btn-swa" class="lang-btn">SWA</button>
     </div>
+    <div class="lang-toggle" id="currencyToggle">
+      <button id="btn-usd" class="lang-btn active">USD</button>
+      <button id="btn-kes" class="lang-btn">KES</button>
+    </div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
     <button class="command-btn" id="commandBtn" type="button" aria-label="Open command menu">⌘K</button>
     <a href="https://wa.me/254792442670?text=Hello%20Job%2C%20I%20saw%20your%20site%20and%20want%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="btn-nav-cta">Chat</a>
@@ -1516,7 +1529,7 @@ body.modal-open{overflow:hidden;}
         <h3>Thrift & Chic Nairobi</h3>
       </div>
       <div class="project-chat">
-        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Selling mitumba via Instagram DMs only — slow replies lost sales." data-swa="Kuuza mitumba kwa Instagram DM tu — majibu ya polepole yalipoteza mauzo.">Selling mitumba via Instagram DMs only — slow replies lost sales.</span></p>
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Selling mitumba (secondhand/thrift clothing) via Instagram DMs only — slow replies lost sales." data-swa="Kuuza mitumba kwa Instagram DM tu — majibu ya polepole yalipoteza mauzo.">Selling mitumba (secondhand/thrift clothing) via Instagram DMs only — slow replies lost sales.</span></p>
         <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Product catalog site with instant WhatsApp order buttons." data-swa="Tovuti ya katalogi na buttons za oda za WhatsApp papo hapo.">Product catalog site with instant WhatsApp order buttons.</span></p>
         <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="10 → 60+ orders a week, same-day Nairobi delivery." data-swa="Oda 10 → 60+ kwa wiki, delivery siku hiyo hiyo Nairobi.">10 → 60+ orders a week, same-day Nairobi delivery.</span></p>
       </div>
@@ -1573,7 +1586,7 @@ body.modal-open{overflow:hidden;}
         <h3>TechHub Electronics</h3>
       </div>
       <div class="project-chat">
-        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Customers calling repeatedly to ask 'mko na hio bado?'" data-swa="Wateja wakipiga simu mara kwa mara kuuliza 'mko na hio bado?'">Customers calling repeatedly to ask "mko na hio bado?"</span></p>
+        <p><strong data-en="Problem" data-swa="Shida">Problem</strong><span data-en="Customers calling repeatedly to ask &quot;mko na hio bado?&quot; (&quot;do you still have this?&quot;)" data-swa="Wateja wakipiga simu mara kwa mara kuuliza 'mko na hio bado?'">Customers calling repeatedly to ask "mko na hio bado?" ("do you still have this?")</span></p>
         <p><strong data-en="Solution" data-swa="Suluhisho">Solution</strong><span data-en="Live stock catalog with prices + WhatsApp reserve buttons." data-swa="Katalogi ya stock papo hapo na bei + buttons za kuhifadhi kwa WhatsApp.">Live stock catalog with prices + WhatsApp reserve buttons.</span></p>
         <p><strong data-en="Result" data-swa="Matokeo">Result</strong><span data-en="80% fewer repetitive calls, 150+ items reserved monthly." data-swa="Simu za kurudia zimepungua 80%, bidhaa 150+ zimehifadhiwa kila mwezi.">80% fewer repetitive calls, 150+ items reserved monthly.</span></p>
       </div>
@@ -1716,7 +1729,7 @@ body.modal-open{overflow:hidden;}
               <strong data-en="Product catalog / e-commerce" data-swa="Katalogi ya bidhaa">Product catalog / e-commerce</strong>
               <span data-en="Browsable products with WhatsApp order buttons" data-swa="Bidhaa zinazoonekana na buttons za oda WhatsApp">Browsable products with WhatsApp order buttons</span>
             </span>
-            <span class="addon-price">+KES 8,000</span>
+            <span class="addon-price" data-kes="8000">+KES 8,000</span>
           </label>
           <label class="addon-row" data-price="7000" data-days="2">
             <input type="checkbox">
@@ -1724,7 +1737,7 @@ body.modal-open{overflow:hidden;}
               <strong data-en="Booking / appointment system" data-swa="Mfumo wa booking">Booking / appointment system</strong>
               <span data-en="Live slots with WhatsApp confirmation" data-swa="Nafasi za wakati na uthibitisho wa WhatsApp">Live slots with WhatsApp confirmation</span>
             </span>
-            <span class="addon-price">+KES 7,000</span>
+            <span class="addon-price" data-kes="7000">+KES 7,000</span>
           </label>
           <label class="addon-row" data-price="5000" data-days="1">
             <input type="checkbox">
@@ -1732,7 +1745,7 @@ body.modal-open{overflow:hidden;}
               <strong data-en="Kirong AI chat embedded" data-swa="Kirong AI imejumuishwa">Kirong AI chat embedded</strong>
               <span data-en="Answers visitor questions instantly, day or night" data-swa="Inajibu maswali ya wageni papo hapo, mchana au usiku">Answers visitor questions instantly, day or night</span>
             </span>
-            <span class="addon-price">+KES 5,000</span>
+            <span class="addon-price" data-kes="5000">+KES 5,000</span>
           </label>
           <label class="addon-row" data-price="3000" data-days="1">
             <input type="checkbox">
@@ -1740,7 +1753,7 @@ body.modal-open{overflow:hidden;}
               <strong data-en="Bilingual site (English + Swahili)" data-swa="Tovuti ya lugha mbili (Kiingereza + Kiswahili)">Bilingual site (English + Swahili)</strong>
               <span data-en="One-tap language toggle across every page" data-swa="Kubadilisha lugha kwa mguso mmoja">One-tap language toggle across every page</span>
             </span>
-            <span class="addon-price">+KES 3,000</span>
+            <span class="addon-price" data-kes="3000">+KES 3,000</span>
           </label>
         </div>
       </div>
@@ -1798,7 +1811,7 @@ body.modal-open{overflow:hidden;}
   <div class="pricing-grid">
     <div class="price-card reveal">
       <h3 data-en="Starter" data-swa="Mwanzo">Starter</h3>
-      <p class="price-amount">KES 15,000</p>
+      <p class="price-amount" data-kes="15000">KES 15,000</p>
       <p class="price-desc" data-en="A focused one-page website for a clear business or professional need." data-swa="Tovuti ya ukurasa mmoja na oda za WhatsApp. Live ndani ya siku 3.">A focused one-page website for a clear business or professional need.</p>
       <ul>
         <li data-en="Mobile-first design" data-swa="Muundo wa simu kwanza">Mobile-first design</li>
@@ -1810,7 +1823,7 @@ body.modal-open{overflow:hidden;}
     <div class="price-card featured reveal">
       <span class="price-tag" data-en="Most popular" data-swa="Maarufu zaidi">Most popular</span>
       <h3 data-en="Business" data-swa="Biashara">Business</h3>
-      <p class="price-amount">KES 30,000</p>
+      <p class="price-amount" data-kes="30000">KES 30,000</p>
       <p class="price-desc" data-en="A larger website with custom sections, integrations and optional AI features." data-swa="Tovuti ya kurasa nyingi, katalogi ya bidhaa, na Kirong AI ndani yake.">A larger website with custom sections, integrations and optional AI features.</p>
       <ul>
         <li data-en="Everything in Starter" data-swa="Kila kitu cha Mwanzo">Everything in Starter</li>
@@ -1906,6 +1919,11 @@ body.modal-open{overflow:hidden;}
     <button class="omni-action" id="omniAsk" type="button"><span><b>Ask Kirong</b><small>Continue with this page's context</small></span><b>→</b></button>
     <button class="omni-action" id="omniExplore" type="button"><span><b>Explore this section</b><small>Jump to the relevant part of the portfolio</small></span><b>↓</b></button>
     <button class="omni-action" id="omniBrief" type="button"><span><b>Start a project brief</b><small>Turn your idea into a qualified lead</small></span><b>↗</b></button>
+  </div>
+  <div class="omni-quick" id="omniQuick" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
+    <button type="button" class="omni-chip" data-en="How much would my project cost?" data-swa="Mradi wangu ungegharimu kiasi gani?" style="padding:6px 11px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--text-muted);font-size:.72rem;cursor:pointer">How much would my project cost?</button>
+    <button type="button" class="omni-chip" data-en="Can I pay from outside Kenya?" data-swa="Naweza kulipa nikiwa nje ya Kenya?" style="padding:6px 11px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--text-muted);font-size:.72rem;cursor:pointer">Can I pay from outside Kenya?</button>
+    <button type="button" class="omni-chip" data-en="Can you build an AI feature?" data-swa="Unaweza kujenga kipengele cha AI?" style="padding:6px 11px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--text-muted);font-size:.72rem;cursor:pointer">Can you build an AI feature?</button>
   </div>
   <div class="omni-status" id="omniStatus">Context is private to this session.</div>
 </div>
@@ -2072,7 +2090,7 @@ const CASE_STUDIES = {
   thrift: {
     tag: "Fashion", client: "Thrift & Chic Nairobi", tagline: "From Instagram DMs to a real storefront",
     devTime: "4 days", type: "E-commerce",
-    problem: "All mitumba sales happened through Instagram DMs. Slow replies during busy hours meant lost sales to faster-responding competitors.",
+    problem: "All mitumba (secondhand/thrift clothing) sales happened through Instagram DMs. Slow replies during busy hours meant lost sales to faster-responding competitors.",
     solution: "A mobile-first product catalog with instant WhatsApp order buttons on every item, so a customer can go from browsing to ordering in seconds.",
     before: "Sales through Instagram DM only, slow response times, no product catalog.",
     after: "Customers browse the catalog and tap straight into a pre-filled WhatsApp order.",
@@ -2106,7 +2124,7 @@ const CASE_STUDIES = {
     live: "https://beautie-salon.netlify.app"
   },
   techhub: {
-    tag: "Electronics", client: "TechHub Electronics", tagline: "Ending the 'mko na hio bado?' calls",
+    tag: "Electronics", client: "TechHub Electronics", tagline: "Ending the 'mko na hio bado?' (\"do you still have this?\") calls",
     devTime: "5 days", type: "Product catalog",
     problem: "Customers called constantly to ask whether an item was still in stock, tying up staff who could be serving in-store customers.",
     solution: "A live stock catalog with prices and a one-tap WhatsApp reserve button, so customers check availability themselves before calling or visiting.",
@@ -2365,6 +2383,51 @@ document.addEventListener('DOMContentLoaded', () => {
   btnEn.addEventListener('click', () => setLang('en'));
   btnSwa.addEventListener('click', () => setLang('swa'));
 
+  /* ---------- CURRENCY TOGGLE ---------- */
+  // Static site, not a live FX feed — update this rate every so often
+  // (check e.g. google.com/search?q=usd+to+kes) rather than wiring a
+  // live API for a number that only needs to be roughly right.
+  const KES_PER_USD = 129; // last checked: 2026-09 — update periodically
+
+  const btnUsd = document.getElementById('btn-usd');
+  const btnKes = document.getElementById('btn-kes');
+  const savedCurrency = localStorage.getItem('kirong-currency');
+
+  function formatKes(amount) {
+    return 'KES ' + Math.round(amount).toLocaleString();
+  }
+  function formatUsd(kesAmount) {
+    const usd = kesAmount / KES_PER_USD;
+    // round to a clean number so it reads like a price, not a raw conversion
+    const rounded = usd < 100 ? Math.round(usd / 5) * 5 : Math.round(usd / 10) * 10;
+    return '$' + rounded.toLocaleString();
+  }
+  function isUsd() {
+    return document.documentElement.getAttribute('data-currency') !== 'kes';
+  }
+  function formatPrice(kesAmount) {
+    return isUsd() ? formatUsd(kesAmount) : formatKes(kesAmount);
+  }
+
+  function updateStaticPrices() {
+    document.querySelectorAll('[data-kes]').forEach(el => {
+      const kes = parseInt(el.getAttribute('data-kes'), 10);
+      const prefix = el.classList.contains('addon-price') ? '+' : '';
+      el.textContent = prefix + formatPrice(kes);
+    });
+  }
+
+  function setCurrency(cur) {
+    document.documentElement.setAttribute('data-currency', cur);
+    btnUsd.classList.toggle('active', cur === 'usd');
+    btnKes.classList.toggle('active', cur === 'kes');
+    localStorage.setItem('kirong-currency', cur);
+    updateStaticPrices();
+  }
+  setCurrency(savedCurrency === 'kes' ? 'kes' : 'usd');
+  btnUsd.addEventListener('click', () => { setCurrency('usd'); if (typeof renderEstimate === 'function') renderEstimate(); });
+  btnKes.addEventListener('click', () => { setCurrency('kes'); if (typeof renderEstimate === 'function') renderEstimate(); });
+
   /* ---------- THEME TOGGLE ---------- */
   const themeToggle = document.getElementById('themeToggle');
   themeToggle.addEventListener('click', () => {
@@ -2574,10 +2637,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function setSection(section){ if(section) currentSection=String(section).slice(0,80); const label=currentSection==='home'?'this page':currentSection.replace(/-/g,' '); omniSubtitle.textContent=`Kirong can guide you through ${label}.`; }
   function openOmni(){ omniPanel.classList.add('open'); omniPanel.setAttribute('aria-hidden','false'); floatingAiBtn.setAttribute('aria-expanded','true'); sendSignal('launcher_open'); }
   function closeOmni(){ omniPanel.classList.remove('open'); omniPanel.setAttribute('aria-hidden','true'); floatingAiBtn.setAttribute('aria-expanded','false'); sendSignal('launcher_close'); }
-  function openAiWithContext(){
-    currentIntent=detectIntent((omniSubtitle?.textContent||'')+' '+currentSection);
+  function openAiWithContext(prefillQuestion){
+    currentIntent=detectIntent((omniSubtitle?.textContent||'')+' '+currentSection+' '+(prefillQuestion||''));
     sendSignal('ask_ai',{intent:currentIntent});
-    const context={page:location.pathname,section:currentSection,intent:currentIntent,sessionId};
+    const context={page:location.pathname,section:currentSection,intent:currentIntent,sessionId,...(prefillQuestion?{prefillQuestion}:{})};
     const url=AI_URL+'?portfolio_context='+encodeURIComponent(JSON.stringify(context));
     if(aiFrame) aiFrame.src=url;
     aiModal.classList.add('open'); document.body.style.overflow='hidden'; closeOmni();
@@ -2585,14 +2648,21 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeAiModal(){ aiModal.classList.remove('open'); document.body.style.overflow=''; }
   floatingAiBtn?.addEventListener('click',()=>omniPanel.classList.contains('open')?closeOmni():openOmni());
   omniClose?.addEventListener('click',closeOmni);
-  omniAsk?.addEventListener('click',openAiWithContext);
+  omniAsk?.addEventListener('click',()=>openAiWithContext());
   omniExplore?.addEventListener('click',()=>{document.getElementById(currentSection)?.scrollIntoView({behavior:'smooth',block:'start'});closeOmni();});
   omniBrief?.addEventListener('click',()=>{sendSignal('brief_started',{stage:'qualifying'});closeOmni();openBrief();});
+  document.querySelectorAll('#omniQuick .omni-chip').forEach(chip=>{
+    chip.addEventListener('click',()=>{
+      const question=(typeof isSwa==='function'&&isSwa())?chip.getAttribute('data-swa'):chip.getAttribute('data-en');
+      openAiWithContext(question||chip.textContent);
+    });
+  });
   document.getElementById('aiModalClose').addEventListener('click',closeAiModal);
   aiModal.addEventListener('click',(e)=>{if(e.target===aiModal)closeAiModal();});
   document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){if(omniPanel.classList.contains('open'))closeOmni();else if(aiModal.classList.contains('open'))closeAiModal();}});
 
   sendSignal('session_start');
+  document.addEventListener('click',(e)=>{const a=e.target.closest('a[href^="https://wa.me/"]');if(a)sendSignal('contact_started',{section:currentSection,intent:currentIntent});});
   document.querySelectorAll('section[id]').forEach(sec=>{ const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){setSection(sec.id);sendSignal('page_view',{section:sec.id});}}),{threshold:.55}); io.observe(sec); });
   document.querySelectorAll('[data-project]').forEach(el=>el.addEventListener('click',()=>sendSignal('project_view',{project:el.dataset.project,section:currentSection})));
   document.querySelectorAll('[data-intent]').forEach(el=>el.addEventListener('click',()=>{currentIntent=detectIntent(el.dataset.intent);sendSignal('intent_detected',{intent:currentIntent});}));
@@ -2685,7 +2755,7 @@ document.addEventListener('DOMContentLoaded', () => {
       estimatorTotal.textContent = isSwa() ? 'Tuongee' : "Let's talk";
       estimatorDays.textContent = isSwa() ? 'Bei baada ya mazungumzo bure' : 'Scoped after a free call';
     } else {
-      estimatorTotal.textContent = 'KES ' + price.toLocaleString();
+      estimatorTotal.textContent = formatPrice(price);
       estimatorDays.textContent = (isSwa() ? '~siku ' : '~') + days + (isSwa() ? ' hadi live' : ' days to launch');
     }
 
@@ -2696,7 +2766,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const summaryParts = [tierBtn.querySelector('strong').textContent];
     if (includedAddons.length) summaryParts.push(includedAddons.join(', '));
-    const priceText = isCustom ? 'to be scoped' : 'KES ' + price.toLocaleString();
+    const priceText = isCustom ? 'to be scoped' : formatPrice(price);
     const message = `Hello Kirong, I built an estimate on your site: ${summaryParts.join(' + ')}. Estimated: ${priceText}. Can we talk?`;
     estimatorCta.href = 'https://wa.me/254792442670?text=' + encodeURIComponent(message);
   }
