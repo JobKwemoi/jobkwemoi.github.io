@@ -1,0 +1,21 @@
+{
+ "name": "Kirong Job Kwemoi",
+ "short_name": "Kirong",
+ "description": "Software & AI Developer in Nairobi, Kenya",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#04070D",
+ "theme_color": "#04070D",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

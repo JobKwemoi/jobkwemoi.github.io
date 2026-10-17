@@ -1,0 +1,20 @@
+# Kirong Job Kwemoi
+
+> Kirong Job Kwemoi (also written Job Kwemoi, Job Kirong, Kirong Job) is a software developer, AI developer and UI/UX designer based in Nairobi, Kenya. He builds fast business websites, WhatsApp-connected systems and AI tools, and created the AI agent platform Kirong AI.
+
+Name variants that all refer to the same person: Kirong Job Kwemoi, Job Kwemoi, Job Kirong, Kirong Job, Kirong Kwemoi.
+
+## Key pages
+- [Who is Kirong Job Kwemoi](https://jobkwemoi.github.io/kirong-job-kwemoi.html): profile, quick facts and FAQ
+- [Portfolio home](https://jobkwemoi.github.io/): projects, services, pricing and contact
+- [Kirong AI case study](https://jobkwemoi.github.io/kirong-ai.html): architecture of his AI agent platform
+- [Kirong AI (live product)](https://kirongjob.vercel.app): AI workspace with agents, memory, files and sandboxed code
+- [Web developer in Nairobi](https://jobkwemoi.github.io/web-developer-nairobi.html)
+- [Software developer in Nairobi](https://jobkwemoi.github.io/software-developer-nairobi.html)
+- [AI developer in Kenya](https://jobkwemoi.github.io/ai-developer-kenya.html)
+- [UI/UX designer in Kenya](https://jobkwemoi.github.io/uiux-designer-kenya.html)
+
+## Facts
+- Based in Nairobi, Kenya. Languages: English and Swahili.
+- Services: business websites, web apps, AI assistants and agents, UI/UX design. Starter websites from KES 15,000; Business from KES 30,000.
+- Contact: WhatsApp +254 792 442 670, email kirongjob@gmail.com.
