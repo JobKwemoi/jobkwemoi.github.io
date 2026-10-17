@@ -25,18 +25,6 @@ var n=$(".facts span:first-child b")[0];
 if(n&&/^\d+$/.test(n.textContent)){var to=+n.textContent,t0=0;n.textContent="0";
 var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();
 (function s(t){t0=t0||t;var p=Math.min(1,(t-t0)/900);n.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(s)})(performance.now())});io.observe(n)}
-/* orb: glows purple and sinks into the sea as you scroll */
-var sc=$("#scene")[0],orb=$("#orb")[0],gl=$("#orbGlow")[0];
-if(sc&&orb&&gl){var W=1,end=1,rt=0;
-function meas(){var r=sc.getBoundingClientRect();W=r.width;end=Math.max(1,r.height*.8)}
-function sink(){rt=0;var p=Math.min(1,Math.max(0,scrollY/end)),e=p*p*(3-2*p),y=(e*W*.95).toFixed(1);
-orb.style.transform="translate3d(0,"+y+"px,0) scale("+(1-.14*e).toFixed(3)+")";
-orb.style.filter=e>.01?"hue-rotate("+(78*e).toFixed(1)+"deg) saturate("+(1+.35*e).toFixed(2)+")":"";
-gl.style.opacity=Math.min(1,e*1.5).toFixed(2);
-gl.style.transform="translate3d(0,"+y+"px,0) scale("+(1.05+.25*e).toFixed(3)+")";
-sc.style.setProperty("--rp",Math.max(0,Math.min(1,(e-.3)*2.5)).toFixed(2))}
-meas();addEventListener("resize",function(){meas();sink()});
-addEventListener("scroll",function(){rt||(rt=requestAnimationFrame(sink))},{passive:true});sink()}
 /* architecture flow: a request travelling User -> Agent -> Risk -> Tools -> Storage */
 var f=$(".flow")[0];
 if(f){var seq=Array.prototype.slice.call(f.children),i=0,timer=0;
